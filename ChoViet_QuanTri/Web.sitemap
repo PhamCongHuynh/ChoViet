@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode>
+      <siteMapNode url="" description="Thong tin ca nhan" title="Thông tin cá nhân" >
+        <siteMapNode url="index.aspx" title="Thong tin chung"   />
+        <siteMapNode url="Quantri.aspx" title="Thay doi thong tin ca nhan"  />
+        <siteMapNode url="" title="Doi mat khau"/>
+      </siteMapNode>
+      <siteMapNode url="" description="Quan ly tin dang" title="Quan ly tin dang" >
+        <siteMapNode url="" title="Dang tin moi"   />
+        <siteMapNode url="" title="Tin moi cho duyet"  />
+        <siteMapNode url="" title="Quan ly tin" />
+      </siteMapNode>
+      <siteMapNode url="" description="Danh muc khac" title="Danh muc khac" >
+        <siteMapNode url="" title="Thong tin nguoi dung"   />
+        <siteMapNode url="" title="Ho tro khach hang"  />
+        <siteMapNode url="" title="Bao cao thong ke" />
+       </siteMapNode>
+  
+    </siteMapNode>
+</siteMap>
