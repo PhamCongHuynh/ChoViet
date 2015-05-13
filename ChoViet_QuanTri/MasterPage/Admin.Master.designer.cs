@@ -31,6 +31,24 @@ namespace ChoViet_QuanTri.MasterPage {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// Header control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::ChoViet_QuanTri.Header Header;
+        
+        /// <summary>
+        /// phMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phMenu;
+        
+        /// <summary>
         /// Label5 control.
         /// </summary>
         /// <remarks>

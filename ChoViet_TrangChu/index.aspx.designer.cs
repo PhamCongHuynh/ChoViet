@@ -55,7 +55,7 @@ namespace ChoViet_TrangChu {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DLDanhSachDB;
+        protected global::System.Web.UI.WebControls.Repeater DLDanhSachDB;
         
         /// <summary>
         /// DLlatestproducts control.
@@ -64,7 +64,7 @@ namespace ChoViet_TrangChu {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DLlatestproducts;
+        protected global::System.Web.UI.WebControls.Repeater DLlatestproducts;
         
         /// <summary>
         /// Choviet_Footer control.

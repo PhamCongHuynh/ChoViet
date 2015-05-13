@@ -1,14 +1,21 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Header.ascx.cs" Inherits="ChoViet_QuanTri.Header" %>
-<style type="text/css">
-    .auto-style1 {
-        width: 100%;
-    }
-</style>
-<table class="auto-style1" style="width: 1300px">
-    <tr>
-        <td>
-            &nbsp;</td>
-    </tr>
-</table>
+<div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Quản tri hệ thống</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">ChợViệt.net</a></li>
+            <li class=""><a href="#about">Trang cá nhân </a></li>
+            <li><a href="#contact">Thoát</a></li>
+          </ul>
+        </div>
+</div>
 
 

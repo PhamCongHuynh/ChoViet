@@ -65,6 +65,7 @@
     <Content Include="Admin_CapMoiTaiKhoanNhanVien.aspx" />
     <Content Include="Content.ascx" />
     <Content Include="Footer.ascx" />
+    <Content Include="Global.asax" />
     <Content Include="Header.ascx" />
     <Content Include="Image\footerquantrij.PNG" />
     <Content Include="Image\headerquantri.PNG" />
@@ -78,6 +79,8 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="MenuAdmin.ascx" />
+    <Content Include="MenuQuanTri.ascx" />
     <Content Include="QuanTri.aspx" />
     <Content Include="QuanTri_ThongTinNguoiDung.aspx" />
     <Content Include="QuanTri_TinQuangCao.aspx" />
@@ -162,6 +165,9 @@
     <Compile Include="Footer.ascx.designer.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Header.ascx.cs">
       <DependentUpon>Header.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,6 +202,20 @@
     </Compile>
     <Compile Include="MasterPage\QuanTri.Master.designer.cs">
       <DependentUpon>QuanTri.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MenuAdmin.ascx.cs">
+      <DependentUpon>MenuAdmin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuAdmin.ascx.designer.cs">
+      <DependentUpon>MenuAdmin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuQuanTri.ascx.cs">
+      <DependentUpon>MenuQuanTri.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuQuanTri.ascx.designer.cs">
+      <DependentUpon>MenuQuanTri.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanTri.aspx.cs">

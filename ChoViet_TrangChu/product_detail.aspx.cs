@@ -22,8 +22,8 @@ namespace ChoViet_TrangChu
         public void loadChitietsanpham()
         {
             int matin = 6;
-            FvChitiet.DataSource = News_Controller.ViewByChiTiet(matin);
-            FvChitiet.DataBind();
+            RPChitiet.DataSource = News_Controller.ViewByChiTiet(matin);
+            RPChitiet.DataBind();
         }
         public void loadDatalistview()
         {

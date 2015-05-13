@@ -7,12 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace ChoViet_QuanTri
 {
-    public partial class CapMoiTaiKhoanNhanVien : System.Web.UI.Page
+    public partial class MenuQuanTri : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Lay ten file: Admin_CapMoiTaiKhoanNhanVien.aspx.cs
-            
+
         }
     }
 }

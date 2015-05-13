@@ -1,5 +1,10 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="ChoViet_QuanTri.MasterPage.Admin" %>
 
+<%@ Register Src="~/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/MenuAdmin.ascx" TagPrefix="uc1" TagName="MenuAdmin" %>
+
+
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -68,7 +73,10 @@
 <body>
     <form id="form1" runat="server">
       <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
+          <%--   khu vực header--%>
+          <uc1:Header runat="server" ID="Header" />
+
+      <%--<div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -85,27 +93,15 @@
             <li><a href="#contact">Thoát</a></li>
           </ul>
         </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
+      </div>--%>
     </nav>
       <div class="container-fluid">
 
       <div class="row row-offcanvas row-offcanvas-left">
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Quản lý tin đăng</a>
-            <a href="#" class="list-group-item">Quản lý tin quảng cáo</a>
-            <a href="#" class="list-group-item">Tin quảng cáo mới</a>
-            <a href="#" class="list-group-item">Tin xem xét chờ duyệt / Từ chối</a>
-            <a href="#" class="list-group-item">Tin đã hoàn thành</a>
-            <a href="#" class="list-group-item active">Quản lý nhân viên</a>
-            <a href="#" class="list-group-item">Cấp mới tài khoản nhân viên</a>
-            <a href="#" class="list-group-item">Quản lý tài khoản nhân viên</a>
-            <a href="#" class="list-group-item">Phân công công việc</a>
-            <a href="#" class="list-group-item active">Danh mục khác</a>
-            <a href="#" class="list-group-item">Thông tin người dùng</a>
-            <a href="#" class="list-group-item">Hỗ trợ khách hàng</a>
-            <a href="#" class="list-group-item">Xem báo cáo thống kê</a>
-          </div>
+             <%--   khu vực dành cho menu--%>
+            <asp:PlaceHolder ID="phMenu" runat="server"></asp:PlaceHolder>
+          
         </div>
         <div class="col-xs-12 col-sm-9">
           <p class="pull-left visible-xs">
@@ -154,14 +150,14 @@
           </div>
           <div class="row">
             <div class="col-xs-12 col-lg-12">
-              <%--<div class="col-xs-12 col-lg-9">--%>
+              <%--   khu vực dành cho nội dung--%>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
                 </asp:ContentPlaceHolder>
              </div>
           <hr>
           <footer>
-            <p>© Company 2015</p>
+            <p>© Ban Quản Trị Chợ Việt 2015</p>
           </footer>
           </div>
      </div>

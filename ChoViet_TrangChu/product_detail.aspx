@@ -7,15 +7,14 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="span9">
-          <div class="row">
+<div class="span9">          
            <ul class="breadcrumb">
             <li><a href="index.html">Home</a> <span class="divider">/</span></li>
             <li><a href="products.html">Products</a> <span class="divider">/</span></li>
             <li class="active">product Details</li>
            </ul>
            <div class="row">
-            <asp:FormView ID="FvChitiet" runat="server">
+            <asp:Repeater ID="RPChitiet" runat="server">
               <ItemTemplate>   
                   <div id="gallery" class="span3">
                   <a href="themes/images/products/large/f1.jpg" title="Fujifilm FinePix S2950 Digital Camera">
@@ -81,7 +80,7 @@
 			<hr class="soft">
 			</div>
               </ItemTemplate>
-         </asp:FormView>
+         </asp:Repeater>
             <div class="span9">
             <ul id="productDetail" class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">Thảo luận</a></li>
@@ -108,7 +107,7 @@
 		<hr class="soft">
 		<div class="tab-content">
 			<div class="tab-pane" id="listView">
-            <asp:DataList ID="DLListView" runat="server">
+            <asp:Repeater ID="DLListView" runat="server">
                     <ItemTemplate>
                        <div class="row">	  
 					<div class="span2">
@@ -137,11 +136,11 @@
 			    </div>
 			    <hr class="soft">
                     </ItemTemplate>
-                </asp:DataList>
+                </asp:Repeater>
 		    </div>
-			<div class="tab-pane active" id="blockView">
+			<div class="tab-pane active" id="blockView" >
 				<ul class="thumbnails">
-                    <asp:DataList ID="DLblockView" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+                    <asp:Repeater ID="DLblockView" runat="server">
                         <ItemTemplate>
                            <li class="span3">
 					          <div class="thumbnail">
@@ -156,7 +155,7 @@
 					          </div>
 					        </li>
                         </ItemTemplate>
-                    </asp:DataList>	
+                    </asp:Repeater>	
 				</ul>
 			<hr class="soft">
 			</div>
@@ -167,5 +166,5 @@
           </div>
             </div>
            </div>
-</div>
+
 </asp:Content>

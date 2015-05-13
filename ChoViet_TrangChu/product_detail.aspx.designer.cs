@@ -13,13 +13,13 @@ namespace ChoViet_TrangChu {
     public partial class product_detail {
         
         /// <summary>
-        /// FvChitiet control.
+        /// RPChitiet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FormView FvChitiet;
+        protected global::System.Web.UI.WebControls.Repeater RPChitiet;
         
         /// <summary>
         /// DLListView control.
@@ -28,7 +28,7 @@ namespace ChoViet_TrangChu {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DLListView;
+        protected global::System.Web.UI.WebControls.Repeater DLListView;
         
         /// <summary>
         /// DLblockView control.
@@ -37,6 +37,6 @@ namespace ChoViet_TrangChu {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DLblockView;
+        protected global::System.Web.UI.WebControls.Repeater DLblockView;
     }
 }

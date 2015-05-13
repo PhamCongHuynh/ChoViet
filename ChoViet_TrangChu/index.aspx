@@ -138,8 +138,7 @@
 			<div class="well well-small">
 			<h4>Quảng cáo đặc biệt<small class="pull-right">Tổng sô 40 sản phẩm </small></h4>
 			<div class="row-fluid">
-			<div id="featured">
-		<div>
+			
 			  <div class="item">
 			  <ul class="thumbnails">
 				<%--<li class="span3">
@@ -152,11 +151,10 @@
 					</div>
 				  </div>
 				</li>--%>
-                 <asp:DataList ID="DLDanhSachDB" runat="server" RepeatColumns="4" RepeatDirection="Horizontal">
-                      <ItemTemplate>
-                       
+                 <asp:Repeater ID="DLDanhSachDB" runat="server">
+                      <ItemTemplate>                       
                        <li class="span3">
-				          <div class="thumbnail" style="width: 176.141px;height: 272px;margin:10px;">
+				          <div class="thumbnail">
 				          <i class="tag"></i>
 					        <asp:Image ID="Imahinhanh" runat="server" ImageUrl="themes/images/products/9.jpg"  Height="160px" Width="160px" />
 					        <div class="caption">
@@ -164,21 +162,17 @@
 					          <h4><a class="btn" href="product_detail.aspx">VIEW</a> <span class="pull-right">$222.00</span></h4>
 					        </div>
 				          </div>
-				        </li>
-                      
+				        </li>                      
                       </ItemTemplate>
-                  </asp:DataList>
+                  </asp:Repeater>
 			  </ul>
-			  </div>
-			   
 		</div>
-	    </div>
 	    </div>
             <h4>Xem nhiều hơn<small class="pull-right">Liên hệ ngay để mua hàng </small></h4>
 		</div>
 		     <h4>Danh sách sản phẩm trong ngày </h4>
 			 <ul class="thumbnails">
-                  <asp:DataList ID="DLlatestproducts" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+                  <asp:Repeater ID="DLlatestproducts" runat="server">
                       <ItemTemplate>
                      <li class="span3">
 				       <div class="thumbnail">
@@ -192,7 +186,7 @@
 				       </div>
 				      </li>
                       </ItemTemplate>
-                  </asp:DataList>
+                  </asp:Repeater>
 			  </ul>	
 		</div>
 		</div>

@@ -32,7 +32,7 @@ namespace BUSINESS
         {
             using (dbchoviet db = new dbchoviet())
             {
-                var Views = from n in db.Newss.AsEnumerable()
+                var Views = (from n in db.Newss.AsEnumerable()
                              join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
                              join re in db.Regions on n.Regions.Id equals re.Id
                              join ca in db.Categorys on n.Category.Id equals ca.Id
@@ -46,7 +46,7 @@ namespace BUSINESS
                                  timeaction =n.dateaction,
                                  nguoidang=ac.name,
                                  url_image = n.image1
-                             };
+                             }).Take(30);
                 return Views.ToList();
             }
         }
@@ -68,7 +68,7 @@ namespace BUSINESS
                                 timeaction = n.dateaction,
                                 nguoidang = ac.name,
                                 url_image = n.image1
-                            }).Take(8);
+                            }).Take(4);
                 return Views.ToList();
             }
         }
@@ -76,7 +76,7 @@ namespace BUSINESS
         {
             using (dbchoviet db = new dbchoviet())
             {
-                var Views = from n in db.Newss.AsEnumerable()
+                var Views = (from n in db.Newss.AsEnumerable()
                             where n.Category.Id==idDanhmuc
                             join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
                             join re in db.Regions on n.Regions.Id equals re.Id
@@ -92,7 +92,7 @@ namespace BUSINESS
                                 nguoidang = ac.name,
                                 image1 = n.image1,
                                 content=n.content
-                            };
+                            }).Take(30);
                 return Views.ToList();
             }
         }

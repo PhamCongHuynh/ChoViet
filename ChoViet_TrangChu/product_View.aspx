@@ -32,7 +32,7 @@
 <br class="clr">
 <div class="tab-content">
 		<div class="tab-pane" id="listView">
-            <asp:DataList ID="DLListView" runat="server">
+            <asp:Repeater ID="DLListView" runat="server">
                     <ItemTemplate>
                        <div class="row">	  
 					<div class="span2">
@@ -61,11 +61,11 @@
 			    </div>
 			    <hr class="soft">
                     </ItemTemplate>
-                </asp:DataList>
+                </asp:Repeater>
 		    </div>
 			<div class="tab-pane active" id="blockView">
 				<ul class="thumbnails">
-                    <asp:DataList ID="DLblockView" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+                    <asp:Repeater ID="DLblockView" runat="server" >
                         <ItemTemplate>
                            <li class="span3">
 					          <div class="thumbnail">
@@ -80,7 +80,7 @@
 					          </div>
 					        </li>
                         </ItemTemplate>
-                    </asp:DataList>	
+                    </asp:Repeater>	
 				</ul>
 			<hr class="soft">
 			</div>
