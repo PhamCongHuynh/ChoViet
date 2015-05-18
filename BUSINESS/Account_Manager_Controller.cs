@@ -41,7 +41,22 @@ namespace BUSINESS
             Account_Manager ac = Account_ManagerREPO.GetById(ids);
             Account_ManagerREPO.Delete(ac);         
         }
-
+        public static Boolean CheckAccount(int ac_id,string ac_password)
+        {
+            using(dbchoviet db=new dbchoviet())
+            {
+                var query = from u in db.Account_Managers where u.Id == ac_id && u.password == ac_password select u;
+                if(query.Count()!=0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            
+        }
        
        
     }

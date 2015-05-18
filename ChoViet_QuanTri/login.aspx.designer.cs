@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChoViet_QuanTri.MasterPage {
+namespace ChoViet_QuanTri {
     
     
-    public partial class Admin {
-        
-        /// <summary>
-        /// head control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+    public partial class index {
         
         /// <summary>
         /// form1 control.
@@ -31,30 +22,30 @@ namespace ChoViet_QuanTri.MasterPage {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Header control.
+        /// txttmaaikhoan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ChoViet_QuanTri.Header Header;
+        protected global::System.Web.UI.WebControls.TextBox txttmaaikhoan;
         
         /// <summary>
-        /// phMenu control.
+        /// txtmatkhau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder phMenu;
+        protected global::System.Web.UI.WebControls.TextBox txtmatkhau;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// btndangnhap control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Button btndangnhap;
     }
 }

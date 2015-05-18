@@ -63,6 +63,17 @@
     <Content Include="Admin_QuanLyTinQuangCao.aspx" />
     <Content Include="Admin_TinQuangCao.aspx" />
     <Content Include="Admin_CapMoiTaiKhoanNhanVien.aspx" />
+    <Content Include="assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="assets\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\bootstrap\js\npm.js" />
+    <Content Include="assets\css\styles.css" />
+    <Content Include="assets\images\bg.jpg" />
+    <Content Include="assets\images\logo.png" />
     <Content Include="Content.ascx" />
     <Content Include="Footer.ascx" />
     <Content Include="Global.asax" />
@@ -70,9 +81,15 @@
     <Content Include="Image\footerquantrij.PNG" />
     <Content Include="Image\headerquantri.PNG" />
     <Content Include="index.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="MasterPage\Test.Master" />
     <Content Include="MasterPage\QuanTri.Master" />
     <Content Include="MasterPage\Admin.Master" />
+    <Content Include="assets\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -84,6 +101,7 @@
     <Content Include="QuanTri.aspx" />
     <Content Include="QuanTri_ThongTinNguoiDung.aspx" />
     <Content Include="QuanTri_TinQuangCao.aspx" />
+    <Content Include="search.ascx" />
     <Content Include="Style2\base.css" />
     <Content Include="Style2\bootstrap.min.css" />
     <Content Include="Style2\bootstrap.min.js" />
@@ -102,6 +120,7 @@
     <Content Include="Style2\offcanvas.js" />
     <Content Include="Style2\pnr.js" />
     <Content Include="Style\bootstrap.min2.css" />
+    <Content Include="Style\Styles.css" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +201,13 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MasterPage\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -238,6 +264,13 @@
     </Compile>
     <Compile Include="QuanTri_TinQuangCao.aspx.designer.cs">
       <DependentUpon>QuanTri_TinQuangCao.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="search.ascx.cs">
+      <DependentUpon>search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="search.ascx.designer.cs">
+      <DependentUpon>search.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

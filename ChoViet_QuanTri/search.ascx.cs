@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ChoViet_QuanTri
 {
-    public partial class index1 : System.Web.UI.Page
+    public partial class search : System.Web.UI.UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -85,18 +85,17 @@
 			<hr class="soft">
 			</div>
 </div>
-
-	<a href="compair.html" class="btn btn-large pull-right">Compair Product</a>
 	<div class="pagination">
-			<ul>
-			<li><a href="#">‹</a></li>
-			<li><a href="#">1</a></li>
-			<li><a href="#">2</a></li>
-			<li><a href="#">3</a></li>
-			<li><a href="#">4</a></li>
-			<li><a href="#">...</a></li>
-			<li><a href="#">›</a></li>
-			</ul>
+		   <asp:Repeater ID="rptPages" runat="server"
+                onitemcommand="rptPages_ItemCommand1">
+                <ItemTemplate>
+                    <asp:LinkButton ID="btnPage"
+                     style="padding:1px 3px; margin:1px; background:#ccc; border:solid 1px #666; font:8pt tahoma;"
+                     CommandName="Page" CommandArgument="<%# Container.DataItem %>"
+                     runat="server"><%# Container.DataItem %>
+                    </asp:LinkButton>
+                </ItemTemplate>
+            </asp:Repeater>
 			</div>
 			<br class="clr">
 

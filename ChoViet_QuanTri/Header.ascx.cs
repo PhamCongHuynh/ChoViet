@@ -13,5 +13,16 @@ namespace ChoViet_QuanTri
         {
 
         }
+
+        protected void btlthoat_Click(object sender, EventArgs e)
+        {
+            string[] cookies = Request.Cookies.AllKeys;
+            foreach(string cookie in cookies)
+            {
+                Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
+                //Response.Redirect(Request.RawUrl);
+                Response.Redirect("login.aspx");
+            }
+        }
     }
 }
