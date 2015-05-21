@@ -19,18 +19,19 @@ namespace ChoViet_QuanTri.MasterPage
         }
         public void loadmenu()
         {
-            int idd = int.Parse(Session["id"].ToString());
-            Account_Manager_Controller ac = new Account_Manager_Controller();
-            var tk = ac.GetById(idd).ToList();
-            string role = tk.FirstOrDefault().position.ToString() ;
-            //Session["id"] = idd;
+            int id=1;
+            //int idd = int.Parse(Session["id"].ToString());
+            //Account_Manager_Controller ac = new Account_Manager_Controller();
+            //var tk = ac.GetById(idd).ToList();
+            //string role = tk.FirstOrDefault().position.ToString() ;
+            ////Session["id"] = idd;
             Control menu = new Control();
-            
-            if(role.Equals("1"))
+            //role.Equals("1")
+            if(id==1)
             {
                 menu = Page.LoadControl("~/MenuAdmin.ascx");
             }
-            else if (role.Equals("2"))
+            else if (id==2)
             {
                 menu = Page.LoadControl("~/MenuQuanTri.ascx");
             }

@@ -31,13 +31,22 @@ namespace ChoViet_QuanTri.MasterPage {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Header control.
+        /// btncanhan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ChoViet_QuanTri.Header Header;
+        protected global::System.Web.UI.WebControls.Button btncanhan;
+        
+        /// <summary>
+        /// btnthoat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnthoat;
         
         /// <summary>
         /// phMenu control.

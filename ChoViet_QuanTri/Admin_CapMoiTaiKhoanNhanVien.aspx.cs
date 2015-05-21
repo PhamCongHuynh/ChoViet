@@ -11,8 +11,18 @@ namespace ChoViet_QuanTri
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Lay ten file: Admin_CapMoiTaiKhoanNhanVien.aspx.cs
-            
+              
+        }
+
+        protected void btlxacnhan_Click(object sender, EventArgs e)
+        {
+            lbtxthoten.Text = txthoten.Text;
+            lbtxtemail.Text = txtemail.Text;
+            lblsodienthoai.Text = txtsodienthoai.Text;
+            lbltxtchucvu.Text = drchucvu.SelectedValue.ToString();
+            lbltxtngaysinh.Text = txtngaysinh.Text;
+            lbltxtdiachi.Text = txtdiachi.Text;
+            lbltxtdanhmuc.Text = drdanhmucquanly.SelectedItem.ToString();
         }
     }
 }

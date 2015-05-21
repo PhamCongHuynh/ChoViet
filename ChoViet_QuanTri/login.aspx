@@ -19,19 +19,15 @@
 			<div>
 				<img src="assets/images/logo.png" alt="" class="img-responsive" />
 				<div class="form-group">
-					<%--<input type="email" name="email" required="" class="form-control" placeholder="Enter email or nickname"/>--%>
                     <asp:TextBox ID="txttmaaikhoan" runat="server"  CssClass="form-control" placeholder="Nhập mã nhân viên"></asp:TextBox>
-					<%--<span class="glyphicon glyphicon-user"></span>--%>
+					
 				</div>
-				
 				<div class="form-group">
-                    <asp:TextBox ID="txtmatkhau" runat="server"  CssClass="form-control" TextMode="Password" placeholder="Nhập mật khẩu"></asp:TextBox>
-					<%--<input type="password" name="password" required="" class="form-control" placeholder="Enter password"/>--%>
-					<%--<span class="glyphicon glyphicon-lock"></span>--%>
+                    <asp:TextBox ID="txtmatkhau" runat="server"  CssClass="form-control" TextMode="Password" placeholder="Nhập mật khẩu"></asp:TextBox>	
 				</div>
                 <asp:Button ID="btndangnhap" CssClass="btn btn-primary btn-block" runat="server" Text="Đăng nhập" OnClick="btndangnhap_Click" />
-				<%--<button type="submit" name="go" class="btn btn-primary btn-block">Đăng nhập</button>--%>
-				<a href="#">Reset password</a>
+				
+				<a href="#">Nhớ mật khẩu</a>
 			</div>
 		</section>
 	</section>

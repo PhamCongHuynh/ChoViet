@@ -24,5 +24,6 @@ namespace ChoViet_QuanTri
             Grdanhsachnguoidung.DataSource = ac.getALL().ToList();
             Grdanhsachnguoidung.DataBind();
         }
+   
     }
 }

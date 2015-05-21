@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ChoViet_QuanTri
 {
-    public partial class QuanTri : System.Web.UI.Page
+    public partial class QuanTri_HoTroKhachHang : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

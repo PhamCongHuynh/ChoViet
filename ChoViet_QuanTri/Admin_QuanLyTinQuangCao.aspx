@@ -7,5 +7,20 @@
 		<li class="active">Quản lý tin quảng cáo</li>
     </ul>
     <hr />
+    <div class="jumbotron">
+        <div class="navbar-form">
+            <div class="form-group">
+                <asp:Label ID="Label1" CssClass="text-center" runat="server" Text="Tìm kiếm theo ID "></asp:Label>  
+            </div>
+            <div class="form-group">
+                <asp:TextBox ID="txttimkiem" CssClass="form-control"  runat="server"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <asp:Button ID="btltimkiem" CssClass="btn btn-success" runat="server" Text="Tìm kiếm" />
+            </div>
+
+        </div>
+    </div>
+
 
 </asp:Content>

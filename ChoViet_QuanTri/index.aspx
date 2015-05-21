@@ -3,9 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div>
-        <p>
-             Xin chao Quan tri vien bajn da dang nhap thanh cong
-        </p>
+    <div class="jumbotron">
+    <h1>Xin chào đã đăng nhập hệ thống chợ việt thành công </h1> 
+    <p>Cùng lỗ lực phấn đấu vì sự phát triển của công ty</p> 
     </div>
 </asp:Content>

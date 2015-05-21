@@ -11,7 +11,6 @@
 <head runat="server">
     <title></title>
     <link href="../Style2/bootstrap.min.css" rel="stylesheet" />
-    <%--<link href="../Style/bootstrap.min2.css" rel="stylesheet" />--%>
     <script src="../Style2/bootstrap.min.js"></script>
     <script src="../Style2/browserSpecificScript.js"></script>
     <script src="../Style2/contentscript.js"></script>
@@ -65,35 +64,43 @@
             background-image: none;
             border: 1px solid transparent;
             border-radius: 4px;
-        }
+        }  
+        .modalBackground{
+            background-color:black;
+            z-index:1000;
+            opacity:0.8;  
+        }   
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-      <nav class="navbar navbar-fixed-top navbar-inverse">
+      <nav class="navbar navbar-fixed-top navbar-inverse navbar-static-top">
           <%--   khu vực header--%>
-          <uc1:Header runat="server" ID="Header" />
+          <%--<uc1:Header runat="server" ID="Header" />--%>
+          <div class="container">
+             <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                   </button>                    
+               <a href="#" class="navbar-brand">Quản Trị Chợ Việt</a>               
+             </div>            
+             <div class="navbar-form navbar-right navbar-collapse collapse" id="menu">
+                 <div class="form-group">
+                     <asp:Button ID="btncanhan" CssClass="btn btn-link" runat="server" Text="Admin" />
+                 </div>
+                 <div class="form-group">
+                     <asp:Button ID="btnthoat" CssClass="btn btn-warning" runat="server" Text="Thoát" />
+                 </div>
+             </div>
 
-      <%--<div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Quản tri hệ thống</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">ChợViệt.net</a></li>
-            <li><a href="#about">Trang cá nhân </a></li>
-            <li><a href="#contact">Thoát</a></li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div>--%>
+          </div>
+
     </nav>
       <div class="container-fluid">
 
@@ -105,49 +112,9 @@
         </div>
         <div class="col-xs-12 col-sm-9">
           <p class="pull-left visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-          <%--<div class="jumbotron">
-                <div class="form-inline navbar-search">
-                    <asp:Label ID="Label5" runat="server" Text="Tìm kiếm theo ID"></asp:Label>
-                    <input id="txttimkiem" class="texttimkiem" type="text"/>
-                    <button type="submit" id="Button" class="btntile2 btn-primary">Tìm kiếm</button>
-                </div>
-              <hr />
-                <div class="form-inline navbar-search">
-                    <asp:Label ID="Label1" runat="server" Text="Từ ngày"></asp:Label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <input id="txttungay" class="textlich" type="text"/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <asp:Label ID="Label2" runat="server" Text="Đến ngày"></asp:Label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <input id="txtdenngay" class="textlich" type="text"/>
-                </div>
-
-                <div class="form-inline navbar-search">
-                    <asp:Label ID="Label3" runat="server" Text="Loại tin đăng"></asp:Label>
-		          <select class="textbinhthuong">
-			        <option>All</option>
-			        <option>CLOTHES </option>
-			        <option>FOOD AND BEVERAGES </option>
-			        <option>HEALTH &amp; BEAUTY </option>
-			        <option>SPORTS &amp; LEISURE </option>
-			        <option>BOOKS &amp; ENTERTAINMENTS </option>
-		        </select> 
-                    <asp:Label ID="Label4" runat="server" Text="Chọn khu vực"></asp:Label>
-                <select class="textbinhthuong">
-			        <option>All</option>
-			        <option>CLOTHES </option>
-			        <option>FOOD AND BEVERAGES </option>
-			        <option>HEALTH &amp; BEAUTY </option>
-			        <option>SPORTS &amp; LEISURE </option>
-			        <option>BOOKS &amp; ENTERTAINMENTS </option>
-		        </select>
-		          <button type="submit" id="submitButton" class="btntile2 btn-primary">Tìm kiếm nâng cao</button>
-                </div>
-              
-
-            <%--<h1>Hello, world!</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>--%>
-           
-          </div>--%>
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Hiện menu</button>
+          </p> 
+          
           <div class="row">
             <div class="col-xs-12 col-lg-12">
               <%--   khu vực dành cho nội dung--%>

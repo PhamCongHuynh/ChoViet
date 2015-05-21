@@ -11,7 +11,7 @@ namespace ChoViet_QuanTri
 {
 
 
-    public partial class QuanTri
+    public partial class QuanTri_BaoCaoThongKe
     {
     }
 }

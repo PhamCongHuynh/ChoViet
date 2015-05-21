@@ -38,6 +38,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.1.100, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\huynh\AppData\Local\Microsoft\VisualStudio\12.0\Extensions\b0lopug5.x5v\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -61,7 +65,9 @@
     <Content Include="Admin_PhanCongCongViec.aspx" />
     <Content Include="Admin_QuanLyTaiKhoan.aspx" />
     <Content Include="Admin_QuanLyTinQuangCao.aspx" />
-    <Content Include="Admin_TinQuangCao.aspx" />
+    <Content Include="QuanTri_BaoCaoThongKe.aspx" />
+    <Content Include="QuanTri_HoTroKhachHang.aspx" />
+    <Content Include="QuanTri_ThongTinChung.aspx" />
     <Content Include="Admin_CapMoiTaiKhoanNhanVien.aspx" />
     <Content Include="assets\bootstrap\css\bootstrap-theme.css" />
     <Content Include="assets\bootstrap\css\bootstrap-theme.min.css" />
@@ -98,7 +104,6 @@
     </None>
     <Content Include="MenuAdmin.ascx" />
     <Content Include="MenuQuanTri.ascx" />
-    <Content Include="QuanTri.aspx" />
     <Content Include="QuanTri_ThongTinNguoiDung.aspx" />
     <Content Include="QuanTri_TinQuangCao.aspx" />
     <Content Include="search.ascx" />
@@ -156,12 +161,26 @@
     <Compile Include="Admin_QuanLyTinQuangCao.aspx.designer.cs">
       <DependentUpon>Admin_QuanLyTinQuangCao.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin_TinQuangCao.aspx.cs">
-      <DependentUpon>Admin_TinQuangCao.aspx</DependentUpon>
+    <Compile Include="QuanTri_BaoCaoThongKe.aspx.cs">
+      <DependentUpon>QuanTri_BaoCaoThongKe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin_TinQuangCao.aspx.designer.cs">
-      <DependentUpon>Admin_TinQuangCao.aspx</DependentUpon>
+    <Compile Include="QuanTri_BaoCaoThongKe.aspx.designer.cs">
+      <DependentUpon>QuanTri_BaoCaoThongKe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri_HoTroKhachHang.aspx.cs">
+      <DependentUpon>QuanTri_HoTroKhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri_HoTroKhachHang.aspx.designer.cs">
+      <DependentUpon>QuanTri_HoTroKhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri_ThongTinChung.aspx.cs">
+      <DependentUpon>QuanTri_ThongTinChung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri_ThongTinChung.aspx.designer.cs">
+      <DependentUpon>QuanTri_ThongTinChung.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_CapMoiTaiKhoanNhanVien.aspx.cs">
       <DependentUpon>Admin_CapMoiTaiKhoanNhanVien.aspx</DependentUpon>
@@ -244,13 +263,6 @@
       <DependentUpon>MenuQuanTri.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanTri.aspx.cs">
-      <DependentUpon>QuanTri.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="QuanTri.aspx.designer.cs">
-      <DependentUpon>QuanTri.aspx</DependentUpon>
-    </Compile>
     <Compile Include="QuanTri_ThongTinNguoiDung.aspx.cs">
       <DependentUpon>QuanTri_ThongTinNguoiDung.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

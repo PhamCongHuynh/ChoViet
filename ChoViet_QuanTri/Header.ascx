@@ -9,7 +9,7 @@
           </button>
           <a class="navbar-brand" href="#">Quản tri hệ thống</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+        <div id="navbar" class="collapse navbar-collapse na">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">ChợViệt.net</a></li>
             <li class=""><a href="#about">Trang cá nhân </a></li>
