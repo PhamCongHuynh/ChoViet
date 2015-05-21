@@ -126,6 +126,7 @@
     <Content Include="Style2\pnr.js" />
     <Content Include="Style\bootstrap.min2.css" />
     <Content Include="Style\Styles.css" />
+    <Content Include="TinQuangCao_ViewChiTiet.aspx" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
@@ -283,6 +284,13 @@
     </Compile>
     <Compile Include="search.ascx.designer.cs">
       <DependentUpon>search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="TinQuangCao_ViewChiTiet.aspx.cs">
+      <DependentUpon>TinQuangCao_ViewChiTiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TinQuangCao_ViewChiTiet.aspx.designer.cs">
+      <DependentUpon>TinQuangCao_ViewChiTiet.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

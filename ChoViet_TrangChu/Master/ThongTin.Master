@@ -4,8 +4,6 @@
 <%@ Register Src="~/Choviet_Footer.ascx" TagPrefix="uc1" TagName="Choviet_Footer" %>
 
 
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -16,6 +14,7 @@
 <!-- Bootstrap style --> 
     <link id="callCss" rel="stylesheet" href="../themes/bootshop/bootstrap.min.css" media="screen"/>
     <link href="../themes/css/base.css" rel="stylesheet" media="screen"/>
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />
 <!-- Bootstrap style responsive -->	
 	<link href="../themes/css/bootstrap-responsive.min.css" rel="stylesheet"/>
 	<link href="../themes/css/font-awesome.css" rel="stylesheet" type="text/css"/>
@@ -28,7 +27,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../themes/images/ico/apple-touch-icon-72-precomposed.png"/>
     <link rel="apple-touch-icon-precomposed" href="../themes/images/ico/apple-touch-icon-57-precomposed.png"/>
 	<style type="text/css" id="enject"></style>
-  
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

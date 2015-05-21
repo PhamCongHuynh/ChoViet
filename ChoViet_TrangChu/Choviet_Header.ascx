@@ -26,10 +26,11 @@
           <asp:DropDownList CssClass="srchTxt" ID="DrCatgory" runat="server"></asp:DropDownList>
 		  <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
         </div>
+
     <ul id="topMenu" class="nav pull-right">
-	 <li class=""><a href="special_offer.html">Đăng Tin</a></li>
 	 <li class=""><a href="normal.html">Giới thiệu</a></li>
 	 <li class=""><a href="contact.html">Liên hệ</a></li>
+     <li class=""><a href="Choviet_DangKy.aspx">Đăng ký </a></li>
 	 <li class="">
 	 <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Đăng nhập</span></a>
 	 <div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false">

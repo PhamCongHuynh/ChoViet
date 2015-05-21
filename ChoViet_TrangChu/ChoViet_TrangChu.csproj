@@ -65,6 +65,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="Choviet_DangKy.aspx" />
     <Content Include="ChoViet_LienHe.aspx" />
     <Content Include="Choviet_Footer.ascx" />
     <Content Include="Choviet_MenuRight.ascx" />
@@ -167,7 +169,6 @@
   <ItemGroup>
     <Content Include="bootstrap\css\bootstrap-responsive.css" />
     <Content Include="bootstrap\css\bootstrap-responsive.min.css" />
-    <Content Include="bootstrap\css\bootstrap.css" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="bootstrap\img\glyphicons-halflings.png" />
@@ -262,6 +263,13 @@
     <Content Include="index.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Choviet_DangKy.aspx.cs">
+      <DependentUpon>Choviet_DangKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Choviet_DangKy.aspx.designer.cs">
+      <DependentUpon>Choviet_DangKy.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ChoViet_LienHe.aspx.cs">
       <DependentUpon>ChoViet_LienHe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

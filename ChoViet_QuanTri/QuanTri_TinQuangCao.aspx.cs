@@ -24,5 +24,11 @@ namespace ChoViet_QuanTri
             GrdanhSachtinquangcao.DataSource = News_Controller.QTViewDSProduct(cate,tyle_qc);
             GrdanhSachtinquangcao.DataBind();
         }
+
+        protected void GrdanhSachtinquangcao_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GrdanhSachtinquangcao.PageIndex = e.NewPageIndex;
+            loadDanhsachtinQC();
+        }
     }
 }

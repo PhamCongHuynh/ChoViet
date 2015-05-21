@@ -6,6 +6,6 @@
 		<li><a href="index.html">Quản trị hệ thống</a> <span class="divider">/</span></li>
 		<li class="active">Quản lý tin quảng cáo</li>
     </ul>
-    <asp:GridView ID="GrdanhSachtinquangcao" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20">
+    <asp:GridView ID="GrdanhSachtinquangcao" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" OnPageIndexChanging="GrdanhSachtinquangcao_PageIndexChanging">
     </asp:GridView>
 </asp:Content>
