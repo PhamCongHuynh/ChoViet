@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="member.master.cs" Inherits="ChoViet_TrangChu.Master.member" %>
+
+<%@ Register Src="~/Choviet_Footer.ascx" TagPrefix="uc1" TagName="Choviet_Footer" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8"/>
+    <title>Thành viên chợ việt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!-- Bootstrap style --> 
+    <link href="../Style2/base.css" rel="stylesheet" />
+    <link href="../Style2/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Style2/navbar-static-top.css" rel="stylesheet" />
+    <link href="../Style2/offcanvas.css" rel="stylesheet" />
+    <link href="../Style2/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-static-top navbar-fixed-top navbar-default">
+            <div class="container">
+             <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                   </button>                    
+               <a href="#" class="navbar-brand">CHỢ VIỆT.net</a>               
+             </div>            
+             <div class="navbar-form navbar-right navbar-collapse collapse" id="menu">
+                 <div class="form-group">
+                     <asp:Button ID="btncanhan" CssClass="btn btn-link" runat="server" Text="Admin" />
+                 </div>
+                 <div class="form-group">
+                     <asp:Button ID="btnthoat" CssClass="btn btn-warning" runat="server" Text="Thoát" />
+                 </div>
+             </div>
+            </div>
+        </nav>
+    
+      <div class="container-fluid">
+      <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+             <%--   khu vực dành cho menu--%>
+            <div class="list-group">
+            <a href="#" class="list-group-item active">Thông tin cá nhân</a>
+            <a href="#" class="list-group-item">Thông tin chung</a>
+            <a href="#" class="list-group-item">Thay đổi thông tin cá nhân</a>
+            <a href="#" class="list-group-item">Đổi mật khẩu</a>
+            <a href="#" class="list-group-item">Thoát / Logout</a>
+            <a href="#" class="list-group-item active"> Quản lý tin đăng</a>
+            <a href="#" class="list-group-item">Đăng tin mới</a>
+            <a href="#" class="list-group-item">Tin mới chờ duyệt</a>
+            <a href="#" class="list-group-item">Tin bị từ chối </a>
+            <a href="#" class="list-group-item">Tất cả tin </a>
+          </div>          
+        </div>
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-left visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Hiện menu</button>
+          </p> 
+          
+          <div class="row">
+            <div class="col-xs-12 col-lg-12">
+              <%--   khu vực dành cho nội dung--%>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+             </div>
+          </div>
+         </div>
+     </div>
+     </div>
+     <div>
+         <uc1:Choviet_Footer runat="server" ID="Choviet_Footer" />
+	<!-- Container End -->
+     </div>
+        <script src="../Style2/pnr.js"></script>
+        <script src="../Style2/offcanvas.js"></script>
+        <script src="../Style2/number_highlighting_builder.js"></script>
+        <script src="../Style2/mutation-summary.js"></script>
+        <script src="../Style2/jquery-2.1.0.min.js"></script>
+        <script src="../Style2/jquery.min.js"></script>
+        <script src="../Style2/ie10-viewport-bug-workaround.js"></script>
+        <script src="../Style2/ie-emulation-modes-warning.js"></script>
+        <script src="../Style2/fpnr.js"></script>
+        <script src="../Style2/contentscript.js"></script>
+        <script src="../Style2/browserSpecificScript.js"></script>
+        <script src="../Style2/bootstrap.min.js"></script>
+
+    </form>
+</body>
+</html>

@@ -28,49 +28,6 @@
     <script src="../Style2/pnr.js"></script>
     <%--  bootrap style2--%>
     <link href="../Style2/base.css" rel="stylesheet" />
-    <style>
-        .texttimkiem{
-             width: 350px;
-             height: 30px;
-        }
-        .textbinhthuong{
-             width: 200px;
-             height: 30px;
-        }
-        .textlich{
-             width: 150px;
-             height: 25px;
-        }
-        .btntile2 {
-            float:right;
-            height:30px;
-            width:140px;
-            display: inline-block;
-            padding: 6px 12px;
-            margin-bottom: 0;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 1.42857143;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: middle;
-            -ms-touch-action: manipulation;
-            touch-action: manipulation;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            background-image: none;
-            border: 1px solid transparent;
-            border-radius: 4px;
-        }  
-        .modalBackground{
-            background-color:black;
-            z-index:1000;
-            opacity:0.8;  
-        }   
-    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

@@ -84,8 +84,6 @@
     <Content Include="Footer.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Header.ascx" />
-    <Content Include="Image\footerquantrij.PNG" />
-    <Content Include="Image\headerquantri.PNG" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
     <Content Include="MasterPage\Test.Master" />
@@ -302,6 +300,9 @@
       <Project>{735cf620-e0e3-4076-a726-dad6e9829ad1}</Project>
       <Name>DATA</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Image\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

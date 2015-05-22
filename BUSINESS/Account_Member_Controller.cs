@@ -33,5 +33,11 @@ namespace BUSINESS
             Account_Member ac = Account_MemberREPO.GetById(ids);
             Account_MemberREPO.Delete(ac);         
         }
+
+        public void insertMember(Account_Member ac)
+        {
+            Account_MemberREPO.Insert(ac);
+        }
+
     }
 }

@@ -32,7 +32,7 @@
 	 <li class=""><a href="contact.html">Liên hệ</a></li>
      <li class=""><a href="Choviet_DangKy.aspx">Đăng ký </a></li>
 	 <li class="">
-	 <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-large btn-success">Đăng nhập</span></a>
+	 <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-success">Đăng nhập</span></a>
 	 <div id="login" class="modal hide fade in" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="false">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
