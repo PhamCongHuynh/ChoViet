@@ -10,7 +10,16 @@
 namespace ChoViet_TrangChu.Master {
     
     
-    public partial class member {
+    public partial class Index {
+        
+        /// <summary>
+        /// callCss control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlLink callCss;
         
         /// <summary>
         /// head control.
@@ -31,22 +40,13 @@ namespace ChoViet_TrangChu.Master {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// btncanhan control.
+        /// Choviet_Header control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btncanhan;
-        
-        /// <summary>
-        /// btnthoat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnthoat;
+        protected global::ChoViet_TrangChu.Header Choviet_Header;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

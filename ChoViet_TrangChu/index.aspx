@@ -141,16 +141,6 @@
 			
 			  <div class="item">
 			  <ul class="thumbnails">
-				<%--<li class="span3">
-				  <div class="thumbnail">
-				  <i class="tag"></i>
-					<a href="product_details.html"><img src="themes/images/products/b1.jpg" alt=""></a>
-					<div class="caption">
-					  <h5>Product name</h5>
-					  <h4><a class="btn" href="product_details.html">VIEW</a> <span class="pull-right">$222.00</span></h4>
-					</div>
-				  </div>
-				</li>--%>
                  <asp:Repeater ID="DLDanhSachDB" runat="server">
                       <ItemTemplate>                       
                        <li class="span3">
@@ -178,10 +168,10 @@
 				       <div class="thumbnail">
                           <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("url_image") %>' Height="160px" Width="160px" />
 					        <div class="caption">
-                                <h5> <asp:Label ID="txtnguoidang" runat="server" Text='<%# Eval("nguoidang") %>'>'></asp:Label></h5>
+                                <h5> <asp:Label ID="txtnguoidang" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label></h5>
                                 <p><asp:Label ID="txttieude" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
 
-					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Xem chi tiết <i class="icon-zoom-in"></i></a> <a class="btn btn-primary" href="#">'<%# Eval("price") %>'></a></h4>
+					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Xem chi tiết <i class="icon-zoom-in"></i></a> <a class="btn btn-primary" href="#">'<%# Eval("price") %>'</a></h4>
 					        </div>
 				       </div>
 				      </li>

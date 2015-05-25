@@ -8,7 +8,7 @@
 		<a href="product_summary.html"><span class="">Es</span></a>
         <a href="product_summary.html"><span class="">Ngôn ngữ</span></a>
 		<span class="btn btn-mini">Tiếng Việt</span>
-		<a href="product_summary.html"><span class="btn btn-mini btn-primary"><i class="icon-shopping-cart icon-white"></i> Đăng tin ngay </span> </a> 
+		<a href="Choviet_Dangtin.aspx"><span class="btn btn-mini btn-primary"><i class="icon-shopping-cart icon-white"></i> Đăng tin ngay </span> </a> 
 	</div>
 	</div>
 </div>
@@ -20,7 +20,7 @@
 	<span class="icon-bar"></span>
 </a>
   <div class="navbar-inner">
-    <a class="brand" href="index.html"><img src="themes/images/logo.png" alt="Chợ Việt.net"/></a>
+    <a class="brand" href="index.aspx"><img src="themes/images/logo.png" alt="Chợ Việt.net"/></a>
 		<div class="form-inline navbar-search">
           <asp:TextBox CssClass="srchTxt" ID="seacrch" runat="server"></asp:TextBox>
           <asp:DropDownList CssClass="srchTxt" ID="DrCatgory" runat="server"></asp:DropDownList>
@@ -28,8 +28,8 @@
         </div>
 
     <ul id="topMenu" class="nav pull-right">
-	 <li class=""><a href="normal.html">Giới thiệu</a></li>
-	 <li class=""><a href="contact.html">Liên hệ</a></li>
+	 <li class=""><a href="Choviet_rule.aspx">Giới thiệu</a></li>
+	 <li class=""><a href="ChoViet_LienHe.aspx">Liên hệ</a></li>
      <li class=""><a href="Choviet_DangKy.aspx">Đăng ký </a></li>
 	 <li class="">
 	 <a href="#login" role="button" data-toggle="modal" style="padding-right:0"><span class="btn btn-success">Đăng nhập</span></a>

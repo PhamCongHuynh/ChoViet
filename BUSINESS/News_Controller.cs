@@ -207,5 +207,27 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
+        public static IEnumerable NewsNguoiDungBy(int AC_id, string st_new_id)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var Views = from n in db.Newss.AsEnumerable()
+                            where n.status_news.Equals(st_new_id) && n.Account_Members.Id == AC_id
+                            join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
+                            join re in db.Regions on n.Regions.Id equals re.Id
+                            join ca in db.Categorys on n.Category.Id equals ca.Id
+                            select new
+                            {
+                                Matin = n.Id,
+                                tieude = n.title,
+                                khuvuc = re.Name,
+                                danhmuc = ca.name,
+                                kiemduyet=n.status_news,
+                                thoigiandang = n.datecreate,
+                                luotxem=n.views                               
+                            };
+                return Views.ToList();
+            }
+        }
     }
 }
