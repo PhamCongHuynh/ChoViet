@@ -30,6 +30,7 @@ namespace DATA
         public IList<Status_Members> Status_Memberss { get; set; }
         public IList<News> News { get; set; }
         public IList<Information> Informations { get; set; }
+        public IList<Support> Suports { get; set; }
         public Account_Manager() { }
 
     }

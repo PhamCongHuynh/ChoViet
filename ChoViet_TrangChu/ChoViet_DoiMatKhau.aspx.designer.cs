@@ -7,72 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChoViet_TrangChu.Master {
+namespace ChoViet_TrangChu {
     
     
-    public partial class Index {
+    public partial class ChoViet_DoiMatKhau {
         
         /// <summary>
-        /// callCss control.
+        /// txtmatkhauhientai control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlLink callCss;
+        protected global::System.Web.UI.WebControls.TextBox txtmatkhauhientai;
         
         /// <summary>
-        /// head control.
+        /// txtmatkhaumoi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.TextBox txtmatkhaumoi;
         
         /// <summary>
-        /// form1 control.
+        /// txtnhaplaimatkhau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtnhaplaimatkhau;
         
         /// <summary>
-        /// Choviet_Header control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ChoViet_TrangChu.Header Choviet_Header;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Choviet_MenuMember control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ChoViet_TrangChu.Choviet_MenuMember Choviet_MenuMember;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-        
-        /// <summary>
-        /// Choviet_Footer control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::ChoViet_TrangChu.Footer Choviet_Footer;
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

@@ -54,31 +54,6 @@
     <Compile Include="Category.cs" />
     <Compile Include="dbchoviet.cs" />
     <Compile Include="Information.cs" />
-    <Compile Include="Migrations\201504200330500_InitialCreate.cs" />
-    <Compile Include="Migrations\201504200330500_InitialCreate.Designer.cs">
-      <DependentUpon>201504200330500_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504200355127_AddedFirstName.cs" />
-    <Compile Include="Migrations\201504200355127_AddedFirstName.Designer.cs">
-      <DependentUpon>201504200355127_AddedFirstName.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504200820075_AddSecondMigration.cs" />
-    <Compile Include="Migrations\201504200820075_AddSecondMigration.Designer.cs">
-      <DependentUpon>201504200820075_AddSecondMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504271356434_ThirdMigration.cs" />
-    <Compile Include="Migrations\201504271356434_ThirdMigration.Designer.cs">
-      <DependentUpon>201504271356434_ThirdMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504271627079_fourMigration.cs" />
-    <Compile Include="Migrations\201504271627079_fourMigration.Designer.cs">
-      <DependentUpon>201504271627079_fourMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201504271658193_fiveMigration.cs" />
-    <Compile Include="Migrations\201504271658193_fiveMigration.Designer.cs">
-      <DependentUpon>201504271658193_fiveMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Regions.cs" />
     <Compile Include="Images.cs" />
     <Compile Include="LichSuLamViec.cs" />
@@ -94,26 +69,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201504200330500_InitialCreate.resx">
-      <DependentUpon>201504200330500_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504200355127_AddedFirstName.resx">
-      <DependentUpon>201504200355127_AddedFirstName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504200820075_AddSecondMigration.resx">
-      <DependentUpon>201504200820075_AddSecondMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504271356434_ThirdMigration.resx">
-      <DependentUpon>201504271356434_ThirdMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504271627079_fourMigration.resx">
-      <DependentUpon>201504271627079_fourMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201504271658193_fiveMigration.resx">
-      <DependentUpon>201504271658193_fiveMigration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

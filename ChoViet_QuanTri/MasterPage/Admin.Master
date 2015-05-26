@@ -2,9 +2,6 @@
 
 <%@ Register Src="~/Header.ascx" TagPrefix="uc1" TagName="Header" %>
 <%@ Register Src="~/MenuAdmin.ascx" TagPrefix="uc1" TagName="MenuAdmin" %>
-
-
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">

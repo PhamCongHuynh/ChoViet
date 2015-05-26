@@ -3,6 +3,8 @@
 
 <%@ Register Src="~/Choviet_Header.ascx" TagPrefix="uc1" TagName="Choviet_Header" %>
 <%@ Register Src="~/Choviet_Footer.ascx" TagPrefix="uc1" TagName="Choviet_Footer" %>
+<%@ Register Src="~/Choviet_MenuMember.ascx" TagPrefix="uc1" TagName="Choviet_MenuMember" %>
+
 
 
 <!DOCTYPE html>
@@ -34,15 +36,24 @@
 <body>
     <form id="form1" runat="server">
                 <div id="header">
-                <uc1:Choviet_Header runat="server" id="Choviet_Header" />
-                
+                <uc1:Choviet_Header runat="server" id="Choviet_Header" />               
                 </div>
 <!-- Header End====================================================================== -->
                 <div id="mainBody">
+                  <div class="container" style="min-height:500px;">
+	                <div class="row">
+                <!-- Sidebar ================================================== -->
+	                <div id="sidebar" class="span3">
+                        <uc1:Choviet_MenuMember runat="server" ID="Choviet_MenuMember" />
+	                </div>
+                    <div class="span9">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    </div>
+                 </div>
                 
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-                </asp:ContentPlaceHolder>
+                
                 
                 </div>
 <!-- MainBody End ============================= -->

@@ -16,6 +16,12 @@ namespace DATA
         [StringLength(250)]
         public string email { get; set; }
         [StringLength(250)]
+        public string birthday { get; set; }
+        [StringLength(250)]
+        public string gender { get; set; }
+        [StringLength(250)]
+        public string address { get; set; }
+        [StringLength(250)]
         public string password { get; set; }
         [StringLength(250)]
         public string datecreate { get; set; }

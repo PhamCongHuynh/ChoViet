@@ -13,15 +13,6 @@ namespace ChoViet_TrangChu {
     public partial class ChoViet_Member {
         
         /// <summary>
-        /// Choviet_MenuMember control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::ChoViet_TrangChu.Choviet_MenuMember Choviet_MenuMember;
-        
-        /// <summary>
         /// Grdanhsach control.
         /// </summary>
         /// <remarks>

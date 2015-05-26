@@ -15,9 +15,9 @@ namespace DATA
         public DbSet<Account_Member> Account_Members { get; set; }
         public DbSet<News> Newss { get; set; }
         public DbSet<Schedule> Schedules { get; set; }
-        public DbSet<Images> Imagess { get; set; }
         public DbSet<Advertising> Advertisings { get; set; }
         public DbSet<Information> Informations { get; set; }
+        public DbSet<Support> Suports { get; set; }
         public dbchoviet():base()
         {
 

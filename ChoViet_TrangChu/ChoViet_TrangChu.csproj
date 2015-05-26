@@ -68,6 +68,8 @@
     <Content Include="bootstrap\css\bootstrap.css" />
     <Content Include="Choviet_DangKy.aspx" />
     <Content Include="Choviet_Dangtin.aspx" />
+    <Content Include="ChoViet_DoiMatKhau.aspx" />
+    <Content Include="ChoViet_DoiThongTinCaNhan.aspx" />
     <Content Include="ChoViet_LienHe.aspx" />
     <Content Include="Choviet_Footer.ascx" />
     <Content Include="ChoViet_Member.aspx" />
@@ -280,6 +282,20 @@
     </Compile>
     <Compile Include="Choviet_Dangtin.aspx.designer.cs">
       <DependentUpon>Choviet_Dangtin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChoViet_DoiMatKhau.aspx.cs">
+      <DependentUpon>ChoViet_DoiMatKhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChoViet_DoiMatKhau.aspx.designer.cs">
+      <DependentUpon>ChoViet_DoiMatKhau.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChoViet_DoiThongTinCaNhan.aspx.cs">
+      <DependentUpon>ChoViet_DoiThongTinCaNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChoViet_DoiThongTinCaNhan.aspx.designer.cs">
+      <DependentUpon>ChoViet_DoiThongTinCaNhan.aspx</DependentUpon>
     </Compile>
     <Compile Include="ChoViet_LienHe.aspx.cs">
       <DependentUpon>ChoViet_LienHe.aspx</DependentUpon>
