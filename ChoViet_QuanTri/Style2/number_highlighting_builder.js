@@ -109,7 +109,7 @@ SkypeClick2Call.NumberHighlightingBuilder.initialize = function() {
 * @desc Searches and highlights numbers within a given element. It searches the given node's child nodes too
 *       and stops when all matches have been found.
 * @param element - Element to search
-* @param searchContext - Context information used while searching
+* @param searchContext - Context Support used while searching
 */
 SkypeClick2Call.NumberHighlightingBuilder.searchAndHighlight = function(element, searchContext) {
 

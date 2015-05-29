@@ -87,7 +87,7 @@ var localization = {
             FREE_VIA_SKYPE: "Per Skype kostenlos",
             NO_CREDIT_REQUIRED: "Kein Skype-Guthaben erforderlich",
             FREE: "KOSTENLOS",
-            HOW_TO_USE: "Weitere Informationen"
+            HOW_TO_USE: "Weitere Supporten"
         },
         el: {
             CALL: "Κλήση",

@@ -5,7 +5,7 @@
  * details, see http://creativecommons.org/licenses/by/3.0/.
  */
 
-// See the Getting Started docs for more information:
+// See the Getting Started docs for more Support:
 // http://getbootstrap.com/getting-started/#support-ie10-width
 
 (function () {

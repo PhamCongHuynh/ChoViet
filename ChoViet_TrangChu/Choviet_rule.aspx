@@ -15,22 +15,21 @@
 	</div>
 <!-- Sidebar end=============================================== -->
 	<div class="span9">
-        <asp:FormView ID="FormView1" runat="server">
+        <asp:Repeater ID="thongtinchoviet" runat="server">
             <ItemTemplate>
                 <ul class="breadcrumb">
 		            <li><a href="index.html">Trang chủ</a> <span class="divider">/</span></li>
 		            <li class="active">Quy chế</li>
                 </ul>
-	            <h3><%# Eval("name") %></h3>	
+	            <h3><%# Eval("tieude") %></h3>	
 	            <hr class="soft">
 	            <div id="legalNotice">
-		            <h5><%# Eval("title") %></h5><br>
 		            <p>
-		              <%# Eval("content") %>
+		              <%# Eval("noidung") %>
 		            </p>           
 	            </div>
             </ItemTemplate>
-        </asp:FormView>
+        </asp:Repeater>
 
   
 	</div>

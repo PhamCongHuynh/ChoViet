@@ -67,6 +67,7 @@
     <Content Include="Admin_QuanLyTinQuangCao.aspx" />
     <Content Include="QuanTri_BaoCaoThongKe.aspx" />
     <Content Include="QuanTri_HoTroKhachHang.aspx" />
+    <Content Include="QuanTri_ThongTinChoViet.aspx" />
     <Content Include="QuanTri_ThongTinChung.aspx" />
     <Content Include="Admin_CapMoiTaiKhoanNhanVien.aspx" />
     <Content Include="assets\bootstrap\css\bootstrap-theme.css" />
@@ -173,6 +174,13 @@
     </Compile>
     <Compile Include="QuanTri_HoTroKhachHang.aspx.designer.cs">
       <DependentUpon>QuanTri_HoTroKhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri_ThongTinChoViet.aspx.cs">
+      <DependentUpon>QuanTri_ThongTinChoViet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri_ThongTinChoViet.aspx.designer.cs">
+      <DependentUpon>QuanTri_ThongTinChoViet.aspx</DependentUpon>
     </Compile>
     <Compile Include="QuanTri_ThongTinChung.aspx.cs">
       <DependentUpon>QuanTri_ThongTinChung.aspx</DependentUpon>

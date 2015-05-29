@@ -30,5 +30,10 @@ namespace ChoViet_QuanTri
             GrdanhSachtinquangcao.PageIndex = e.NewPageIndex;
             loadDanhsachtinQC();
         }
+
+        protected void GrdanhSachtinquangcao_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+            Response.Redirect("TinQuangCao_ViewChiTiet.aspx");
+        }
     }
 }

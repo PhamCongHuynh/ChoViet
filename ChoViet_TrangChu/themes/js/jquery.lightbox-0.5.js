@@ -9,7 +9,7 @@
  * @category jQuery plugin
  * @copyright (c) 2008 Leandro Vieira Pinho (leandrovieira.com)
  * @license CCAttribution-ShareAlike 2.5 Brazil - http://creativecommons.org/licenses/by-sa/2.5/br/deed.en_US
- * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
+ * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more Supports about this jQuery plugin
  */
 
 // Offering a Custom Alias suport - More info: http://docs.jquery.com/Plugins/Authoring#Custom_Alias
@@ -70,7 +70,7 @@
 			_set_interface();
 			// Unset total images in imageArray
 			settings.imageArray.length = 0;
-			// Unset image active information
+			// Unset image active Support
 			settings.activeImage = 0;
 			// We have an image set? Or just an image? Let´s see it.
 			if ( jQueryMatchedObj.length == 1 ) {
@@ -234,7 +234,7 @@
 			_preload_neighbor_images();
 		};
 		/**
-		 * Show the image information
+		 * Show the image Support
 		 *
 		 */
 		function _show_image_data() {

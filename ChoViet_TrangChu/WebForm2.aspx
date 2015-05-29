@@ -88,7 +88,7 @@
             </ul>
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade active in" id="home">
-			  <h4>Product Information</h4>
+			  <h4>Product Support</h4>
                 <table class="table table-bordered">
 				<tbody>
 				<tr class="techSpecRow"><th colspan="2">Product Details</th></tr>

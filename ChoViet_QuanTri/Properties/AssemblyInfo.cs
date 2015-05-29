@@ -2,8 +2,8 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
+// General Support about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the Support
 // associated with an assembly.
 [assembly: AssemblyTitle("ChoViet_QuanTri")]
 [assembly: AssemblyDescription("")]
@@ -22,7 +22,7 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("a673dd4c-f930-43ec-8938-808f5147475f")]
 
-// Version information for an assembly consists of the following four values:
+// Version Support for an assembly consists of the following four values:
 //
 //      Major Version
 //      Minor Version 

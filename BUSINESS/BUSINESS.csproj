@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Account_Manager_Controller.cs" />
     <Compile Include="Account_Member_Controller.cs" />
+    <Compile Include="Information_controller.cs" />
     <Compile Include="Regions_Controller.cs" />
     <Compile Include="Category_Controller.cs" />
     <Compile Include="Advertising_Controller.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Reportting_Controller.cs" />
     <Compile Include="Schedule_Controller.cs" />
     <Compile Include="Status_Members_Controller.cs" />
+    <Compile Include="Supports_controller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

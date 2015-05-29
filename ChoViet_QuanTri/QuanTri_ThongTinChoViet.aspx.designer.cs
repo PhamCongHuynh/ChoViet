@@ -7,27 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChoViet_TrangChu {
+namespace ChoViet_QuanTri {
     
     
-    public partial class Choviet_rule {
+    public partial class QuanTri_ThongTinChoViet {
         
         /// <summary>
-        /// Choviet_MenuRight control.
+        /// grdsthongtin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::ChoViet_TrangChu.Choviet_MenuRight Choviet_MenuRight;
-        
-        /// <summary>
-        /// thongtinchoviet control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater thongtinchoviet;
+        protected global::System.Web.UI.WebControls.GridView grdsthongtin;
     }
 }

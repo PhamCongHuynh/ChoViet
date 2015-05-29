@@ -2,28 +2,25 @@
 <div class="container">
 		<div class="row">
 			<div class="span3">
-				<h5>Tài khoản</h5>
-				<a href="login.html">YOUR ACCOUNT</a>
-				<a href="login.html">PERSONAL INFORMATION</a> 
-				<a href="login.html">ADDRESSES</a> 
-				<a href="login.html">DISCOUNT</a>  
-				<a href="login.html">ORDER HISTORY</a>
+				<h5>Chợ Viêt.net</h5>
+				<a href="login.html">Hiểu thêm về chợ việt.net</a>
+				<a href="login.html">Theo dõi</a> 
+				<a href="login.html">Tuyển dụng</a> 
 			 </div>
 			<div class="span3">
 				<h5>Thông tin liên hệ</h5>
-				<a href="contact.html">CONTACT</a>  
-				<a href="register.html">REGISTRATION</a>  
-				<a href="legal_notice.html">LEGAL NOTICE</a>  
-				<a href="tac.html">TERMS AND CONDITIONS</a> 
-				<a href="faq.html">FAQ</a>
+				<a href="ChoViet_LienHe.aspx">Liên hệ chợ việt</a>  
+				<a href="Choviet_rule.aspx?matt=1">Quy chế Chợ Việt</a>  
+				<a href="Choviet_rule.aspx?matt=4">Quy định đăng tin</a>  
+				<a href="Choviet_rule.aspx?matt=2">Quy tắc mua bán</a> 
+				<a href="Choviet_rule.aspx">Chứng nhận</a>
 			 </div>
 			<div class="span3">
 				<h5>Chăm sóc khách hàng</h5>
-				<a href="#">NEW PRODUCTS</a> 
-				<a href="#">TOP SELLERS</a>  
-				<a href="special_offer.html">SPECIAL OFFERS</a>  
-				<a href="#">MANUFACTURERS</a> 
-				<a href="#">SUPPLIERS</a> 
+				<a href="ChoViet_LienHe.aspx">Thắc mắc khiếu nại</a> 
+				<a href="ChoViet_HoiDap.aspx">Hỏi đáp</a>  
+				<a href="Choviet_rule.aspx?matt=3">An toàn mua bán</a>  
+				<a href="Choviet_rule.aspx">Kinh nghiệm mua bán</a> 
 			 </div>
 			<div id="socialMedia" class="span3 pull-right">
 				<h5>Cộng đồng </h5>

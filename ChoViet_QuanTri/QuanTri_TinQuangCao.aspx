@@ -6,6 +6,9 @@
 		<li><a href="index.html">Quản trị hệ thống</a> <span class="divider">/</span></li>
 		<li class="active">Quản lý tin quảng cáo</li>
     </ul>
-    <asp:GridView ID="GrdanhSachtinquangcao" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" OnPageIndexChanging="GrdanhSachtinquangcao_PageIndexChanging">
+    <asp:GridView ID="GrdanhSachtinquangcao" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" OnPageIndexChanging="GrdanhSachtinquangcao_PageIndexChanging" OnSelectedIndexChanging="GrdanhSachtinquangcao_SelectedIndexChanging">
+        <Columns>
+            <asp:CommandField DeleteText="Xóa" HeaderText="Thao tác" SelectText="Xem chi tiết" ShowDeleteButton="True" ShowSelectButton="True" />
+        </Columns>
     </asp:GridView>
 </asp:Content>

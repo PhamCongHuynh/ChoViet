@@ -28,7 +28,7 @@
         </div>
 
     <ul id="topMenu" class="nav pull-right">
-	 <li class=""><a href="Choviet_rule.aspx">Giới thiệu</a></li>
+	 <li class=""><a href="Choviet_rule.aspx?matt=5">Giới thiệu</a></li>
 	 <li class=""><a href="ChoViet_LienHe.aspx">Liên hệ</a></li>
      <li class=""><a href="Choviet_DangKy.aspx">Đăng ký </a></li>
 	 <li class="">
