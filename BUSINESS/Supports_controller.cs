@@ -17,7 +17,11 @@ namespace BUSINESS
         {
             SupportREPO = unitOfWork.Repository<Support>();
         }
-       
+        public List<Support> GetAll()
+        {
+            List<Support> sup = SupportREPO.Table.ToList();
+            return sup;
+        }
         public static IEnumerable getBySupID(int ids)
         {
             using(dbchoviet db=new dbchoviet())
@@ -40,6 +44,26 @@ namespace BUSINESS
             }
            
             
+        }
+        public static IEnumerable QTGetALL()
+        {
+           using(dbchoviet db=new dbchoviet())
+           {
+               var query = (from s in db.Suports
+                            
+                            select new
+                            {
+                                matin = s.id,
+                                nguoigui = s.name_cus,
+                                email = s.email_cus,
+                                sodienthoai = s.phone_cus,
+                                tieude = s.title,
+                                ngaynhan = s.datecreate,
+                                
+
+                            });
+               return query.ToList();
+           }
         }
         public static IEnumerable getQTSupALL()
         {
@@ -67,13 +91,13 @@ namespace BUSINESS
         }
         public void UpdateSup(int ids)
         {
-            Support info = SupportREPO.GetById(ids);
-            SupportREPO.Update(info);
+            Support sup = SupportREPO.GetById(ids);
+            SupportREPO.Update(sup);
         }
         public void Delete(int ids)
         {
-            Support info = SupportREPO.GetById(ids);
-           SupportREPO.Delete(info);
+            Support sup = SupportREPO.GetById(ids);
+           SupportREPO.Delete(sup);
         }
     }
     

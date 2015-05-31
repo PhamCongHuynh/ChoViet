@@ -26,5 +26,8 @@ namespace DATA
         [StringLength(2000)]
         public string note { get; set; }
         public Account_Manager Account_Managers { get; set; }
+        public Support()
+        {}
+
     }
 }

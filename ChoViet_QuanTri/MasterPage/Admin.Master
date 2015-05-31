@@ -25,6 +25,13 @@
     <script src="../Style2/pnr.js"></script>
     <%--  bootrap style2--%>
     <link href="../Style2/base.css" rel="stylesheet" />
+       <style type="text/css">
+        .modalBackground{
+            background-color:black;
+            z-index:1000;
+            opacity:0.8;  
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

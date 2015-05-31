@@ -12,6 +12,12 @@ namespace DATA
         public Account_Member Account_Members { get; set; }
         public Regions Regions { get; set; }
         public Category Category { get; set; }
+        [StringLength(250)]
+        public string full_name { get; set; }
+        [StringLength(250)]
+        public string phone_number { get; set; }
+        [StringLength(250)]
+        public string email { get; set; }
           [StringLength(250)]
         public string Address_contact { get; set; }
           [StringLength(250)]

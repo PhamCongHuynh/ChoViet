@@ -42,6 +42,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\huynh\AppData\Local\Microsoft\VisualStudio\12.0\Extensions\b0lopug5.x5v\AjaxControlToolkit.dll</HintPath>
     </Reference>
+    <Reference Include="AjaxControlToolkit.HtmlEditor.Sanitizer">
+      <HintPath>..\packages\AjaxControlToolkit.HtmlEditor.Sanitizer.15.1.2.0\lib\net40\AjaxControlToolkit.HtmlEditor.Sanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -95,6 +101,8 @@
     <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="packages.config" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -123,13 +131,10 @@
     <Content Include="Style2\offcanvas.css" />
     <Content Include="Style2\offcanvas.js" />
     <Content Include="Style2\pnr.js" />
-    <Content Include="Style\bootstrap.min2.css" />
-    <Content Include="Style\Styles.css" />
     <Content Include="TinQuangCao_ViewChiTiet.aspx" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Style\Admin.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -297,6 +302,13 @@
     </Compile>
     <Compile Include="TinQuangCao_ViewChiTiet.aspx.designer.cs">
       <DependentUpon>TinQuangCao_ViewChiTiet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

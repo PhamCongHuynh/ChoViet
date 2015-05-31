@@ -18,16 +18,18 @@ namespace BUSINESS
         {
             News_ControllerREPO = unitOfWork.Repository<News>();
         }
-
+        // lấy tất cả danh sách tin tức 
         public List<News> GetAll()
         {
             List<News> New = News_ControllerREPO.Table.ToList();
             return New;
         }
-        public void createNew()
+        // phương thức đăng tin mới 
+        public void insertNew(News objnew)
         {
-
+            News_ControllerREPO.Insert(objnew);
         }
+        //phương thức trả về phần danh sách sản phầm hiển thị trang index 30 sản phẩm
         public static IEnumerable ViewLastProduct()
         {
             using (dbchoviet db = new dbchoviet())
@@ -50,6 +52,7 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
+        //phương thức trả về phần danh sách sản phầm nổi bật hiển thị trang index 4 sản phẩm
         public static IEnumerable ViewSPnoibat()
         {
             using (dbchoviet db = new dbchoviet())
@@ -72,6 +75,7 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
+        // phương thức lấy các sản phẩm theo từng danh mục
         public static IEnumerable ViewByproduct(int idDanhmuc)
         {
             using (dbchoviet db = new dbchoviet())
@@ -96,6 +100,8 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
+
+        //phương thức trả về chi tiết 1 sản phẩm theo mã id
         public static IEnumerable ViewByChiTiet(int ids)
         {
             using (dbchoviet db = new dbchoviet())
@@ -128,6 +134,7 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
+        //Quản trị: phương thức này trả về danh sách các sản phẩm trong phần quản trị
         public static IEnumerable ViewDanhSachTinQLByCategoryID(int ids)
         {
             using (dbchoviet db = new dbchoviet())
@@ -152,6 +159,7 @@ namespace BUSINESS
             }
 
         }
+        // quản trị : phương thức xem chi tiết 1 tin quảng cáo theo mã ID 
         public static IEnumerable ViewChiTietTinQLByCategoryID(int ids)
         {
             using (dbchoviet db = new dbchoviet())
@@ -185,6 +193,7 @@ namespace BUSINESS
             }
 
         }
+        // Quản trị / trả về danh sách sản phẩm theo mã danh mục và tình trạng tin quảng cáo đã được đăng hay chưa 
         public static IEnumerable QTViewDSProduct(int cate_id,string st_new_id)
         {
             using (dbchoviet db = new dbchoviet())
@@ -207,6 +216,7 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
+        // phương thức trả về các tin quảng cáo của từng người dùng theo tình trạng bài đăng 
         public static IEnumerable NewsNguoiDungBy(int AC_id, string st_new_id)
         {
             using (dbchoviet db = new dbchoviet())

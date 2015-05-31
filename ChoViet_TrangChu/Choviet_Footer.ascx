@@ -3,9 +3,10 @@
 		<div class="row">
 			<div class="span3">
 				<h5>Chợ Viêt.net</h5>
-				<a href="login.html">Hiểu thêm về chợ việt.net</a>
-				<a href="login.html">Theo dõi</a> 
-				<a href="login.html">Tuyển dụng</a> 
+				<a href="Choviet_rule.aspx?matt=5">Hiểu thêm về chợ việt.net</a>
+				<a href="Choviet_rule.aspx?matt=6">Theo dõi</a> 
+				<a href="Choviet_rule.aspx?matt=7">Tuyển dụng</a>
+                <a href="Choviet_rule.aspx?matt=8">Chứng nhận</a>
 			 </div>
 			<div class="span3">
 				<h5>Thông tin liên hệ</h5>
@@ -13,14 +14,14 @@
 				<a href="Choviet_rule.aspx?matt=1">Quy chế Chợ Việt</a>  
 				<a href="Choviet_rule.aspx?matt=4">Quy định đăng tin</a>  
 				<a href="Choviet_rule.aspx?matt=2">Quy tắc mua bán</a> 
-				<a href="Choviet_rule.aspx">Chứng nhận</a>
+				
 			 </div>
 			<div class="span3">
 				<h5>Chăm sóc khách hàng</h5>
 				<a href="ChoViet_LienHe.aspx">Thắc mắc khiếu nại</a> 
 				<a href="ChoViet_HoiDap.aspx">Hỏi đáp</a>  
 				<a href="Choviet_rule.aspx?matt=3">An toàn mua bán</a>  
-				<a href="Choviet_rule.aspx">Kinh nghiệm mua bán</a> 
+				<a href="Choviet_rule.aspx?matt=9">Kinh nghiệm mua bán</a> 
 			 </div>
 			<div id="socialMedia" class="span3 pull-right">
 				<h5>Cộng đồng </h5>
