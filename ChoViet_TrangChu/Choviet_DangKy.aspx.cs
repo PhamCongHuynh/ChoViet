@@ -23,6 +23,9 @@ namespace ChoViet_TrangChu
             acm.email = txtemail.Text;
             acm.password = txtmatkhau.Text;
             acm.phonenumber = txtsodienthoai.Text;
+            acm.address = txtdiachi.Text;
+            acm.birthday = txtngaysinh.Text;
+            acm.gender = Drgioitinh.SelectedValue.ToString();
             acm.datecreate = DateTime.Now.ToString(" ddd - yyyy.MM.dd HH:mm:ss");
             Account_Member_Controller sccontroll = new Account_Member_Controller();
             sccontroll.insertMember(acm);

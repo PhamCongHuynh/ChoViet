@@ -17,7 +17,7 @@ namespace DATA
         [StringLength(250)]
         public string phone_number { get; set; }
         [StringLength(250)]
-        public string email { get; set; }
+        public string email_cus { get; set; }
           [StringLength(250)]
         public string Address_contact { get; set; }
           [StringLength(250)]

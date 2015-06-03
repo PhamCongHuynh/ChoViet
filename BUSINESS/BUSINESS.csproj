@@ -54,7 +54,6 @@
     <Compile Include="Regions_Controller.cs" />
     <Compile Include="Category_Controller.cs" />
     <Compile Include="Advertising_Controller.cs" />
-    <Compile Include="DanhMuc_Controller.cs" />
     <Compile Include="News_Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reportting_Controller.cs" />

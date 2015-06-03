@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ChoViet_TrangChu
 {
-    public partial class ChoViet_DoiThongTinCaNhan : System.Web.UI.Page
+    public partial class Choviet_Thongtinchung : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

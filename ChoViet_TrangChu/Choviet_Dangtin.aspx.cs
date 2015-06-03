@@ -13,25 +13,30 @@ namespace ChoViet_TrangChu
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+                loaddanhmuc();
+                loadkhuvuc();
+            }
 
         }
 
         protected void btndangky_Click(object sender, EventArgs e)
         {
+            
             if (Page.IsValid)
             {
-                News obj = new News();
-                obj.Account_Members.Id = 1;
-                obj.Account_Members.email =txtemail.Text;
-                //obj.Account_Members.phonenumber;
-                obj.Address_contact = txtdiachi.Text;
-
+                int idMA=1;
+                int idME=1;
+                int idCA = Int32.Parse(Drchuyenmuc.SelectedValue);
+                int idRE = Int32.Parse(Drvung.SelectedValue);             
+                News_Controller.insertNew(txthoten.Text, txtsodienthoai.Text, txtemail.Text, txtdiachi.Text, rdloaitin.SelectedValue, txttuade.Text, txtnoidung.Text, UploadImage(image1), UploadImage(image2), UploadImage(image3), UploadImage(image4), UploadImage(image5), UploadImage(image6),txtgia.Text,txtcachthanhtoan.Text,txtvanchuyen.Text,DateTime.Now.ToString(),idMA,idME,idCA,idRE);      
             }
         }
         public string UploadImage(FileUpload files)
         {
             string pathfile="";
-            if(!files.HasFile)
+            if(files.HasFile)
             {
                 string fileName = DateTime.Now.ToString("ddMMyyyy_hhmmss_tt_") + files.FileName;
                 string filePath = MapPath("images/" + fileName);
@@ -39,6 +44,23 @@ namespace ChoViet_TrangChu
                 pathfile=fileName;
             }
             return pathfile;
+        }
+        public void loadkhuvuc()
+        {
+            Regions_Controller re = new Regions_Controller();
+            var listds = re.GetALLRegions();
+            foreach (Regions obj in listds)
+            {
+                Drvung.Items.Add(new ListItem(obj.Name.ToString(), obj.Id.ToString()));
+            }
+        }
+        public void loaddanhmuc()
+        {
+            var listds = Category_Controller.getCategory();
+            foreach (Category obj in listds)
+            {
+                Drchuyenmuc.Items.Add(new ListItem(obj.name.ToString(), obj.Id.ToString()));
+            }
         }
 
     }

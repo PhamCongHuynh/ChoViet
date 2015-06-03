@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ChoViet_TrangChu
+namespace ChoViet_QuanTri
 {
-    public partial class ChoViet_HoiDap : System.Web.UI.Page
+    public partial class Admin_Dulieu_Category : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

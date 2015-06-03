@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin.aspx" />
+    <Content Include="Admin_Create_Dulieu_Thongtin.aspx" />
+    <Content Include="Admin_Dulieu_Category.aspx" />
+    <Content Include="Admin_Dulieu_Information.aspx" />
+    <Content Include="Admin_Dulieu_Regions.aspx" />
     <Content Include="Admin_PhanCongCongViec.aspx" />
     <Content Include="Admin_QuanLyTaiKhoan.aspx" />
     <Content Include="Admin_QuanLyTinQuangCao.aspx" />
@@ -144,6 +148,34 @@
     </Compile>
     <Compile Include="Admin.aspx.designer.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Create_Dulieu_Thongtin.aspx.cs">
+      <DependentUpon>Admin_Create_Dulieu_Thongtin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Create_Dulieu_Thongtin.aspx.designer.cs">
+      <DependentUpon>Admin_Create_Dulieu_Thongtin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Dulieu_Category.aspx.cs">
+      <DependentUpon>Admin_Dulieu_Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Dulieu_Category.aspx.designer.cs">
+      <DependentUpon>Admin_Dulieu_Category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Dulieu_Information.aspx.cs">
+      <DependentUpon>Admin_Dulieu_Information.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Dulieu_Information.aspx.designer.cs">
+      <DependentUpon>Admin_Dulieu_Information.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Dulieu_Regions.aspx.cs">
+      <DependentUpon>Admin_Dulieu_Regions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Dulieu_Regions.aspx.designer.cs">
+      <DependentUpon>Admin_Dulieu_Regions.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_PhanCongCongViec.aspx.cs">
       <DependentUpon>Admin_PhanCongCongViec.aspx</DependentUpon>

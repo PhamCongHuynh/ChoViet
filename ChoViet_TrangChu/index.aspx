@@ -20,9 +20,16 @@
     <link href="themes/css/font-awesome-ie7.css" rel="stylesheet" />
     <link href="themes/css/font-awesome.css" rel="stylesheet" />
     <link href="themes/js/google-code-prettify/prettify.css" rel="stylesheet" />
-    <style type="text/css" id="enject">      .auto-style1 {
+    <style type="text/css" id="enject">      
+        .auto-style1 {
             width: 100%;
         }
+        .modalBackground{
+            background-color:black;
+            z-index:1000;
+            opacity:0.8;  
+        }
+
     </style>
     <link rel="shortcut icon" href="themes/images/ico/favicon.ico"/>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="themes/images/ico/apple-touch-icon-144-precomposed.png"/>

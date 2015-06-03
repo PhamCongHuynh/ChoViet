@@ -17,6 +17,7 @@ namespace BUSINESS
         {
             SupportREPO = unitOfWork.Repository<Support>();
         }
+        
         public List<Support> GetAll()
         {
             List<Support> sup = SupportREPO.Table.ToList();

@@ -20,6 +20,20 @@ namespace BUSINESS
         {
             List<Regions> listRegion = RegionsREPO.Table.ToList();
             return listRegion;
-        } 
+        }
+        public void Insert(Regions Sup)
+        {
+            RegionsREPO.Insert(Sup);
+        }
+        public void Update(int ids)
+        {
+            Regions sup = RegionsREPO.GetById(ids);
+            RegionsREPO.Update(sup);
+        }
+        public void Delete(int ids)
+        {
+            Regions sup = RegionsREPO.GetById(ids);
+            RegionsREPO.Delete(sup);
+        }
     }
 }

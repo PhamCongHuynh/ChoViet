@@ -14,6 +14,7 @@ namespace ChoViet_TrangChu
         {
             if(!IsPostBack)
             {
+                checkID();
                 loadDanhSachNew();
             }
         }
@@ -29,7 +30,14 @@ namespace ChoViet_TrangChu
             Grdanhsach.PageIndex = e.NewPageIndex;
             loadDanhSachNew();
         }
+        public void checkID()
+        {
+            if (Session["id"].ToString() == "")
+            {
+                Response.Redirect("index.aspx");
+            }
 
+        }
        
 
     }

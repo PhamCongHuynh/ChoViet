@@ -51,7 +51,6 @@ namespace BUSINESS
                              {
                                  matin = i.Id,
                                  tieude = i.title_infor,
-                                 noidung = i.content_infor,
                                  nguoisoan = ac.name
                              });
                 return query.ToList();
@@ -70,6 +69,16 @@ namespace BUSINESS
         {
             Information info = InfoREPO.GetById(ids);
            InfoREPO.Delete(info);
+        }
+        public static void InsertInfNew(string title,string content,int id_manager)
+        {
+            using(dbchoviet db=new dbchoviet())
+            {
+                var ac_manager = db.Account_Managers.FirstOrDefault(ac => ac.Id == id_manager);
+                Information info = new Information() {title_infor=title,content_infor=content,Account_Manager=ac_manager };
+                db.Informations.Add(info);
+                db.SaveChanges();
+            }
         }
     }
 }

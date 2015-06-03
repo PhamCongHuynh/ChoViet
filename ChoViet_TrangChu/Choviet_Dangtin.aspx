@@ -16,24 +16,28 @@
         <label class="control-label  col-sm-10">Tên: </label>
         <div class="col-ms-8">
             <asp:TextBox ID="txthoten" CssClass="control-group" runat="server" placeholder="Điền đầy đủ họ tên" style="min-width:40%;"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txthoten" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-4">E-mail: </label>
         <div class="col-ms-8">
             <asp:TextBox ID="txtemail" CssClass="control-group" runat="server" style="min-width:40%;" placeholder="Chúng tôi sẽ liên hệ với bạn qua Email"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtemail" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-4">Số điện thoại: </label>
         <div class="col-ms-8">
             <asp:TextBox ID="txtsodienthoai" CssClass="control-group" runat="server" style="min-width:40%;" placeholder="Điền đầy đủ số điện thoại"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtsodienthoai" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-4">Địa chỉ: </label>
         <div class="col-ms-8">
             <asp:TextBox ID="txtdiachi" CssClass="control-group" runat="server" style="min-width:40%;" placeholder="Địa chỉ của bạn"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtdiachi" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
     <h4>Nội dung tin </h4>
@@ -64,12 +68,14 @@
         <label class="control-label col-sm-4">Tựa đề: </label>
         <div class="col-ms-8">
             <asp:TextBox ID="txttuade"  CssClass="control-group" style="min-width:60%;" TextMode="multiline" Columns="50" Rows="3" runat="server" placeholder="Dùng tiếng việt có dấu"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" ControlToValidate="txttuade" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-4">Nội dung tin: </label>
         <div class="col-ms-8">
             <asp:TextBox ID="txtnoidung" TextMode="multiline" style="min-width:60%;" Columns="50" Rows="5" CssClass="control-group" runat="server" placeholder="Dùng tiếng việt có dấu"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtnoidung" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
@@ -133,12 +139,14 @@
         <label class="control-label col-sm-4">Cách Thanh toán: </label>
         <div class="col-ms-8">
             <asp:TextBox ID="txtcachthanhtoan" CssClass="control-group" style="min-width:40%;" runat="server" placeholder="Cách thanh toán"></asp:TextBox>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" ControlToValidate="txtcachthanhtoan" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-4">Vận chuyển, giao nhận : </label>
         <div class="col-ms-8">
             <asp:TextBox ID="txtvanchuyen" CssClass="control-group" style="min-width:60%;" TextMode="multiline" Columns="50" Rows="3" runat="server" placeholder="Quy trình vận chuyển, giao nhận"></asp:TextBox>
+             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" ControlToValidate="txtvanchuyen" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
@@ -148,7 +156,7 @@
 </div>
             </div>
     <div class="span2"></div>
-    </div>
+    </div
 </div>
 
 

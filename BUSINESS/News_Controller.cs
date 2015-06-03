@@ -25,9 +25,39 @@ namespace BUSINESS
             return New;
         }
         // phương thức đăng tin mới 
-        public void insertNew(News objnew)
+        public static void insertNew(string fullname,string phonenumber,string emailcus,string addresscontrac,string typenew,string titles,string contents, string image1s,string image2s,string image3s, string image4s, string image5s,string image6s, string prices,string pays, string shippings,string datecreates,int idmember, int idmanager, int idcategory,int idregions)
         {
-            News_ControllerREPO.Insert(objnew);
+            using(var db=new dbchoviet())
+            {
+                var manager=db.Account_Managers.FirstOrDefault(ac=>ac.Id==idmanager);
+                var member=db.Account_Members.FirstOrDefault(acm=>acm.Id==idmember);
+                var categorys=db.Categorys.FirstOrDefault(ca=>ca.Id==idcategory);
+                var region=db.Regions.FirstOrDefault(re=>re.Id==idregions);
+                News obj=new News();
+                obj.full_name=fullname;
+                obj.phone_number=phonenumber;
+                obj.email_cus=emailcus;
+                obj.Address_contact=addresscontrac;
+                obj.type_news=typenew;
+                obj.title=titles;
+                obj.content=contents;
+                obj.image1=image1s;
+                obj.image2=image2s;
+                obj.image3=image3s;
+                obj.image4=image4s;
+                obj.image5=image5s;
+                obj.image6=image6s;
+                obj.price=prices;
+                obj.pay=pays;
+                obj.shipping=shippings;
+                obj.datecreate=datecreates;
+                obj.Account_Managers=manager;
+                obj.Account_Members=member;
+                obj.Category=categorys;
+                obj.Regions=region;
+                db.Newss.Add(obj);
+                db.SaveChanges();
+            }
         }
         //phương thức trả về phần danh sách sản phầm hiển thị trang index 30 sản phẩm
         public static IEnumerable ViewLastProduct()

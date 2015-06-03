@@ -38,6 +38,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=15.1.1.100, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\huynh\AppData\Local\Microsoft\VisualStudio\12.0\Extensions\b0lopug5.x5v\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="AjaxControlToolkit.HtmlEditor.Sanitizer, Version=15.1.2.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AjaxControlToolkit.HtmlEditor.Sanitizer.15.1.2.0\lib\net40\AjaxControlToolkit.HtmlEditor.Sanitizer.dll</HintPath>
@@ -74,15 +78,16 @@
     <Content Include="Choviet_Dangtin.aspx" />
     <Content Include="ChoViet_DoiMatKhau.aspx" />
     <Content Include="ChoViet_DoiThongTinCaNhan.aspx" />
-    <Content Include="ChoViet_HoiDap.aspx" />
     <Content Include="ChoViet_LienHe.aspx" />
     <Content Include="Choviet_Footer.ascx" />
     <Content Include="ChoViet_Member.aspx" />
     <Content Include="Choviet_MenuMember.ascx" />
     <Content Include="Choviet_MenuRight.ascx" />
     <Content Include="Choviet_rule.aspx" />
+    <Content Include="Choviet_Thongtinchung.aspx" />
     <Content Include="Forget_password.aspx" />
     <Content Include="Choviet_Header.ascx" />
+    <Content Include="Global.asax" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\10.jpg" />
     <Content Include="Images\11.jpg" />
@@ -302,13 +307,6 @@
     <Compile Include="ChoViet_DoiThongTinCaNhan.aspx.designer.cs">
       <DependentUpon>ChoViet_DoiThongTinCaNhan.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ChoViet_HoiDap.aspx.cs">
-      <DependentUpon>ChoViet_HoiDap.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ChoViet_HoiDap.aspx.designer.cs">
-      <DependentUpon>ChoViet_HoiDap.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ChoViet_LienHe.aspx.cs">
       <DependentUpon>ChoViet_LienHe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -351,6 +349,13 @@
     <Compile Include="Choviet_rule.aspx.designer.cs">
       <DependentUpon>Choviet_rule.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Choviet_Thongtinchung.aspx.cs">
+      <DependentUpon>Choviet_Thongtinchung.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Choviet_Thongtinchung.aspx.designer.cs">
+      <DependentUpon>Choviet_Thongtinchung.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Forget_password.aspx.cs">
       <DependentUpon>Forget_password.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -364,6 +369,9 @@
     </Compile>
     <Compile Include="Choviet_Header.ascx.designer.cs">
       <DependentUpon>Choviet_Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Master\ChiTiet.Master.cs">
       <DependentUpon>ChiTiet.Master</DependentUpon>

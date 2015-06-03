@@ -54,6 +54,15 @@
     <Compile Include="Category.cs" />
     <Compile Include="dbchoviet.cs" />
     <Compile Include="Information.cs" />
+    <Compile Include="Migrations\201505260845196_InitialCreate.cs" />
+    <Compile Include="Migrations\201505260845196_InitialCreate.Designer.cs">
+      <DependentUpon>201505260845196_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505310321537_newMigration.cs" />
+    <Compile Include="Migrations\201505310321537_newMigration.Designer.cs">
+      <DependentUpon>201505310321537_newMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Regions.cs" />
     <Compile Include="Images.cs" />
     <Compile Include="LichSuLamViec.cs" />
@@ -69,6 +78,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201505260845196_InitialCreate.resx">
+      <DependentUpon>201505260845196_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505310321537_newMigration.resx">
+      <DependentUpon>201505310321537_newMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

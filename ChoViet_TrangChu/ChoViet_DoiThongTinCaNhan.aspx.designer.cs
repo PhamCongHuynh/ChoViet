@@ -13,22 +13,22 @@ namespace ChoViet_TrangChu {
     public partial class ChoViet_DoiThongTinCaNhan {
         
         /// <summary>
-        /// lblidtaikhoan control.
+        /// txtid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblidtaikhoan;
+        protected global::System.Web.UI.WebControls.TextBox txtid;
         
         /// <summary>
-        /// lblemailchoviet control.
+        /// TextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblemailchoviet;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
         /// txthovaten control.

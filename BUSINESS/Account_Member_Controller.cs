@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DATA;
+using System.Collections;
 
 namespace BUSINESS
 {
@@ -40,6 +41,33 @@ namespace BUSINESS
         public void insertMember(Account_Member ac)
         {
             Account_MemberREPO.Insert(ac);
+        }
+        // kiểm tra đăng nhập tài khoản
+        public static Boolean CheckAccount(string ac_email, string ac_password)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var query = from u in db.Account_Members where u.email == ac_email && u.password == ac_password select u;
+                if (query.Count() != 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+        }
+        //phương thức nhận vảo email và trả về id
+        public static List<Account_Member> CheckIdAccount(string ac_email)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var query = from u in db.Account_Members where u.email == ac_email select u;
+                return query.ToList();
+            }
+
         }
 
     }

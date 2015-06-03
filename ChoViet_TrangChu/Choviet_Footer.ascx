@@ -11,7 +11,7 @@
 			<div class="span3">
 				<h5>Thông tin liên hệ</h5>
 				<a href="ChoViet_LienHe.aspx">Liên hệ chợ việt</a>  
-				<a href="Choviet_rule.aspx?matt=1">Quy chế Chợ Việt</a>  
+				<a href="Choviet_rule.aspx?matt=15">Quy chế Chợ Việt</a>  
 				<a href="Choviet_rule.aspx?matt=4">Quy định đăng tin</a>  
 				<a href="Choviet_rule.aspx?matt=2">Quy tắc mua bán</a> 
 				
@@ -19,7 +19,7 @@
 			<div class="span3">
 				<h5>Chăm sóc khách hàng</h5>
 				<a href="ChoViet_LienHe.aspx">Thắc mắc khiếu nại</a> 
-				<a href="ChoViet_HoiDap.aspx">Hỏi đáp</a>  
+				<a href="Choviet_rule.aspx?matt=10">Hỏi đáp</a>  
 				<a href="Choviet_rule.aspx?matt=3">An toàn mua bán</a>  
 				<a href="Choviet_rule.aspx?matt=9">Kinh nghiệm mua bán</a> 
 			 </div>

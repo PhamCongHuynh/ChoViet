@@ -11,7 +11,19 @@ namespace ChoViet_TrangChu
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                checkID();
+            }
+        }
+        public void checkID()
+        {
+            if (Session["id"].ToString() == "")
+            {
+                Response.Redirect("index.aspx");
+            }
 
         }
+
     }
 }

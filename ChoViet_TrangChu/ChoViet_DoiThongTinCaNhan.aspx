@@ -7,13 +7,13 @@
         <div class="form-group">
             <label class="control-label  col-sm-10">ID tài khoản: </label>
             <div class="col-ms-8">
-                <asp:Label ID="lblidtaikhoan" runat="server" Text=""></asp:Label>
+                <asp:TextBox ID="txtid" CssClass="control-group" runat="server" Text="1234567" Enabled="False"></asp:TextBox>
             </div>
         </div>
         <div class="form-group">
             <label class="control-label  col-sm-10">E-mail chợ việt: </label>
             <div class="col-ms-8">
-                <asp:Label ID="lblemailchoviet" runat="server" Text=""></asp:Label>
+                <asp:TextBox ID="TextBox1" CssClass="control-group" runat="server" Enabled="False"></asp:TextBox>
             </div>
         </div>
         <div class="form-group">
@@ -31,8 +31,8 @@
         <div class="form-group">
             <label class="control-label  col-sm-10"></label>
             <div class="col-ms-8">
-                <asp:Button ID="btnluulai" CssClass="btn col-sm-10 btn-success" runat="server" Text="Lưu lại" />
-                <asp:Button ID="btnhuybo" CssClass="btn btn-group btn-success" runat="server" Text="Hủy bỏ" />
+                <asp:Button ID="btnluulai" CssClass="btn btn-success" runat="server" Text="Lưu lại" />
+                <asp:Button ID="btnhuybo" CssClass="btn btn-success" runat="server" Text="Hủy bỏ" />
             </div>
         </div>
 

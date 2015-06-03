@@ -11,7 +11,7 @@ namespace ChoViet_TrangChu
 {
 
 
-    public partial class ChoViet_HoiDap
+    public partial class Choviet_Thongtinchung
     {
     }
 }

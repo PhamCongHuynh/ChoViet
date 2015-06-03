@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DATA;
+using System.Collections;
 
 namespace BUSINESS
 {
@@ -34,6 +35,15 @@ namespace BUSINESS
            list.Add(ac);
            return list;
         }
+        public static IEnumerable getByMannager(int ids)
+        {
+            using(dbchoviet db=new dbchoviet())
+            {
+                var query = (from u in db.Account_Managers where u.Id == ids select u);
+                return query;
+            }
+            
+        }
 
 
         public void Delete(int ids) 
@@ -41,6 +51,16 @@ namespace BUSINESS
             Account_Manager ac = Account_ManagerREPO.GetById(ids);
             Account_ManagerREPO.Delete(ac);         
         }
+        public void InsertAC(Account_Manager Sup)
+        {
+            Account_ManagerREPO.Insert(Sup);
+        }
+        public void UpdateAC(int ids)
+        {
+            Account_Manager sup = Account_ManagerREPO.GetById(ids);
+            Account_ManagerREPO.Update(sup);
+        }
+       
         public static Boolean CheckAccount(int ac_id,string ac_password)
         {
             using(dbchoviet db=new dbchoviet())
