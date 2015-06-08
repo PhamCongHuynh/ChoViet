@@ -130,6 +130,30 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
+        public static IEnumerable ViewByproductsearch(int idkhuvuc,string tukhoa)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var Views = (from n in db.Newss.AsEnumerable()
+                             where n.Regions.Id==idkhuvuc && n.title.Contains(tukhoa)
+                             join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
+                             join re in db.Regions on n.Regions.Id equals re.Id
+                             join ca in db.Categorys on n.Category.Id equals ca.Id
+                             select new
+                             {
+                                 ID = n.Id,
+                                 title = n.title,
+                                 price = n.price,
+                                 region = re.Name,
+                                 danhmuc = ca.name,
+                                 timeaction = n.dateaction,
+                                 nguoidang = ac.name,
+                                 image1 = n.image1,
+                                 content = n.content
+                             }).Take(30);
+                return Views.ToList();
+            }
+        }
 
         //phương thức trả về chi tiết 1 sản phẩm theo mã id
         public static IEnumerable ViewByChiTiet(int ids)
@@ -159,7 +183,8 @@ namespace BUSINESS
                                  image3 = n.image3,
                                  image4 = n.image4,
                                  image5 = n.image5,
-                                 image6 = n.image6
+                                 image6 = n.image6,
+                                 ship= n.shipping      
                              };
                 return Views.ToList();
             }

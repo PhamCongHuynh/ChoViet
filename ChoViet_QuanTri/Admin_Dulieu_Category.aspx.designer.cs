@@ -10,7 +10,7 @@
 namespace ChoViet_QuanTri {
     
     
-    public partial class QuanTri_ThongTinChoViet {
+    public partial class Admin_Dulieu_Category {
         
         /// <summary>
         /// Label1 control.
@@ -40,12 +40,12 @@ namespace ChoViet_QuanTri {
         protected global::System.Web.UI.WebControls.Button btltimkiem;
         
         /// <summary>
-        /// grdsthongtin control.
+        /// grDSdanhmuc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdsthongtin;
+        protected global::System.Web.UI.WebControls.GridView grDSdanhmuc;
     }
 }

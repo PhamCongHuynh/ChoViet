@@ -49,14 +49,14 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                    </button>                    
-               <a href="#" class="navbar-brand">Quản Trị Chợ Việt</a>               
+               <a href="index.aspx" class="navbar-brand">Quản Trị Chợ Việt</a>               
              </div>            
              <div class="navbar-form navbar-right navbar-collapse collapse" id="menu">
                  <div class="form-group">
                      <asp:Button ID="btncanhan" CssClass="btn btn-link" runat="server" Text="Admin" />
                  </div>
                  <div class="form-group">
-                     <asp:Button ID="btnthoat" CssClass="btn btn-warning" runat="server" Text="Thoát" />
+                     <asp:Button ID="btnthoat" CssClass="btn btn-warning" runat="server" Text="Thoát" OnClick="btnthoat_Click" />
                  </div>
              </div>
 

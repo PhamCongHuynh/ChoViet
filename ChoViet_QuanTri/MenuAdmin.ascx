@@ -13,4 +13,8 @@
             <a href="QuanTri_ThongTinNguoiDung.aspx" class="list-group-item">Thông tin người dùng</a>
             <a href="QuanTri_HoTroKhachHang.aspx" class="list-group-item">Hỗ trợ khách hàng</a>
             <a href="QuanTri_BaoCaoThongKe.aspx" class="list-group-item">Xem báo cáo thống kê</a>
+            <a href="#" class="list-group-item active">Quản lý tác vụ</a>
+            <a href="Admin_Dulieu_Regions.aspx" class="list-group-item">Quản lý danh sách khu vực</a>
+            <a href="Admin_Dulieu_Information.aspx" class="list-group-item">Quản lý danh sách thong tin</a>
+            <a href="Admin_Dulieu_Category.aspx" class="list-group-item">Quản lý danh mục quảng cáo</a>
           </div>

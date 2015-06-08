@@ -3,7 +3,7 @@
 			<li class="subMenu"><a>Bất động sản</a>
 				<ul style="display: none;">
 				<li><a class="active" href="product_View.aspx"><i class="icon-chevron-right"></i>Căn hộ, chung cư </a></li>
-				<li><a href="product_View.aspx"><i class="icon-chevron-right"></i>Nhà & đất ở</a></li>
+				<li><a href="product_View.aspx?idc=1"><i class="icon-chevron-right"></i>Nhà & đất ở</a></li>
 				<li><a href="product_View.aspx"><i class="icon-chevron-right"></i>Đất nông nghiệp</a></li>
 				<li><a href="product_View.aspx"><i class="icon-chevron-right"></i>Trang trại</a></li>
 				</ul>

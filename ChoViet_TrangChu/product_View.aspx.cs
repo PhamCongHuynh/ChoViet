@@ -55,7 +55,7 @@ namespace ChoViet_TrangChu
                         rptPages.DataBind();
                     }
                     else
-                        rptPages.Visible = false;
+                    rptPages.Visible = false;
                     DLListView.DataSource = pgitems;
                     DLblockView.DataSource = pgitems;
                     DLListView.DataBind();

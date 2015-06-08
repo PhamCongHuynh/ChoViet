@@ -108,6 +108,7 @@
     <Content Include="Images\kindle.png" />
     <Content Include="Images\panasonic.jpg" />
     <Content Include="product_detail.aspx" />
+    <Content Include="product_search.aspx" />
     <Content Include="product_View.aspx" />
     <Content Include="themes\font\fontawesome-webfont.eot" />
     <Content Include="themes\font\fontawesome-webfont.ttf" />
@@ -173,8 +174,6 @@
     <Content Include="Master\Member.Master" />
     <Content Include="Master\ChiTiet.Master" />
     <Content Include="Master\ThongTin.Master" />
-    <Content Include="WebForm2.aspx" />
-    <Content Include="WebForm3.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -401,6 +400,13 @@
     <Compile Include="product_detail.aspx.designer.cs">
       <DependentUpon>product_detail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="product_search.aspx.cs">
+      <DependentUpon>product_search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product_search.aspx.designer.cs">
+      <DependentUpon>product_search.aspx</DependentUpon>
+    </Compile>
     <Compile Include="product_View.aspx.cs">
       <DependentUpon>product_View.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -415,20 +421,6 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm3.aspx.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm3.aspx.designer.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

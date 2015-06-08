@@ -22,40 +22,49 @@ namespace ChoViet_TrangChu {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
-        /// seacrch control.
+        /// txtseacrch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox seacrch;
+        protected global::System.Web.UI.WebControls.TextBox txtseacrch;
         
         /// <summary>
-        /// DrCatgory control.
+        /// Drkhuvuc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DrCatgory;
+        protected global::System.Web.UI.WebControls.DropDownList Drkhuvuc;
         
         /// <summary>
-        /// HyperLink1 control.
+        /// btnsearch control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.Button btnsearch;
         
         /// <summary>
-        /// Button2 control.
+        /// hpgioithieu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink Button2;
+        protected global::System.Web.UI.WebControls.HyperLink hpgioithieu;
+        
+        /// <summary>
+        /// hplienhe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hplienhe;
         
         /// <summary>
         /// btnlogout control.

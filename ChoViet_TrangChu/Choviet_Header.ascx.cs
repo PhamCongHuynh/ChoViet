@@ -27,12 +27,14 @@ namespace ChoViet_TrangChu
             var listds = re.GetALLRegions();
             foreach (Regions obj in listds)
             {
-                DrCatgory.Items.Add(new ListItem(obj.Name.ToString(), obj.Id.ToString()));
+                Drkhuvuc.Items.Add(new ListItem(obj.Name.ToString(), obj.Id.ToString()));
             }
         }
+        //ẩn hiện button đăng nhập hoặc đăng xuất 
+
         public void hirenButton()
         {
-            if (Session["id"].ToString() != "")
+            if (!Session["id"].ToString().Equals(""))
             {              
                 btnlogin.Visible = false;
                 btnlogout.Visible = true;
@@ -49,16 +51,9 @@ namespace ChoViet_TrangChu
             string matkhau = txtpass.Text;
             Boolean flag = Account_Member_Controller.CheckAccount(email, matkhau);
             if (flag)
-            {
-                //Account_Manager_Controller ac = new Account_Manager_Controller();
-                //var tk = ac.GetById(mataikhoan).ToList();
-                //int idd = tk.FirstOrDefault().Id;
-                //Session["id"] =idd;
-                int id = checkids(email);
-                HttpCookie cookieID = new HttpCookie("id");
-                cookieID.Value = id.ToString();
-                cookieID.Expires = DateTime.Now.AddDays(1);
-                Response.Cookies.Add(cookieID);
+            {               
+                int ids = checkids(email);
+                Session["id"] = ids;
                 Response.Redirect("ChoViet_DoiThongTinCaNhan.aspx");
             }
             else
@@ -76,12 +71,23 @@ namespace ChoViet_TrangChu
 
         protected void btnlogout_Click(object sender, EventArgs e)
         {
-            string[] cookies = Request.Cookies.AllKeys;
-            foreach (string cookie in cookies)
-            {
-                Response.Cookies[cookie].Expires = DateTime.Now.AddDays(-1);
-                Response.Redirect(Request.RawUrl);
-            }
+            Session["id"] = "";
+            Response.Redirect("index.aspx");
+        }
+
+        protected void btnsearch_Click(object sender, EventArgs e)
+        {
+            //Response.Redirect("product_search.aspx?ma=1");
+            ////try
+            ////{
+            ////    Response.Redirect("product_search.aspx?id=1");
+            ////}
+            ////catch(Exception)
+            ////{
+            ////    Response.Redirect(Request.RawUrl);
+            ////}
+
+            Response.Redirect("product_search.aspx?key=" + txtseacrch.Text + "&kv=" + Drkhuvuc.SelectedValue);
         }
     }
 }

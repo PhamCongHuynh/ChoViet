@@ -17,18 +17,8 @@ namespace ChoViet_QuanTri
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            HttpCookie CookieName = Request.Cookies["id"];
-            
-            if(CookieName != null)
-            {
-                Session["id"] = CookieName.Value.ToString();
-                
-            }
-            else
-            {
+           
                 Session["id"] = "";
-            }
-
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

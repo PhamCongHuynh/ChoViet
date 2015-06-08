@@ -77,6 +77,15 @@ namespace BUSINESS
             }
             
         }
+        public static List<Account_Manager> CheckIdAccount(int maid)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var query = from u in db.Account_Managers where u.Id==maid  select u;
+                return query.ToList();
+            }
+
+        }
        
        
     }

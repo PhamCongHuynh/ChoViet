@@ -155,8 +155,9 @@
 				          <i class="tag"></i>
 					        <asp:Image ID="Imahinhanh" runat="server" ImageUrl="themes/images/products/9.jpg"  Height="160px" Width="160px" />
 					        <div class="caption">
-					          <h5><%# Eval("nguoidang") %></h5>
-					          <h4><a class="btn" href="product_detail.aspx">VIEW</a> <span class="pull-right">$222.00</span></h4>
+                              <h5><%# Eval("title") %></h5>
+					          <h6><%# Eval("nguoidang") %></h6>
+					          <h4><a class="btn" href="product_detail.aspx">Xem</a> <span class="pull-right"><%# Eval("price") %></span></h4>
 					        </div>
 				          </div>
 				        </li>                      
@@ -178,7 +179,7 @@
                                 <h5> <asp:Label ID="txtnguoidang" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label></h5>
                                 <p><asp:Label ID="txttieude" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
 
-					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Xem chi tiết <i class="icon-zoom-in"></i></a> <a class="btn btn-primary" href="#">'<%# Eval("price") %>'</a></h4>
+					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Xem<i class="icon-zoom-in"></i></a> <a class="btn btn-link" href="product_detail.aspx">'<%# Eval("price") %>'</a></h4>
 					        </div>
 				       </div>
 				      </li>

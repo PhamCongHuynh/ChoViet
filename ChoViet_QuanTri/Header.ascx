@@ -12,7 +12,9 @@
         <div id="navbar" class="collapse navbar-collapse na">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">ChợViệt.net</a></li>
-            <li class=""><a href="#about">Trang cá nhân </a></li>
+            <li> 
+                <asp:Button ID="btntrangcanhan" runat="server" Text="Thoat" OnClick="btlthoat_Click" />
+            </li>
             <li>
                 <asp:Button ID="btlthoat" runat="server" Text="Thoat" OnClick="btlthoat_Click" /></li>
           </ul>

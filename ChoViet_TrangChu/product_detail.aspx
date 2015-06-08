@@ -47,17 +47,18 @@
 			      </div>
 			      <div class="span6">
 				<h3><%# Eval("title") %></h3>
-				<small>- (14MP, 18x Optical Zoom) 3-inch LCD</small>
+				<small>Mã Sản phẩm :<%# Eval("ID") %>  :Tại khu vực <%# Eval("region") %></small>
 				<hr class="soft">
 				<div class="form-horizontal qtyFrm">
 				  <div class="control-group">
-					<label class="control-label"><span><%# Eval("price") %></span></label>
+					<label class="control-label"><span> Giá : <%# Eval("price") %></span></label>
 				  </div>
 				</div>
 				
 				<hr class="soft">
-				<h4>100 items in stock</h4>
-				<div class="form-horizontal qtyFrm pull-right">
+				<h5>Liên hệ :<%# Eval("nguoidang") %> -DT : <%# Eval("phone") %></h5>
+                <smail>Email :<%# Eval("email") %></smail>
+				<%--<div class="form-horizontal qtyFrm pull-right">
 				  <div class="control-group">
 					<label class="control-label"><span>Color</span></label>
 					<div class="controls">
@@ -69,7 +70,7 @@
 						</select>
 					</div>
 				  </div>
-				</div>
+				</div>--%>
 				<hr class="soft clr">
 				<p>
 				<%# Eval("content") %>
@@ -88,7 +89,7 @@
             </ul>
             <div id="myTabContent" class="tab-content">
               <div class="tab-pane fade active in" id="home">
-			  <h4>Bình luận</h4>
+			  <h4>Thảo luận</h4>
                 <script>(function (d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0];
                     if (d.getElementById(id)) return;
@@ -120,7 +121,7 @@
 						<p>
 						<%# Eval("content") %>
 						</p>
-						<a class="btn btn-small pull-right" href="product_details.html">Xem chi tiết</a>
+						<a class="btn btn-small pull-right" href="product_detail.aspx">Xem chi tiết</a>
 						<br class="clr">
 					</div>
 					<div class="span3 alignR">
@@ -150,7 +151,7 @@
 						          <p> 
 							       <%# Eval("title") %> 
 						          </p>
-						          <h4 style="text-align:center"><a class="btn" href="product_details.html">Xem chi tiết<i class="icon-zoom-in"></i></a><a class="btn btn-primary" href="#"><%# Eval("price") %></a></h4>
+						          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Xem chi tiết<i class="icon-zoom-in"></i></a><a class="btn btn-primary" href="#"><%# Eval("price") %></a></h4>
 						        </div>
 					          </div>
 					        </li>

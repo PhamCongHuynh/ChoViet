@@ -18,7 +18,7 @@ namespace ChoViet_TrangChu
         }
         public void checkID()
         {
-            if (Session["id"].ToString() == "")
+            if (Session["id"].ToString().Equals(""))
             {
                 Response.Redirect("index.aspx");
             }
