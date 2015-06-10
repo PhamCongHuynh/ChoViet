@@ -21,9 +21,17 @@
                 </div>
             </div>
         </div>
-        
-        <asp:GridView ID="Grdanhsach" CssClass="table table-hover" runat="server" AllowPaging="True" OnPageIndexChanging="Grdanhsach_PageIndexChanging" PageSize="20">
+        <asp:Label ID="lblthongbao" Style="color:red; font-family:Tahoma;" runat="server" Text=""></asp:Label>
+        <br />
+        <asp:GridView ID="Grdanhsach" CssClass="table table-hover" runat="server" AllowPaging="True" OnPageIndexChanging="Grdanhsach_PageIndexChanging" PageSize="20" AutoGenerateColumns="False" OnRowDeleting="Grdanhsach_RowDeleting" DataKeyNames="Matin" OnRowDataBound="Grdanhsach_RowDataBound">
             <Columns>
+                <asp:BoundField DataField="Matin" HeaderText="Mã tin" />
+                <asp:BoundField DataField="tieude" HeaderText="Tiêu đề" />
+                <asp:BoundField DataField="khuvuc" HeaderText="Khu vực" />
+                <asp:BoundField DataField="danhmuc" HeaderText="Danh mục" />
+                <asp:BoundField DataField="kiemduyet" HeaderText="Kiểm duyệt" />
+                <asp:BoundField DataField="thoigiandang" HeaderText="Thời gian đăng" />
+                <asp:BoundField DataField="luotxem" HeaderText="Lượt xem" />
                 <asp:CommandField DeleteText="Xóa" HeaderText="Thao tác" SelectText="Xem chi tiết" ShowDeleteButton="True" ShowSelectButton="True" />
             </Columns>
         </asp:GridView>

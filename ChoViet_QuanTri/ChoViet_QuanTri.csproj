@@ -42,8 +42,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\huynh\AppData\Local\Microsoft\VisualStudio\12.0\Extensions\b0lopug5.x5v\AjaxControlToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="AjaxControlToolkit.HtmlEditor.Sanitizer">
-      <HintPath>..\packages\AjaxControlToolkit.HtmlEditor.Sanitizer.15.1.2.0\lib\net40\AjaxControlToolkit.HtmlEditor.Sanitizer.dll</HintPath>
+    <Reference Include="FreeTextBox, Version=3.3.1.12354, Culture=neutral, PublicKeyToken=5962a4e684a48b87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\huynh\Documents\Visual Studio 2013\Projects\QuyettamdungAjax\QuyettamdungAjax\bin\FreeTextBox.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
@@ -72,10 +73,12 @@
     <Content Include="Admin_Dulieu_Category.aspx" />
     <Content Include="Admin_Dulieu_Information.aspx" />
     <Content Include="Admin_Dulieu_Regions.aspx" />
+    <Content Include="Admin_phancong.aspx" />
     <Content Include="Admin_PhanCongCongViec.aspx" />
     <Content Include="Admin_QuanLyTaiKhoan.aspx" />
     <Content Include="Admin_QuanLyTinQuangCao.aspx" />
     <Content Include="QuanTri_BaoCaoThongKe.aspx" />
+    <Content Include="QuanTri_DoiMK.aspx" />
     <Content Include="QuanTri_HoTroKhachHang.aspx" />
     <Content Include="QuanTri_ThongTinChoViet.aspx" />
     <Content Include="QuanTri_ThongTinChung.aspx" />
@@ -176,6 +179,13 @@
     <Compile Include="Admin_Dulieu_Regions.aspx.designer.cs">
       <DependentUpon>Admin_Dulieu_Regions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin_phancong.aspx.cs">
+      <DependentUpon>Admin_phancong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_phancong.aspx.designer.cs">
+      <DependentUpon>Admin_phancong.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin_PhanCongCongViec.aspx.cs">
       <DependentUpon>Admin_PhanCongCongViec.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -203,6 +213,13 @@
     </Compile>
     <Compile Include="QuanTri_BaoCaoThongKe.aspx.designer.cs">
       <DependentUpon>QuanTri_BaoCaoThongKe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri_DoiMK.aspx.cs">
+      <DependentUpon>QuanTri_DoiMK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri_DoiMK.aspx.designer.cs">
+      <DependentUpon>QuanTri_DoiMK.aspx</DependentUpon>
     </Compile>
     <Compile Include="QuanTri_HoTroKhachHang.aspx.cs">
       <DependentUpon>QuanTri_HoTroKhachHang.aspx</DependentUpon>
@@ -347,6 +364,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Image\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

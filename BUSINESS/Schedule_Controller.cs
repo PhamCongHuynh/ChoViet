@@ -52,11 +52,11 @@ namespace BUSINESS
             Schedule_REPO.Delete(ac);
         }
         // thêm mơi 1 danh muc
-        public void insertMember(Schedule ca)
+        public void insert(Schedule ca)
         {
             Schedule_REPO.Insert(ca);
         }
-        public void UpdateSup(int ids)
+        public void Update(int ids)
         {
             Schedule sup = Schedule_REPO.GetById(ids);
             Schedule_REPO.Update(sup);

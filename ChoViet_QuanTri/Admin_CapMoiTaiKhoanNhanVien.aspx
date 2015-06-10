@@ -29,23 +29,12 @@
             <asp:Label ID="Label5" runat="server" Text="Địa chỉ liên hệ :"></asp:Label>
             <asp:TextBox ID="txtdiachi" CssClass="form-control" placeholder="Địa chỉ liên hệ" runat="server"></asp:TextBox>
         </div>
-        <h4>Phân công công tác </h4>
-        <hr />
-        <div class="form-group">
-            <asp:Label ID="Label6" runat="server" Text="Chức vụ :"></asp:Label>
-            <asp:DropDownList ID="drchucvu" CssClass="form-control" runat="server"></asp:DropDownList>
-        </div>
-        <div class="form-group">
-            <asp:Label ID="Label7" runat="server" Text="Danh mục quản lý :"></asp:Label>
-            <asp:DropDownList ID="drdanhmucquanly" CssClass="form-control" runat="server"></asp:DropDownList>
-        </div>
-
         <asp:Button ID="btlxacnhan" CssClass="btn btn-default" runat="server" Text="Cấp tài khoản" OnClick="btlxacnhan_Click" />
-        <cc1:ModalPopupExtender runat="server" DynamicServicePath="" BehaviorID="btlxacnhan_ModalPopupExtender" TargetControlID="btlxacnhan" ID="btlxacnhan_ModalPopupExtender" PopupControlID="Panelxemlai" BackgroundCssClass="modalBackground"></cc1:ModalPopupExtender>
+        <%--<cc1:ModalPopupExtender runat="server" DynamicServicePath="" BehaviorID="btlxacnhan_ModalPopupExtender" TargetControlID="btlxacnhan" ID="btlxacnhan_ModalPopupExtender" PopupControlID="Panelxemlai" BackgroundCssClass="modalBackground"></cc1:ModalPopupExtender>--%>
         <asp:Button ID="btnhuy" CssClass="btn btn-default" runat="server" Text="Hủy bỏ" />
 
   <%--   phần xừ lý modal--%>
-        <asp:Panel ID="Panelxemlai" style="width:80%;height:auto; display:none; background:white;" runat="server">
+        <%--<asp:Panel ID="Panelxemlai" style="width:80%;height:auto; display:none; background:white;" runat="server">
 
         
          <!-- Modal content-->
@@ -109,7 +98,7 @@
           </div>
        
 
-     </asp:Panel>
+     </asp:Panel>--%>
           
   </div>
       

@@ -17,7 +17,6 @@ namespace BUSINESS
         {
             Account_ManagerREPO = unitOfWork.Repository<Account_Manager>();
         }
-
         //public IEnumerable<Account_Manager> getALL()
         //{
         //    //IEnumerable<Account_Manager> Account_Managers = bookRepository.Table.ToList();
@@ -86,7 +85,29 @@ namespace BUSINESS
             }
 
         }
-       
+        public static void changesMK(string matkhaumoi, int ids)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var query = (from ac in db.Account_Managers where ac.Id == ids select ac).First();
+                query.password = matkhaumoi;
+                db.SaveChanges();
+            }
+        }
+        public static void insertNew(string hoten, string email,string sodt,string diachi,string chucvu, string ngaytao)
+        {
+            using (var db = new dbchoviet())
+            {
+                //var categorys = db.Categorys.FirstOrDefault(ca => ca.Id ==iddanhmuc );              
+                Account_Manager obj = new Account_Manager();
+                obj.name = hoten;
+                obj.email = email;
+                obj.phonenumber = sodt;
+                obj.password = "1234567890";
+                obj.position = chucvu;
+                obj.datecreate = ngaytao;  
+            }
+        }
        
     }
 }

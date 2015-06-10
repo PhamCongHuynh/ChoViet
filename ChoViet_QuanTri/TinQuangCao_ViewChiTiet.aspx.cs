@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BUSINESS;
 
 namespace ChoViet_QuanTri
 {
@@ -11,7 +12,16 @@ namespace ChoViet_QuanTri
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                loadthongtin();
+            }
+        }
+        public void loadthongtin()
+        {
+            int id = Int32.Parse(Request.QueryString["matin"]);
+            rechitiettin.DataSource= News_Controller.ViewChiTietTinQLByCategoryID(id);
+            rechitiettin.DataBind();
         }
     }
 }

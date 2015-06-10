@@ -22,6 +22,24 @@ namespace ChoViet_TrangChu {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// btndangtinngay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btndangtinngay;
+        
+        /// <summary>
+        /// btnlogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnlogout;
+        
+        /// <summary>
         /// txtseacrch control.
         /// </summary>
         /// <remarks>
@@ -67,13 +85,13 @@ namespace ChoViet_TrangChu {
         protected global::System.Web.UI.WebControls.HyperLink hplienhe;
         
         /// <summary>
-        /// btnlogout control.
+        /// hpcanhan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnlogout;
+        protected global::System.Web.UI.WebControls.HyperLink hpcanhan;
         
         /// <summary>
         /// btnlogin control.

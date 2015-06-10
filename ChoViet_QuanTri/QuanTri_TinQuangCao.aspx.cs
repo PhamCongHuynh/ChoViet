@@ -30,10 +30,9 @@ namespace ChoViet_QuanTri
             GrdanhSachtinquangcao.PageIndex = e.NewPageIndex;
             loadDanhsachtinQC();
         }
-
-        protected void GrdanhSachtinquangcao_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        protected void GrdanhSachtinquangcao_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            Response.Redirect("TinQuangCao_ViewChiTiet.aspx");
+            Response.Redirect("TinQuangCao_ViewChiTiet.aspx?matin=" + GrdanhSachtinquangcao.DataKeys[e.NewEditIndex]["matin"].ToString());
         }
     }
 }

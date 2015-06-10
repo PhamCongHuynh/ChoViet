@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BUSINESS;
+using DATA;
 
 namespace ChoViet_QuanTri
 {
@@ -16,13 +18,11 @@ namespace ChoViet_QuanTri
 
         protected void btlxacnhan_Click(object sender, EventArgs e)
         {
-            lbtxthoten.Text = txthoten.Text;
-            lbtxtemail.Text = txtemail.Text;
-            lblsodienthoai.Text = txtsodienthoai.Text;
-            lbltxtchucvu.Text = drchucvu.SelectedValue.ToString();
-            lbltxtngaysinh.Text = txtngaysinh.Text;
-            lbltxtdiachi.Text = txtdiachi.Text;
-            lbltxtdanhmuc.Text = drdanhmucquanly.SelectedItem.ToString();
+            Account_Manager ac = new Account_Manager();
+            ac.name = txthoten.Text;
+            ac.email = txtemail.Text;
+            
         }
+        
     }
 }

@@ -9,4 +9,7 @@
             <a href="QuanTri_ThongTinNguoiDung.aspx" class="list-group-item">Thông tin người dùng</a>
             <a href="QuanTri_HoTroKhachHang.aspx" class="list-group-item">Hỗ trợ khách hàng</a>
             <a href="QuanTri_BaoCaoThongKe.aspx" class="list-group-item">Xem báo cáo thống kê </a>
+            <a href="#" class="list-group-item active"> Danh mục cá nhân</a>
+            <a href="QuanTri_DoiMK.aspx" class="list-group-item">Đổi mật khẩu</a>
+            <a href="QuanTri_DoiMK.aspx" class="list-group-item">Thông tin cá nhân</a>           
 </div>

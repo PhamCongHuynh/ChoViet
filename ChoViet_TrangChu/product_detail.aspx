@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/ChiTiet.Master" AutoEventWireup="true" CodeBehind="product_detail.aspx.cs" Inherits="ChoViet_TrangChu.product_detail" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/ChiTiet.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="product_detail.aspx.cs" Inherits="ChoViet_TrangChu.product_detail" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -161,6 +161,18 @@
 			<hr class="soft">
 			</div>
 		</div>
+        <div class="pagination">
+		     <asp:Repeater ID="rptPages" runat="server"
+                onitemcommand="rptPages_ItemCommand1">
+                <ItemTemplate>
+                    <asp:LinkButton ID="btnPage"
+                     style="padding:1px 3px; margin:1px; background:#ccc; border:solid 1px #666; font:8pt tahoma;"
+                     CommandName="Page" CommandArgument="<%# Container.DataItem %>"
+                     runat="server"><%# Container.DataItem %>
+                    </asp:LinkButton>
+                </ItemTemplate>
+            </asp:Repeater>
+			</div>
 				<br class="clr">
 					 </div>
 		</div>

@@ -1,4 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Admin.Master" AutoEventWireup="true" CodeBehind="Admin_Create_Dulieu_Thongtin.aspx.cs" Inherits="ChoViet_QuanTri.Admin_Create_Dulieu_Thongtin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Admin.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="Admin_Create_Dulieu_Thongtin.aspx.cs" Inherits="ChoViet_QuanTri.Admin_Create_Dulieu_Thongtin" %>
+
+<%@ Register Assembly="FreeTextBox" Namespace="FreeTextBoxControls" TagPrefix="FTB" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -17,8 +19,9 @@
         <div class="form-group">
             <label class="control-label">E-mail: </label>
             <div class="col-ms-8">
-                <asp:TextBox ID="txtnoidung" CssClass="control-group" runat="server" TextMode="MultiLine" Columns="130" Rows="15" Style="min-width: 40%;" placeholder="Phần nội dung"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtnoidung" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
+                <FTB:FreeTextBox ID="Ftnoidung" runat="server"></FTB:FreeTextBox>
+                <%--<asp:TextBox ID="txtnoidung" CssClass="control-group" runat="server" TextMode="MultiLine" Columns="130" Rows="15" Style="min-width: 40%;" placeholder="Phần nội dung"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtnoidung" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>--%>
             </div>
         </div>
         <div class="form-group">

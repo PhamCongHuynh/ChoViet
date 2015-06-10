@@ -30,7 +30,8 @@ namespace ChoViet_TrangChu
                 int idME = Int32.Parse(Session["id"].ToString());
                 int idCA = Int32.Parse(Drchuyenmuc.SelectedValue);
                 int idRE = Int32.Parse(Drvung.SelectedValue);             
-                News_Controller.insertNew(txthoten.Text, txtsodienthoai.Text, txtemail.Text, txtdiachi.Text, rdloaitin.SelectedValue, txttuade.Text, txtnoidung.Text, UploadImage(image1), UploadImage(image2), UploadImage(image3), UploadImage(image4), UploadImage(image5), UploadImage(image6),txtgia.Text,txtcachthanhtoan.Text,txtvanchuyen.Text,DateTime.Now.ToString(),idMA,idME,idCA,idRE);      
+                News_Controller.insertNew(txthoten.Text, txtsodienthoai.Text, txtemail.Text, txtdiachi.Text, rdloaitin.SelectedValue, txttuade.Text, txtnoidung.Text, UploadImage(image1), UploadImage(image2), UploadImage(image3), UploadImage(image4), UploadImage(image5), UploadImage(image6),txtgia.Text,txtcachthanhtoan.Text,txtvanchuyen.Text,DateTime.Now.ToString(),idMA,idME,idCA,idRE);
+                Response.Redirect(Request.RawUrl);               
             }
         }
         public string UploadImage(FileUpload files)

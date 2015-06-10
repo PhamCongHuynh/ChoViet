@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Admin.Master" AutoEventWireup="true" CodeBehind="Admin_Dulieu_Information.aspx.cs" Inherits="ChoViet_QuanTri.Admin_Dulieu_Information" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage/Admin.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="Admin_Dulieu_Information.aspx.cs" Inherits="ChoViet_QuanTri.Admin_Dulieu_Information" %>
 
 <%@ Register TagPrefix="cc1" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">

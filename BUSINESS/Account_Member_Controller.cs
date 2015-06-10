@@ -42,6 +42,30 @@ namespace BUSINESS
         {
             Account_MemberREPO.Insert(ac);
         }
+        public void Update(int ids)
+        {
+            Account_Member sup = Account_MemberREPO.GetById(ids);
+            Account_MemberREPO.Update(sup);
+        }
+        public static void changesMK(string matkhaumoi, int ids)
+        {
+            using(dbchoviet db=new dbchoviet())
+            {
+                var query = (from ac in db.Account_Members where ac.Id == ids select ac).First();
+                query.password = matkhaumoi;
+                db.SaveChanges();
+            }
+        }
+        public static void UpdateTK(string hoten, string sodt, int ids)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var query = (from ac in db.Account_Members where ac.Id == ids select ac).First();
+                query.name = hoten;
+                query.phonenumber = sodt;
+                db.SaveChanges();
+            }
+        }
         // kiểm tra đăng nhập tài khoản
         public static Boolean CheckAccount(string ac_email, string ac_password)
         {

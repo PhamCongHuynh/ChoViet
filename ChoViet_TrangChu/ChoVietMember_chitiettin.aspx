@@ -1,15 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/ThongTin.Master" AutoEventWireup="true" CodeBehind="Choviet_Dangtin.aspx.cs" Inherits="ChoViet_TrangChu.Choviet_Dangtin" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/Member.Master" AutoEventWireup="true" CodeBehind="ChoVietMember_chitiettin.aspx.cs" Inherits="ChoViet_TrangChu.ChoVietMember_chitiettin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <div class="container">
-    <div class="row">
-    <div class="span2"></div>
-    <div class="span8">
     <div class="form-horizontal">
-        <asp:Label ID="Lbthongbaos" Style="color:red" runat="server" Text=""></asp:Label>
-        <h3> Đăng tin mới </h3>
+        <h3> Chi tiết tin  </h3>
             
     <h4> Thông tin liên hệ </h4>
     <hr />
@@ -89,7 +83,7 @@
         <label class="control-label col-sm-4">Hình ảnh: </label>
         <div class="col-ms-8">
             <asp:FileUpload ID="image1" runat="server" />
-           <%-- <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="image1" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>--%>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="image1" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>
        
             <br />
         </div>
@@ -98,7 +92,7 @@
         <label class="control-label col-sm-4"> </label>
         <div class="col-ms-8">
             <asp:FileUpload ID="image2" runat="server" />
-            <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="image2" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>--%>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="image2" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>
             <br />
         </div>
     </div>
@@ -106,7 +100,7 @@
         <label class="control-label col-sm-4"> </label>
         <div class="col-ms-8">
             <asp:FileUpload ID="image3" runat="server" />
-            <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="image3" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>--%>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="image3" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>
             <br />
         </div>
     </div>
@@ -114,7 +108,7 @@
         <label class="control-label col-sm-4"> </label>
         <div class="col-ms-8">
             <asp:FileUpload ID="image4" runat="server" />
-            <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="image4" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>--%>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ControlToValidate="image4" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>
             <br />
         </div>
     </div>
@@ -122,7 +116,7 @@
         <label class="control-label col-sm-4"> </label>
         <div class="col-ms-8">
             <asp:FileUpload ID="image5" runat="server" />
-            <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="image5" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>--%>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ControlToValidate="image5" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>
             <br />
         </div>
     </div>
@@ -130,7 +124,7 @@
         <label class="control-label col-sm-4"> </label>
         <div class="col-ms-8">
             <asp:FileUpload ID="image6" runat="server" />
-           <%-- <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="image6" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>--%>
+            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ControlToValidate="image6" Display="Dynamic" SetFocusOnError="true"  ErrorMessage="Không đúng định dạng tải lên" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))+(.jpeg|.JPEG|.gif|.GIF|.png|.PNG|.JPG|.jpg|.bitmap|.BITMAP)$"></asp:RegularExpressionValidator>
             <br />
         </div>
     </div>
@@ -152,13 +146,7 @@
     </div>
     <div class="form-group">
         <label class="control-label col-sm-4"> </label>      
-        <asp:Button ID="btndangky" CssClass="btn btn-success" runat="server" Text="Bước tiếp theo" OnClick="btndangky_Click" />
+        <asp:Button ID="btndangky" CssClass="btn btn-success" runat="server" Text="quaylai"  />
     </div>
 </div>
-            </div>
-    <div class="span2"></div>
-    </div
-</div>
-
-
 </asp:Content>

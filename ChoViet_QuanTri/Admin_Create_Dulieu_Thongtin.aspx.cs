@@ -23,7 +23,7 @@ namespace ChoViet_QuanTri
             if(Page.IsValid)
             {
                 int id_mana = 1;
-                Information_controller.InsertInfNew(txttitle.Text, txtnoidung.Text,id_mana);
+                Information_controller.InsertInfNew(txttitle.Text,Ftnoidung.Text,id_mana);
             }         
         }
     }

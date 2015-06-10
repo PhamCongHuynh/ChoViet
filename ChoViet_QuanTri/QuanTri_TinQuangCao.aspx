@@ -20,9 +20,16 @@
             </div>
         </div>
     </div>
-    <asp:GridView ID="GrdanhSachtinquangcao" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" OnPageIndexChanging="GrdanhSachtinquangcao_PageIndexChanging" OnSelectedIndexChanging="GrdanhSachtinquangcao_SelectedIndexChanging">
+    <asp:GridView ID="GrdanhSachtinquangcao" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" OnPageIndexChanging="GrdanhSachtinquangcao_PageIndexChanging" AutoGenerateColumns="False" DataKeyNames="matin" OnRowEditing="GrdanhSachtinquangcao_RowEditing">
         <Columns>
-            <asp:CommandField DeleteText="Xóa" HeaderText="Thao tác" SelectText="Xem chi tiết" ShowDeleteButton="True" ShowSelectButton="True" />
+            <asp:BoundField DataField="matin" HeaderText="Mã tin" />
+            <asp:BoundField DataField="tieude" HeaderText="Tiêu đề" />
+            <asp:BoundField DataField="loaitin" HeaderText="Loại tin" />
+            <asp:BoundField DataField="khuvuc" HeaderText="Khu vực" />
+            <asp:BoundField DataField="danhmuc" HeaderText="Danh mục" />
+            <asp:BoundField DataField="nguoidang" HeaderText="Người đăng" />
+            <asp:BoundField DataField="thoigiangui" HeaderText="Ngày gửi" />
+            <asp:CommandField DeleteText="Xóa" HeaderText="Thao tác" SelectText="Xem " ShowDeleteButton="True" EditText="Xem chi tiết" ShowEditButton="True" />
         </Columns>
     </asp:GridView>
 </asp:Content>

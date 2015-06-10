@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/ChiTiet.Master" AutoEventWireup="true" CodeBehind="product_search.aspx.cs" Inherits="ChoViet_TrangChu.product_search" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/ChiTiet.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="product_search.aspx.cs" Inherits="ChoViet_TrangChu.product_search" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -7,7 +7,7 @@
 		<li><a href="index.aspx">Home</a> <span class="divider">/</span></li>
 		<li class="active">Products Name</li>
     </ul>
-	<h3> Danh sách sản phẩm <small class="pull-right"> 40 products are available </small></h3>	
+	<h3> Danh sách sản phẩm <small class="pull-right">  </small></h3>	
 	<hr class="soft">
 	<p>
 		Chợ việt kiểm duyệt toàn bộ tin trước khi đăng để việc mua bán an toàn & hiệu quả hơn. Tuy nhiên, quá trình duyệt tin chỉ có thể hạn chế tối đa các trường hợp không trung thực. Hãy báo cho chúng tôi những tin xấu để chúng tôi có thể xác minh & xây dựng trang web mua bán an toàn nhất cho người Việt.

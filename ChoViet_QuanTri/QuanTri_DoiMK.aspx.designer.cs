@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ChoViet_TrangChu {
+namespace ChoViet_QuanTri {
     
     
-    public partial class ChoViet_DoiMatKhau {
+    public partial class QuanTri_DoiMK {
         
         /// <summary>
         /// txtmatkhauhientai control.

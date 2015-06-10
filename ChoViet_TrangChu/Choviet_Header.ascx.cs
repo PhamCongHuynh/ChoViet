@@ -38,11 +38,15 @@ namespace ChoViet_TrangChu
             {              
                 btnlogin.Visible = false;
                 btnlogout.Visible = true;
+                hpcanhan.Visible = true;
+                btndangtinngay.Visible = true;
             }
             else
             {
                 btnlogin.Visible = true;
                 btnlogout.Visible = false;
+                hpcanhan.Visible = false;
+                btndangtinngay.Visible = false;
             }
         }
         protected void Button1_Click(object sender, EventArgs e)
@@ -54,6 +58,11 @@ namespace ChoViet_TrangChu
             {               
                 int ids = checkids(email);
                 Session["id"] = ids;
+                Session["email"] = email;
+                //Account_Member_Controller ac = new Account_Member_Controller();
+                //var list = ac.GetById(ids);
+                //string name = list.FirstOrDefault().name.ToString();
+                //hpcanhan.Text = name;
                 Response.Redirect("ChoViet_DoiThongTinCaNhan.aspx");
             }
             else
@@ -77,17 +86,12 @@ namespace ChoViet_TrangChu
 
         protected void btnsearch_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("product_search.aspx?ma=1");
-            ////try
-            ////{
-            ////    Response.Redirect("product_search.aspx?id=1");
-            ////}
-            ////catch(Exception)
-            ////{
-            ////    Response.Redirect(Request.RawUrl);
-            ////}
-
             Response.Redirect("product_search.aspx?key=" + txtseacrch.Text + "&kv=" + Drkhuvuc.SelectedValue);
+        }
+
+        protected void btndangtinngay_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Choviet_Dangtin.aspx");
         }
     }
 }

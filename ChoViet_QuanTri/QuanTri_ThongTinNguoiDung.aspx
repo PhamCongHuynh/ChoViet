@@ -20,8 +20,14 @@
             </div>
         </div>
     </div>
-    <asp:GridView ID="Grdanhsachnguoidung" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" >
+    <asp:GridView ID="Grdanhsachnguoidung" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" AutoGenerateColumns="False" >
         <Columns>
+            <asp:BoundField DataField="Id" HeaderText="Mã thành viên" />
+            <asp:BoundField DataField="name" HeaderText="Họ và tên" />
+            <asp:BoundField DataField="phonenumber" HeaderText="Số điện thoại" />
+            <asp:BoundField DataField="email" HeaderText="E-mail" />
+            <asp:BoundField DataField="address" HeaderText="Địa chỉ" />
+            <asp:BoundField DataField="datecreate" HeaderText="Ngày đăng ký" />
             <asp:CommandField DeleteText="Xóa" HeaderText="Thao tác" SelectText="Xem chi tiết" ShowDeleteButton="True" ShowSelectButton="True" />
 
         </Columns>

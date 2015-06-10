@@ -24,6 +24,11 @@ namespace BUSINESS
             List<News> New = News_ControllerREPO.Table.ToList();
             return New;
         }
+        public void Delete(int ids)
+        {
+            News obj = News_ControllerREPO.GetById(ids);
+            News_ControllerREPO.Delete(obj);
+        }
         // phương thức đăng tin mới 
         public static void insertNew(string fullname,string phonenumber,string emailcus,string addresscontrac,string typenew,string titles,string contents, string image1s,string image2s,string image3s, string image4s, string image5s,string image6s, string prices,string pays, string shippings,string datecreates,int idmember, int idmanager, int idcategory,int idregions)
         {
@@ -78,7 +83,7 @@ namespace BUSINESS
                                  timeaction =n.dateaction,
                                  nguoidang=ac.name,
                                  url_image = n.image1
-                             }).Take(30);
+                             });
                 return Views.ToList();
             }
         }
@@ -150,7 +155,7 @@ namespace BUSINESS
                                  nguoidang = ac.name,
                                  image1 = n.image1,
                                  content = n.content
-                             }).Take(30);
+                             });
                 return Views.ToList();
             }
         }
@@ -240,6 +245,8 @@ namespace BUSINESS
                                 image6 = n.image6,
                                 khuvuc = re.Name,
                                 danhmuc = ca.name,
+                                gia=n.price,
+                                cachthanhtoan=n.pay,
                                 quytrinhvanchuyen=n.shipping,
                                 thoigiannhan = n.datecheck,
                                 nguoidang = ac.name
@@ -254,7 +261,8 @@ namespace BUSINESS
             using (dbchoviet db = new dbchoviet())
             {
                 var Views = from n in db.Newss.AsEnumerable()
-                            where n.status_news.Equals(st_new_id) && n.Category.Id==cate_id
+                            //where n.status_news.Equals(st_new_id) && n.Category.Id==cate_id
+                            where n.Category.Id==cate_id && n.status_news.Contains(st_new_id)
                             join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
                             join re in db.Regions on n.Regions.Id equals re.Id
                             join ca in db.Categorys on n.Category.Id equals ca.Id
@@ -277,7 +285,8 @@ namespace BUSINESS
             using (dbchoviet db = new dbchoviet())
             {
                 var Views = from n in db.Newss.AsEnumerable()
-                            where n.status_news.Equals(st_new_id) && n.Account_Members.Id == AC_id
+                            //where n.status_news.Contains("1") && n.Account_Members.Id == 2
+                            where n.Account_Members.Id==AC_id
                             join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
                             join re in db.Regions on n.Regions.Id equals re.Id
                             join ca in db.Categorys on n.Category.Id equals ca.Id

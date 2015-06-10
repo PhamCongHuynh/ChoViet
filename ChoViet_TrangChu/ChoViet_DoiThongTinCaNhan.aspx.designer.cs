@@ -22,13 +22,13 @@ namespace ChoViet_TrangChu {
         protected global::System.Web.UI.WebControls.TextBox txtid;
         
         /// <summary>
-        /// TextBox1 control.
+        /// txtemail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtemail;
         
         /// <summary>
         /// txthovaten control.
@@ -40,6 +40,15 @@ namespace ChoViet_TrangChu {
         protected global::System.Web.UI.WebControls.TextBox txthovaten;
         
         /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// txtsodienthoai control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace ChoViet_TrangChu {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtsodienthoai;
+        
+        /// <summary>
+        /// RequiredFieldValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
         /// btnluulai control.
@@ -58,12 +76,12 @@ namespace ChoViet_TrangChu {
         protected global::System.Web.UI.WebControls.Button btnluulai;
         
         /// <summary>
-        /// btnhuybo control.
+        /// lblthongbao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnhuybo;
+        protected global::System.Web.UI.WebControls.Label lblthongbao;
     }
 }

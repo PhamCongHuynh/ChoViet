@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BUSINESS;
 
 namespace ChoViet_TrangChu
 {
@@ -23,6 +24,18 @@ namespace ChoViet_TrangChu
                 Response.Redirect("index.aspx");
             }
 
+        }
+        public void loadcheck()
+        {
+            txtid.Text = Session["id"].ToString();
+            txtemail.Text = Session["email"].ToString();
+        }
+
+        protected void btnluulai_Click(object sender, EventArgs e)
+        {
+            int idtk = Int32.Parse(Session["id"].ToString());
+            Account_Member_Controller.UpdateTK(txthovaten.Text,txtsodienthoai.Text,idtk);
+            lblthongbao.Text = "Thay đổi thông tin thành công !";
         }
     }
 }

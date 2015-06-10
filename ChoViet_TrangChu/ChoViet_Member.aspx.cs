@@ -20,8 +20,10 @@ namespace ChoViet_TrangChu
         }
         public void loadDanhSachNew()
         {
-            string st_new_id = Request.QueryString["status_id"];
-            Grdanhsach.DataSource = News_Controller.NewsNguoiDungBy(1,st_new_id);
+            int tv=Int32.Parse(Session["id"].ToString());
+            //string st_new_id = Request.QueryString["status_id"];
+            string st_new_id = "0";
+            Grdanhsach.DataSource = News_Controller.NewsNguoiDungBy(tv,st_new_id);
             Grdanhsach.DataBind();
         }
 
@@ -38,6 +40,33 @@ namespace ChoViet_TrangChu
             }
 
         }
+
+        protected void Grdanhsach_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+           int ma = Int32.Parse(e.Keys[0].ToString());
+           //int ma = Convert.ToInt32(Grdanhsach.DataKeys[Matin].Value);
+           News_Controller news = new News_Controller();
+           news.Delete(ma);
+           
+           lblthongbao.Text = "Bạn vừa xóa 1 tập tin ! ";
+        }
+
+        protected void Grdanhsach_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if (e.Row.Cells[4].Text == "0")
+                    e.Row.Cells[4].Text = "Chưa duyệt";
+                else if (e.Row.Cells[4].Text == "1")
+                    e.Row.Cells[4].Text = "Đã duyệt";
+                else if (e.Row.Cells[4].Text == "2")
+                    e.Row.Cells[4].Text = "Đang xem xét";
+                else
+                    e.Row.Cells[4].Text = "Từ chối";
+            }
+        }
+
+      
        
 
     }

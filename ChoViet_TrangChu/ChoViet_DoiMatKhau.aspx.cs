@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BUSINESS;
 
 namespace ChoViet_TrangChu
 {
@@ -23,7 +24,13 @@ namespace ChoViet_TrangChu
                 Response.Redirect("index.aspx");
             }
 
+        }
 
+        protected void btnthaydoi_Click(object sender, EventArgs e)
+        {
+            int id = Int32.Parse(Session["id"].ToString());
+            Account_Member_Controller.changesMK(txtmatkhaumoi.Text, id);
+            lblthongbao.Text = "Thay đổi mật khẩu thành công !";
         }
 
     }

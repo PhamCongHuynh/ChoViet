@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/ChiTiet.Master" AutoEventWireup="true" CodeBehind="product_View.aspx.cs" Inherits="ChoViet_TrangChu.product_View" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/ChiTiet.Master" EnableEventValidation="false" AutoEventWireup="true" CodeBehind="product_View.aspx.cs" Inherits="ChoViet_TrangChu.product_View" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

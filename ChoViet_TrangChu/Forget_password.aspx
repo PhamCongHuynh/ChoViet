@@ -4,10 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="span9">
     <ul class="breadcrumb">
-		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
-		<li class="active">Forget password?</li>
+		<li><a href="index.html">Trang chủ</a> <span class="divider">/</span></li>
+		<li class="active">Quên mật khẩu?</li>
     </ul>
-	<h3> FORGET YOUR PASSWORD?</h3>	
+	<h3> Quên mật khẩu ?</h3>	
 	<hr class="soft">
 	
 	<div class="row">

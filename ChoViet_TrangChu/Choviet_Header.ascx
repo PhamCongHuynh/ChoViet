@@ -3,14 +3,16 @@
 <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 <div class="container">
     <div id="welcomeLine" class="row">
-        <div class="span6">Welcome!<strong> User</strong></div>
+        <div class="span6"><strong>Chào mừng bạn đến hệ thống rao vặt Chợ Việt</strong></div>
         <div class="span6">
             <div class="pull-right">
                 <a href="product_summary.html"><span class="">Fr</span></a>
                 <a href="product_summary.html"><span class="">Es</span></a>
                 <a href="product_summary.html"><span class="">Ngôn ngữ</span></a>
                 <span class="btn btn-mini">Tiếng Việt</span>
-                <a href="Choviet_Dangtin.aspx"><span class="btn btn-mini btn-primary"><i class="icon-shopping-cart icon-white"></i>Đăng tin ngay </span></a>
+                <%--<a href="Choviet_Dangtin.aspx"><span class="btn btn-mini btn-primary"><i class="icon-shopping-cart icon-white"></i>Đăng tin ngay </span></a>--%>
+                <asp:Button ID="btndangtinngay" CssClass="btn btn-mini btn-primary" runat="server" Text="Đăng tin ngay" OnClick="btndangtinngay_Click" />
+                <asp:Button ID="btnlogout" CssClass="btn btn-mini btn-warning" Style="width: 100px" runat="server" Text="Đăng Xuất" OnClick="btnlogout_Click" />
             </div>
         </div>
     </div>
@@ -31,10 +33,10 @@
                <%-- <button type="submit" id="submitButton" class="btn btn-primary">Go</button>--%>
             </div>
             <div class="form-inline navbar-search pull-right">
-                <asp:HyperLink ID="hpgioithieu" Style="width: 100px; text-decoration-color: white;" runat="server" Text="Giới thiệu" Font-Size="Medium" ForeColor="White" NavigateUrl="~/Choviet_rule.aspx?matt=15" />&nbsp&nbsp&nbsp
-		 
+                <asp:HyperLink ID="hpgioithieu" Style="width: 100px; text-decoration-color: white;" runat="server" Text="Giới thiệu" Font-Size="Medium" ForeColor="White" NavigateUrl="~/Choviet_rule.aspx?matt=15" />&nbsp&nbsp&nbsp		 
                 <asp:HyperLink ID="hplienhe" Style="width: 100px; text-decoration-color: white;" runat="server" Text="Liên hệ" Font-Size="Medium" ForeColor="White" NavigateUrl="~/ChoViet_LienHe.aspx" />&nbsp&nbsp&nbsp
-                <asp:Button ID="btnlogout" CssClass="btn btn-warning" Style="width: 100px" runat="server" Text="Đăng Xuất" OnClick="btnlogout_Click" />
+                <asp:HyperLink ID="hpcanhan" Style="width: 100px; text-decoration-color: white;" runat="server" Text="Trang cá nhân" Font-Size="Medium" ForeColor="White" NavigateUrl="~/ChoViet_DoiThongTinCaNhan.aspx" />&nbsp&nbsp&nbsp
+                <%--<asp:Button ID="btnlogout" CssClass="btn btn-warning" Style="width: 100px" runat="server" Text="Đăng Xuất" OnClick="btnlogout_Click" />--%>
                 <asp:Button ID="btnlogin" CssClass="btn btn-success" Style="width: 100px" runat="server" Text="Đăng nhập" />
                 <cc1:ModalPopupExtender runat="server" DynamicServicePath="" BehaviorID="btnlogin_ModalPopupExtender" TargetControlID="btnlogin" ID="btnlogin_ModalPopupExtender" PopupControlID="Panellogin" BackgroundCssClass="modalBackground"></cc1:ModalPopupExtender>
             </div>

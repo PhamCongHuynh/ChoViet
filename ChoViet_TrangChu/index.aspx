@@ -52,7 +52,7 @@
 		<div class="carousel-inner">
 		  <div class="item">
 		  <div class="container">
-			<a href="register.html"><img style="width:100%" src="themes/images/carousel/1.png" alt="special offers"/></a>
+			<a href="index.aspx"><img style="width:100%" src="themes/images/carousel/1.png" alt="special offers"/></a>
 			<div class="carousel-caption">
 				  <h4>Cái thứ nhất hiển thi</h4>
 				  <p>may co phải là cái thứ nhất</p>
@@ -61,7 +61,7 @@
 		  </div>
 		  <div class="item active left">
 		  <div class="container">
-			<a href="register.html"><img style="width:100%" src="themes/images/carousel/2.png" alt=""/></a>
+			<a href="index.aspx"><img style="width:100%" src="themes/images/carousel/2.png" alt=""/></a>
 				<div class="carousel-caption">
 				  <h4>Cái thứ 2 hiển thi</h4>
 				  <p>may co phải là cái thứ hai</p>	</div>
@@ -69,7 +69,7 @@
 		  </div>
 		  <div class="item next left">
 		  <div class="container">
-			<a href="register.html"><img src="themes/images/carousel/3.png" alt=""></a>
+			<a href="index.aspx"><img src="themes/images/carousel/3.png" alt=""></a>
 			<div class="carousel-caption">
 				  <h4>Second Thumbnail label</h4>
 				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -79,7 +79,7 @@
 		  </div>
 		   <div class="item">
 		   <div class="container">
-			<a href="register.html"><img src="themes/images/carousel/4.png" alt=""></a>
+			<a href="index.aspx"><img src="themes/images/carousel/4.png" alt=""></a>
 			<div class="carousel-caption">
 				  <h4>Second Thumbnail label</h4>
 				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -89,7 +89,7 @@
 		  </div>
 		   <div class="item">
 		   <div class="container">
-			<a href="register.html"><img src="themes/images/carousel/5.png" alt=""></a>
+			<a href="index.aspx"><img src="themes/images/carousel/5.png" alt=""></a>
 			<div class="carousel-caption">
 				  <h4>Second Thumbnail label</h4>
 				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -98,7 +98,7 @@
 		  </div>
 		   <div class="item">
 		   <div class="container">
-			<a href="register.html"><img src="themes/images/carousel/6.png" alt=""></a>
+			<a href="index.aspx"><img src="themes/images/carousel/6.png" alt=""></a>
 			<div class="carousel-caption">
 				  <h4>Second Thumbnail label</h4>
 				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -157,7 +157,7 @@
 					        <div class="caption">
                               <h5><%# Eval("title") %></h5>
 					          <h6><%# Eval("nguoidang") %></h6>
-					          <h4><a class="btn" href="product_detail.aspx">Xem</a> <span class="pull-right"><%# Eval("price") %></span></h4>
+					          <h4><a class="btn" href="product_detail.aspx">Chi tiết</a> <span class="pull-right"><%# Eval("price") %></span></h4>
 					        </div>
 				          </div>
 				        </li>                      
@@ -174,18 +174,30 @@
                       <ItemTemplate>
                      <li class="span3">
 				       <div class="thumbnail">
-                          <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("url_image") %>' Height="160px" Width="160px" />
+                          <asp:Image ID="Imahinhanh" runat="server" ImageUrl="themes/images/products/7.jpg" Height="160px" Width="160px" />
 					        <div class="caption">
                                 <h5> <asp:Label ID="txtnguoidang" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label></h5>
                                 <p><asp:Label ID="txttieude" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
 
-					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Xem<i class="icon-zoom-in"></i></a> <a class="btn btn-link" href="product_detail.aspx">'<%# Eval("price") %>'</a></h4>
+					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Chi tiết<i class="icon-zoom-in"></i></a> <a class="btn btn-link" href="product_detail.aspx">'<%# Eval("price") %>'</a></h4>
 					        </div>
 				       </div>
 				      </li>
                       </ItemTemplate>
                   </asp:Repeater>
-			  </ul>	
+			  </ul>
+             <div class="pagination">
+		     <asp:Repeater ID="rptPages" runat="server"
+                onitemcommand="rptPages_ItemCommand1">
+                <ItemTemplate>
+                    <asp:LinkButton ID="btnPage"
+                     style="padding:1px 3px; margin:1px; background:#ccc; border:solid 1px #666; font:8pt tahoma;"
+                     CommandName="Page" CommandArgument="<%# Container.DataItem %>"
+                     runat="server"><%# Container.DataItem %>
+                    </asp:LinkButton>
+                </ItemTemplate>
+            </asp:Repeater>
+			</div>	
 		</div>
 		</div>
 	</div>
