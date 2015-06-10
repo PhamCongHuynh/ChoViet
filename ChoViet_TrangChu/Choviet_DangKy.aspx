@@ -22,14 +22,14 @@
     <div class="form-group">
         <label class="control-label col-sm-4">Mật khẩu * </label>
         <div class="col-ms-8">
-            <asp:TextBox ID="txtmatkhau" CssClass="control-group" runat="server" placeholder="Mật khẩu đăng nhập"></asp:TextBox>
+            <asp:TextBox ID="txtmatkhau" CssClass="control-group" runat="server" TextMode="Password" placeholder="Mật khẩu đăng nhập"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtmatkhau" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-4">Nhập lại mật khẩu * </label>
         <div class="col-ms-8">
-            <asp:TextBox ID="txtnhaplaimk" CssClass="control-group" runat="server" placeholder="Nhập lại mật khẩu"></asp:TextBox>
+            <asp:TextBox ID="txtnhaplaimk" CssClass="control-group" runat="server" TextMode="Password" placeholder="Nhập lại mật khẩu"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtnhaplaimk" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>
         </div>
     </div>
@@ -43,7 +43,10 @@
     <div class="form-group">
         <label class="control-label col-sm-4">Giới tính: </label>
         <div class="col-ms-8">
-            <asp:DropDownList ID="Drgioitinh" CssClass="control-group" runat="server"></asp:DropDownList>
+            <asp:DropDownList ID="Drgioitinh" CssClass="control-group" runat="server">
+                <asp:ListItem Value="1">Nam</asp:ListItem>
+                <asp:ListItem Value="2">Nữ</asp:ListItem>
+            </asp:DropDownList>
         </div>
     </div>
     <h4> Thông tin khách hàng </h4>

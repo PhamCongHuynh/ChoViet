@@ -26,7 +26,7 @@
 
     <h2>Quản trị thông tin chợ việt</h2>
 
-    <asp:GridView ID="grDSthongtin" CssClass="table table-hover" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="grDSthongtin_PageIndexChanging" PageSize="20" OnRowCreated="grDSthongtin_RowCreated">
+    <asp:GridView ID="grDSthongtin" CssClass="table table-hover" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="grDSthongtin_PageIndexChanging" PageSize="20" DataKeyNames="matin" OnRowEditing="grDSthongtin_RowEditing">
         <Columns>
             <asp:BoundField DataField="matin" HeaderText="Mã thông tin" />
             <asp:BoundField DataField="tieude" HeaderText="Tiêu đề" />

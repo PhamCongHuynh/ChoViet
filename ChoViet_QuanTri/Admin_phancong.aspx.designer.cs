@@ -49,22 +49,22 @@ namespace ChoViet_QuanTri {
         protected global::System.Web.UI.WebControls.TextBox txtid;
         
         /// <summary>
-        /// Label6 control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// drchucvu control.
+        /// txtchucvu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drchucvu;
+        protected global::System.Web.UI.WebControls.TextBox txtchucvu;
         
         /// <summary>
         /// Label7 control.
@@ -83,6 +83,24 @@ namespace ChoViet_QuanTri {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList drdanhmucquanly;
+        
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+        
+        /// <summary>
+        /// txtghichu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtghichu;
         
         /// <summary>
         /// btlxacnhan control.

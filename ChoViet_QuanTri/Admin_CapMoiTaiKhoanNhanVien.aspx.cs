@@ -21,7 +21,12 @@ namespace ChoViet_QuanTri
             Account_Manager ac = new Account_Manager();
             ac.name = txthoten.Text;
             ac.email = txtemail.Text;
-            
+            ac.phonenumber = txtsodienthoai.Text;
+            ac.position = drchucvu.SelectedValue;
+            ac.datecreate = DateTime.Now.ToString();
+            Account_Manager_Controller acm = new Account_Manager_Controller();
+            acm.InsertAC(ac);
+            Response.Redirect("Admin_phancong.aspx?email="+txtemail.Text);
         }
         
     }

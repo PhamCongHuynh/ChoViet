@@ -112,6 +112,24 @@ namespace ChoViet_QuanTri {
         protected global::System.Web.UI.WebControls.TextBox txtdiachi;
         
         /// <summary>
+        /// Label6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
+        
+        /// <summary>
+        /// drchucvu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drchucvu;
+        
+        /// <summary>
         /// btlxacnhan control.
         /// </summary>
         /// <remarks>

@@ -21,6 +21,16 @@
         </div>
     </div>
     
-    <asp:GridView ID="DSTaiKhoan" CssClass="table table-hover" runat="server"></asp:GridView>
+    <asp:GridView ID="DSTaiKhoan" CssClass="table table-hover" runat="server" AutoGenerateColumns="False">
+        <Columns>
+            <asp:BoundField DataField="Id" HeaderText="Mã nhân viên" />
+            <asp:BoundField DataField="name" HeaderText="Họ và tên" />
+            <asp:BoundField DataField="phonenumber" HeaderText="Số điện thoại" />
+            <asp:BoundField DataField="email" HeaderText="Email" />
+            <asp:BoundField DataField="position" HeaderText="Chức vụ" />
+            <asp:BoundField DataField="datecreate" HeaderText="Ngày làm việc" />
+            <asp:CommandField DeleteText="Xóa" EditText="Phân công " HeaderText="Thao tác" ShowDeleteButton="True" ShowEditButton="True" />
+        </Columns>
+    </asp:GridView>
 
 </asp:Content>

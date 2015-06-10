@@ -17,11 +17,9 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label">E-mail: </label>
+            <label class="control-label">Nội dung: </label>
             <div class="col-ms-8">
-                <FTB:FreeTextBox ID="Ftnoidung" runat="server"></FTB:FreeTextBox>
-                <%--<asp:TextBox ID="txtnoidung" CssClass="control-group" runat="server" TextMode="MultiLine" Columns="130" Rows="15" Style="min-width: 40%;" placeholder="Phần nội dung"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtnoidung" runat="server" ErrorMessage="(!)"></asp:RequiredFieldValidator>--%>
+                <FTB:FreeTextBox ID="Ftnoidung" runat="server"></FTB:FreeTextBox>                
             </div>
         </div>
         <div class="form-group">

@@ -29,10 +29,15 @@ namespace ChoViet_QuanTri
             loadthongtin();
         }
 
-        protected void grDSthongtin_RowCreated(object sender, GridViewRowEventArgs e)
+        protected void grDSthongtin_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            Response.Redirect("Admin_Create_Dulieu_Thongtin.aspx");
+            Response.Redirect("Admin_SuaThongTin.aspx?matin=" + grDSthongtin.DataKeys[e.NewEditIndex]["matin"].ToString());
         }
+
+        //protected void grDSthongtin_RowCreated(object sender, GridViewRowEventArgs e)
+        //{
+        //    Response.Redirect("Admin_Create_Dulieu_Thongtin.aspx");
+        //}
 
        
 

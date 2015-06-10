@@ -29,6 +29,13 @@
             <asp:Label ID="Label5" runat="server" Text="Địa chỉ liên hệ :"></asp:Label>
             <asp:TextBox ID="txtdiachi" CssClass="form-control" placeholder="Địa chỉ liên hệ" runat="server"></asp:TextBox>
         </div>
+        <div class="form-group">
+            <asp:Label ID="Label6" runat="server" Text="Chức vụ :"></asp:Label>
+            <asp:DropDownList ID="drchucvu" CssClass="form-control" runat="server">
+                <asp:ListItem Value="1">Admin</asp:ListItem>
+                <asp:ListItem Value="2">Quản trị viên</asp:ListItem>
+            </asp:DropDownList>
+        </div>
         <asp:Button ID="btlxacnhan" CssClass="btn btn-default" runat="server" Text="Cấp tài khoản" OnClick="btlxacnhan_Click" />
         <%--<cc1:ModalPopupExtender runat="server" DynamicServicePath="" BehaviorID="btlxacnhan_ModalPopupExtender" TargetControlID="btlxacnhan" ID="btlxacnhan_ModalPopupExtender" PopupControlID="Panelxemlai" BackgroundCssClass="modalBackground"></cc1:ModalPopupExtender>--%>
         <asp:Button ID="btnhuy" CssClass="btn btn-default" runat="server" Text="Hủy bỏ" />

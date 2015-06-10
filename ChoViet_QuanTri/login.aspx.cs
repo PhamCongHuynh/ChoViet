@@ -18,7 +18,7 @@ namespace ChoViet_QuanTri
         protected void btndangnhap_Click(object sender, EventArgs e)
         {
             int mataikhoan = Int32.Parse(txttmaaikhoan.Text);
-            string matkhau = txtmatkhau.Text;
+            string matkhau = md5(txtmatkhau.Text);
             Boolean flag = Account_Manager_Controller.CheckAccount(mataikhoan, matkhau);
             if (flag)
             {
@@ -29,6 +29,18 @@ namespace ChoViet_QuanTri
             {
                 Response.Redirect("login.aspx");
             }
+        }
+        public static byte[] encryptData(string data)
+        {
+            System.Security.Cryptography.MD5CryptoServiceProvider md5Hasher = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            byte[] hashedBytes;
+            System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();
+            hashedBytes = md5Hasher.ComputeHash(encoder.GetBytes(data));
+            return hashedBytes;
+        }
+        public static string md5(string data)
+        {
+            return BitConverter.ToString(encryptData(data)).Replace("-", "").ToLower();
         }
     }
 }

@@ -108,6 +108,15 @@ namespace BUSINESS
                 obj.datecreate = ngaytao;  
             }
         }
+        public static List<Account_Manager> CheckIdAccount(string ac_email)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var query = from u in db.Account_Managers where u.email == ac_email select u;
+                return query.ToList();
+            }
+
+        }
        
     }
 }

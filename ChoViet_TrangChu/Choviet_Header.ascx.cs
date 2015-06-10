@@ -52,7 +52,7 @@ namespace ChoViet_TrangChu
         protected void Button1_Click(object sender, EventArgs e)
         {
             string email = txtemail.Text;
-            string matkhau = txtpass.Text;
+            string matkhau = md5(txtpass.Text);
             Boolean flag = Account_Member_Controller.CheckAccount(email, matkhau);
             if (flag)
             {               
@@ -92,6 +92,18 @@ namespace ChoViet_TrangChu
         protected void btndangtinngay_Click(object sender, EventArgs e)
         {
             Response.Redirect("Choviet_Dangtin.aspx");
+        }
+        public static byte[] encryptData(string data)
+        {
+            System.Security.Cryptography.MD5CryptoServiceProvider md5Hasher = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            byte[] hashedBytes;
+            System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();
+            hashedBytes = md5Hasher.ComputeHash(encoder.GetBytes(data));
+            return hashedBytes;
+        }
+        public static string md5(string data)
+        {
+            return BitConverter.ToString(encryptData(data)).Replace("-", "").ToLower();
         }
     }
 }

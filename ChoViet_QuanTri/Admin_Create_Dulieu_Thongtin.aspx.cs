@@ -18,12 +18,12 @@ namespace ChoViet_QuanTri
         }
 
         protected void btnluu_Click(object sender, EventArgs e)
-        {         
-           
+        {                    
             if(Page.IsValid)
             {
-                int id_mana = 1;
+                int id_mana =Int32.Parse(Session["id"].ToString());
                 Information_controller.InsertInfNew(txttitle.Text,Ftnoidung.Text,id_mana);
+                Response.Redirect("Admin_Dulieu_Information.aspx");
             }         
         }
     }

@@ -81,5 +81,21 @@ namespace BUSINESS
                  return phancong.ToList();
              }
          }
+         public void insertPhanCong(int idAC,int idCA, string ngaytao,string ghichu)
+         {
+             using(dbchoviet db=new dbchoviet())
+             {
+                 var manager = db.Account_Managers.FirstOrDefault(ac => ac.Id == idAC);
+                 var categorys = db.Categorys.FirstOrDefault(ca => ca.Id == idCA);
+                 Schedule sc = new Schedule();
+                 sc.Account_Managers = manager;
+                 sc.Category = categorys;
+                 sc.datecreate = ngaytao;
+                 sc.note = ghichu;
+                 db.Schedules.Add(sc);
+                 db.SaveChanges();
+             }
+
+         }
     }
 }

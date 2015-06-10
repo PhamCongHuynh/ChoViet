@@ -21,7 +21,7 @@ namespace ChoViet_TrangChu
             Account_Member acm = new Account_Member();
             acm.name = txthoten.Text;
             acm.email = txtemail.Text;
-            acm.password = txtmatkhau.Text;
+            acm.password = md5(txtmatkhau.Text);
             acm.phonenumber = txtsodienthoai.Text;
             acm.address = txtdiachi.Text;
             acm.birthday = txtngaysinh.Text;
@@ -29,7 +29,20 @@ namespace ChoViet_TrangChu
             acm.datecreate = DateTime.Now.ToString(" ddd - yyyy.MM.dd HH:mm:ss");
             Account_Member_Controller sccontroll = new Account_Member_Controller();
             sccontroll.insertMember(acm);
+            Response.Redirect(Request.RawUrl);
 
+        }
+        public static byte[] encryptData(string data)
+        {
+            System.Security.Cryptography.MD5CryptoServiceProvider md5Hasher = new System.Security.Cryptography.MD5CryptoServiceProvider();
+            byte[] hashedBytes;
+            System.Text.UTF8Encoding encoder = new System.Text.UTF8Encoding();
+            hashedBytes = md5Hasher.ComputeHash(encoder.GetBytes(data));
+            return hashedBytes;
+        }
+        public static string md5(string data)
+        {
+            return BitConverter.ToString(encryptData(data)).Replace("-", "").ToLower();
         }
     }
 }

@@ -17,11 +17,18 @@ namespace BUSINESS
         {
             InfoREPO = unitOfWork.Repository<Information>();
         }
-        //public List<Information> getALL()
-        //{
-        //    List<Information> Informations = InfoREPO.Table.ToList();
-        //    return Informations;
-        //}
+        public List<Information> getALL()
+        {
+            List<Information> Informations = InfoREPO.Table.ToList();
+            return Informations;
+        }
+        public List<Information> GetById(int ids)
+        {
+            List<Information> list = new List<Information>();
+            Information ac = InfoREPO.GetById(ids);
+            list.Add(ac);
+            return list;
+        }
         //hien thi ngoai giao dien khi mot bo thong tin duoc trieu goi theo ma
         public static IEnumerable getByInforID(int ids)
         {
@@ -79,6 +86,18 @@ namespace BUSINESS
                 db.Informations.Add(info);
                 db.SaveChanges();
             }
+        }
+        public static void upDateInfNew(int matin, string title, string content, int id_manager)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var ac_manager = db.Account_Managers.FirstOrDefault(ac => ac.Id == id_manager);
+                var query = (from inf in db.Informations where inf.Id == matin select inf).First();
+                query.title_infor = title;
+                query.content_infor = content;
+                query.Account_Manager = ac_manager;
+                db.SaveChanges();
+            }         
         }
     }
 }
