@@ -21,14 +21,16 @@ namespace ChoViet_TrangChu
         }
         public void loadChitietsanpham()
         {
-            int matin = 6;
-            RPChitiet.DataSource = News_Controller.ViewByChiTiet(matin);
+            int mid = Int32.Parse(Request.QueryString["matinid"].ToString());
+            RPChitiet.DataSource = News_Controller.ViewByChiTiet(mid);
             RPChitiet.DataBind();
         }
 
         public void loadDLview()
         {
-            int madanhmuc = 1;
+           
+            int mid = Int32.Parse(Request.QueryString["matinid"].ToString());
+            int madanhmuc = checkanhmuc(mid);
             var list = News_Controller.ViewByproduct(madanhmuc);
             PagedDataSource pgitems = new PagedDataSource();
             //System.Data.DataView dv = new System.Data.DataView(list);
@@ -70,6 +72,13 @@ namespace ChoViet_TrangChu
         {
             PageNumber = Convert.ToInt32(e.CommandArgument) - 1;
             loadDLview();
+        }
+        public int checkanhmuc(int masp)
+        {
+            News_Controller obj=new News_Controller();
+            var list =obj.GetById(masp);
+            int madm = list.FirstOrDefault().Category.Id;
+            return madm;
         }
     }
 }

@@ -24,5 +24,18 @@ namespace ChoViet_QuanTri
             DSTaiKhoan.DataSource = ac.getALL();
             DSTaiKhoan.DataBind();
         }
+
+        protected void DSTaiKhoan_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if (e.Row.Cells[4].Text == "1")
+                    e.Row.Cells[4].Text = "Admin";
+                else if (e.Row.Cells[4].Text == "2")
+                    e.Row.Cells[4].Text = "Quản trị viên";
+                else
+                    e.Row.Cells[4].Text = "Nhân viên";
+            }
+        }
     }
 }

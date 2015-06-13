@@ -23,7 +23,7 @@
         </div>
         <asp:Label ID="lblthongbao" Style="color:red; font-family:Tahoma;" runat="server" Text=""></asp:Label>
         <br />
-        <asp:GridView ID="Grdanhsach" CssClass="table table-hover" runat="server" AllowPaging="True" OnPageIndexChanging="Grdanhsach_PageIndexChanging" PageSize="20" AutoGenerateColumns="False" OnRowDeleting="Grdanhsach_RowDeleting" DataKeyNames="Matin" OnRowDataBound="Grdanhsach_RowDataBound">
+        <asp:GridView ID="Grdanhsach" CssClass="table table-hover" runat="server" AllowPaging="True" OnPageIndexChanging="Grdanhsach_PageIndexChanging" PageSize="20" AutoGenerateColumns="False" OnRowDeleting="Grdanhsach_RowDeleting" DataKeyNames="Matin" OnRowDataBound="Grdanhsach_RowDataBound" OnRowEditing="Grdanhsach_RowEditing">
             <Columns>
                 <asp:BoundField DataField="Matin" HeaderText="Mã tin" />
                 <asp:BoundField DataField="tieude" HeaderText="Tiêu đề" />
@@ -32,7 +32,7 @@
                 <asp:BoundField DataField="kiemduyet" HeaderText="Kiểm duyệt" />
                 <asp:BoundField DataField="thoigiandang" HeaderText="Thời gian đăng" />
                 <asp:BoundField DataField="luotxem" HeaderText="Lượt xem" />
-                <asp:CommandField DeleteText="Xóa" HeaderText="Thao tác" SelectText="Xem chi tiết" ShowDeleteButton="True" ShowSelectButton="True" />
+                <asp:CommandField DeleteText="Xóa" HeaderText="Thao tác" SelectText="Xem " ShowDeleteButton="True" EditText="Xem chi tiết" ShowEditButton="True" />
             </Columns>
         </asp:GridView>
 </asp:Content>

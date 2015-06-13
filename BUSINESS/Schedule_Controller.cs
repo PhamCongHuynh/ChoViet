@@ -25,27 +25,7 @@ namespace BUSINESS
             List<Schedule> Listschedule = Schedule_REPO.Table.ToList();
             return Listschedule;
         }
-        // lay danh muc theo ma danh muc cha
-        //public static IEnumerable getSchedule()
-        //{
-        //    using (dbchoviet db = new dbchoviet())
-        //    {
-        //        var query = from u in db.Categorys where u.parent == 0 select u;
-        //        return query.ToList(); 
-        //    }
-           
-        //}
-        //lay danh muc theo ma danh muc con
-        //public static IEnumerable getCategoryById()
-        //{
-        //    using (dbchoviet db = new dbchoviet())
-        //    {
-        //        var query = from u in db.Categorys where u.parent != 0 select u;
-        //        return query.ToList();
-        //    }
-
-        //}
-        //xoa mot danh muc
+        
         public void Delete(int ids)
         {
             Schedule ac = Schedule_REPO.GetById(ids);
@@ -94,6 +74,15 @@ namespace BUSINESS
                  sc.note = ghichu;
                  db.Schedules.Add(sc);
                  db.SaveChanges();
+             }
+
+         }
+         public static List<Schedule> checkCategory(int idma)
+         {
+             using(dbchoviet db=new dbchoviet())
+             {
+                 var query = from u in db.Schedules where u.Account_Managers.Id == idma select u;
+                 return query.ToList();
              }
 
          }

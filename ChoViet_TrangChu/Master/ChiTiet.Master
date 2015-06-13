@@ -12,7 +12,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">  
     <meta charset="utf-8"/>
-    <title>Cho viet chi tiet san pham </title>
+    <title>Chợ Việt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>	
 <!-- Bootstrap style --> 
     <link id="callCss" rel="stylesheet" href="../themes/bootshop/bootstrap.min.css" media="screen"/>

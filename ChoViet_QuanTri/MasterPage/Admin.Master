@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Quản trị Chợ Việt</title>
     <link href="../Style2/bootstrap.min.css" rel="stylesheet" />
     <script src="../Style2/bootstrap.min.js"></script>
     <script src="../Style2/browserSpecificScript.js"></script>

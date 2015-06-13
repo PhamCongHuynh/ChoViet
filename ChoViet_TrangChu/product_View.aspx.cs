@@ -37,8 +37,8 @@ namespace ChoViet_TrangChu
 
         public void LoadData()
                 {
-                    int madanhmuc = 1;
-                    var list = News_Controller.ViewByproduct(madanhmuc);
+                    int mdanhmuc = Int32.Parse(Request.QueryString["idc"].ToString());
+                    var list = News_Controller.ViewByproduct(mdanhmuc);
                     PagedDataSource pgitems = new PagedDataSource();
                     //System.Data.DataView dv = new System.Data.DataView(list);
                     pgitems.DataSource = list;

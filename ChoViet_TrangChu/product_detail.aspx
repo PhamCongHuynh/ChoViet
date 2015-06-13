@@ -112,7 +112,7 @@
                     <ItemTemplate>
                        <div class="row">	  
 					<div class="span2">
-                        <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1") %>' Height="160px" Width="160px" />
+                        <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
 					</div>
 					<div class="span4">
 						<h3>New | Available</h3>				
@@ -145,7 +145,7 @@
                         <ItemTemplate>
                            <li class="span3">
 					          <div class="thumbnail">
-						        <a href="product_details.html"><img src="themes/images/products/10.jpg" alt=""></a>
+						        <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
 						        <div class="caption">
 						          <h5><%# Eval("nguoidang") %></h5>
 						          <p> 

@@ -20,7 +20,8 @@
             </div>
         </div>
     </div>
-    <asp:GridView ID="GrdanhSachtinquangcao" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" OnPageIndexChanging="GrdanhSachtinquangcao_PageIndexChanging" AutoGenerateColumns="False" DataKeyNames="matin" OnRowEditing="GrdanhSachtinquangcao_RowEditing">
+    <asp:Label ID="lblthongbao" runat="server" Text=""></asp:Label>
+    <asp:GridView ID="GrdanhSachtinquangcao" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" OnPageIndexChanging="GrdanhSachtinquangcao_PageIndexChanging" AutoGenerateColumns="False" DataKeyNames="matin" OnRowEditing="GrdanhSachtinquangcao_RowEditing" OnRowDataBound="GrdanhSachtinquangcao_RowDataBound" OnRowDeleting="GrdanhSachtinquangcao_RowDeleting">
         <Columns>
             <asp:BoundField DataField="matin" HeaderText="Mã tin" />
             <asp:BoundField DataField="tieude" HeaderText="Tiêu đề" />

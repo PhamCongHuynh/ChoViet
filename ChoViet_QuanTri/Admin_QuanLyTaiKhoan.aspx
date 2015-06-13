@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ul class="breadcrumb">
 		<li><a href="index.html">Quản trị hệ thống</a> <span class="divider">//</span></li>
-		<li class="active">Quản lý tài khoản</li>
+		<li class="active">Quản lý tài khoản nhân viên </li>
     </ul>
     <hr />
     <div class="jumbotron">
@@ -21,7 +21,7 @@
         </div>
     </div>
     
-    <asp:GridView ID="DSTaiKhoan" CssClass="table table-hover" runat="server" AutoGenerateColumns="False">
+    <asp:GridView ID="DSTaiKhoan" CssClass="table table-hover" runat="server" AutoGenerateColumns="False" OnRowDataBound="DSTaiKhoan_RowDataBound">
         <Columns>
             <asp:BoundField DataField="Id" HeaderText="Mã nhân viên" />
             <asp:BoundField DataField="name" HeaderText="Họ và tên" />

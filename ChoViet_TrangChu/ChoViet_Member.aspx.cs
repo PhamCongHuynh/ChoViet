@@ -66,6 +66,11 @@ namespace ChoViet_TrangChu
             }
         }
 
+        protected void Grdanhsach_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            Response.Redirect("ChoVietMember_chitiettin.aspx?matin=" + Grdanhsach.DataKeys[e.NewEditIndex]["Matin"].ToString());
+        }
+
       
        
 

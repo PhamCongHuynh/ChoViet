@@ -57,7 +57,7 @@ namespace ChoViet_TrangChu
         }
         public void loaddanhmuc()
         {
-            var listds = Category_Controller.getCategory();
+            var listds = Category_Controller.getCategoryById();
             foreach (Category obj in listds)
             {
                 Drchuyenmuc.Items.Add(new ListItem(obj.name.ToString(), obj.Id.ToString()));

@@ -12,7 +12,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Chợ Việt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link id="callCss" href="themes/bootshop/bootstrap.min.css" rel="stylesheet" media="screen" />
     <link href="themes/css/base.css" rel="stylesheet"media="screen"/>
@@ -143,7 +143,7 @@
 <!-- Sidebar end=============================================== -->
 		<div class="span9">		
 			<div class="well well-small">
-			<h4>Quảng cáo đặc biệt<small class="pull-right">Tổng sô 40 sản phẩm </small></h4>
+			<h4>Quảng cáo đặc biệt<small class="pull-right">Chợ Việt </small></h4>
 			<div class="row-fluid">
 			
 			  <div class="item">
@@ -153,11 +153,11 @@
                        <li class="span3">
 				          <div class="thumbnail">
 				          <i class="tag"></i>
-					        <asp:Image ID="Imahinhanh" runat="server" ImageUrl="themes/images/products/9.jpg"  Height="160px" Width="160px" />
+					        <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>'  Height="160px" Width="160px" />
 					        <div class="caption">
                               <h5><%# Eval("title") %></h5>
 					          <h6><%# Eval("nguoidang") %></h6>
-					          <h4><a class="btn" href="product_detail.aspx">Chi tiết</a> <span class="pull-right"><%# Eval("price") %></span></h4>
+					          <h4><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Chi tiết</a> <span class="pull-right"><%# Eval("price") %></span></h4>
 					        </div>
 				          </div>
 				        </li>                      
@@ -174,12 +174,12 @@
                       <ItemTemplate>
                      <li class="span3">
 				       <div class="thumbnail">
-                          <asp:Image ID="Imahinhanh" runat="server" ImageUrl="themes/images/products/7.jpg" Height="160px" Width="160px" />
+                          <asp:Image ID="Imahinhanlast" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
 					        <div class="caption">
                                 <h5> <asp:Label ID="txtnguoidang" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label></h5>
                                 <p><asp:Label ID="txttieude" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
 
-					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Chi tiết<i class="icon-zoom-in"></i></a> <a class="btn btn-link" href="product_detail.aspx">'<%# Eval("price") %>'</a></h4>
+					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Chi tiết<i class="icon-zoom-in"></i></a> <a class="btn btn-link" href="product_detail.aspx">'<%# Eval("price") %>'</a></h4>
 					        </div>
 				       </div>
 				      </li>

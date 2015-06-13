@@ -29,6 +29,13 @@ namespace BUSINESS
             News obj = News_ControllerREPO.GetById(ids);
             News_ControllerREPO.Delete(obj);
         }
+        public List<News> GetById(int ids)
+        {
+            List<News> list = new List<News>();
+            News ac = News_ControllerREPO.GetById(ids);
+            list.Add(ac);
+            return list;
+        }
         // phương thức đăng tin mới 
         public static void insertNew(string fullname,string phonenumber,string emailcus,string addresscontrac,string typenew,string titles,string contents, string image1s,string image2s,string image3s, string image4s, string image5s,string image6s, string prices,string pays, string shippings,string datecreates,int idmember, int idmanager, int idcategory,int idregions)
         {
@@ -64,7 +71,7 @@ namespace BUSINESS
                 db.SaveChanges();
             }
         }
-        //phương thức trả về phần danh sách sản phầm hiển thị trang index 30 sản phẩm
+        //phương thức trả về phần danh sách sản phầm hiển thị trang index sản phẩm
         public static IEnumerable ViewLastProduct()
         {
             using (dbchoviet db = new dbchoviet())
@@ -82,7 +89,7 @@ namespace BUSINESS
                                  danhmuc=ca.name,
                                  timeaction =n.dateaction,
                                  nguoidang=ac.name,
-                                 url_image = n.image1
+                                 image1 = n.image1
                              });
                 return Views.ToList();
             }
@@ -105,11 +112,38 @@ namespace BUSINESS
                                 danhmuc = ca.name,
                                 timeaction = n.dateaction,
                                 nguoidang = ac.name,
-                                url_image = n.image1
+                                image1 = n.image1
                             }).Take(4);
                 return Views.ToList();
             }
         }
+        //phuong thuc lay ra cac san pham cung loai voi san pham co ma id 
+        //nhan vao id san pham va tra ve danh sach cac san pham trong danh muc do
+        //public static IEnumerable ViewByproductFromSP(int idsp)
+        //{
+        //    using (dbchoviet db = new dbchoviet())
+        //    {
+        //        var Views = (from n in db.Newss.AsEnumerable()
+
+        //                     where n.Category.Id == idDanhmuc
+        //                     join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
+        //                     join re in db.Regions on n.Regions.Id equals re.Id
+        //                     join ca in db.Categorys on n.Category.Id equals ca.Id
+        //                     select new
+        //                     {
+        //                         ID = n.Id,
+        //                         title = n.title,
+        //                         price = n.price,
+        //                         region = re.Name,
+        //                         danhmuc = ca.name,
+        //                         timeaction = n.dateaction,
+        //                         nguoidang = ac.name,
+        //                         image1 = n.image1,
+        //                         content = n.content
+        //                     }).Take(30);
+        //        return Views.ToList();
+        //    }
+        //}
         // phương thức lấy các sản phẩm theo từng danh mục
         public static IEnumerable ViewByproduct(int idDanhmuc)
         {
@@ -181,7 +215,7 @@ namespace BUSINESS
                                  danhmuc=ca.name,
                                  timeaction =n.dateaction,
                                  email=ac.email,
-                                 phone=ac.phonenumber,
+                                 phone=n.phone_number,
                                  nguoidang=ac.name,
                                  image1=n.image1,
                                  image2 = n.image2,
@@ -189,7 +223,11 @@ namespace BUSINESS
                                  image4 = n.image4,
                                  image5 = n.image5,
                                  image6 = n.image6,
-                                 ship= n.shipping      
+                                 ship= n.shipping,
+                                 hoten=n.full_name,
+                                 diachi=n.Address_contact,
+                                 pay=n.pay,
+                                 loaitin=n.type_news
                              };
                 return Views.ToList();
             }
@@ -250,6 +288,7 @@ namespace BUSINESS
                                 quytrinhvanchuyen=n.shipping,
                                 thoigiannhan = n.datecheck,
                                 nguoidang = ac.name
+
                             };
                 return Views.ToList();
             }
@@ -262,7 +301,7 @@ namespace BUSINESS
             {
                 var Views = from n in db.Newss.AsEnumerable()
                             //where n.status_news.Equals(st_new_id) && n.Category.Id==cate_id
-                            where n.Category.Id==cate_id && n.status_news.Contains(st_new_id)
+                            where n.Category.Id==cate_id
                             join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
                             join re in db.Regions on n.Regions.Id equals re.Id
                             join ca in db.Categorys on n.Category.Id equals ca.Id
@@ -303,5 +342,25 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
+        public static void updateDuyet(int matin, string ghichu,string tyle_new,string ngayduyet,string ngayhoatdong, int idma)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                //var query = (from ac in db.Account_Members where ac.Id == ids select ac).First();
+                //query.name = hoten;
+                //query.phonenumber = sodt;
+                //db.SaveChanges();
+                var manager=db.Account_Managers.FirstOrDefault(ac=>ac.Id==idma);
+                var query = (from n in db.Newss where n.Id==matin select n).First();
+                query.note=ghichu;
+                query.type_news=tyle_new;
+                query.datecheck=ngayduyet;
+                query.dateaction=ngayhoatdong;
+                query.Account_Managers=manager;
+                db.SaveChanges();
+            }
+        }
+
+
     }
 }

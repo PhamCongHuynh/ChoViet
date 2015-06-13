@@ -36,7 +36,7 @@
                     <ItemTemplate>
                        <div class="row">	  
 					<div class="span2">
-						<img src="<%# Eval("image1") %>" alt="">
+						<asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
 					</div>
 					<div class="span4">
 						<h3>New | Available</h3>				
@@ -54,7 +54,7 @@
                      <asp:Label ID="Label1" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label>
 					<br>
 					<div class="btn-group">
-					  <a href="product_detail.aspx" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+					  <a href="product_detail.aspx?matinid=<%# Eval("ID") %>" class="btn btn-large"><i class="icon-zoom-in"></i></a>
 					 </div>
 						</form>
 					</div>
@@ -69,13 +69,13 @@
                         <ItemTemplate>
                            <li class="span3">
 					          <div class="thumbnail">
-						        <a href="product_details.html"><img src="themes/images/products/10.jpg" alt=""></a>
+						        <asp:Image ID="Imahinhanh2" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
 						        <div class="caption">
 						          <h5><%# Eval("nguoidang") %></h5>
 						          <p> 
 							       <%# Eval("title") %> 
 						          </p>
-						          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Xem<i class="icon-zoom-in"></i></a><a class="btn btn-primary" href="#"><%# Eval("price") %></a></h4>
+						          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Xem<i class="icon-zoom-in"></i></a><a class="btn btn-primary" href="#"><%# Eval("price") %></a></h4>
 						        </div>
 					          </div>
 					        </li>
