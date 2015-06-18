@@ -9,16 +9,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="span9">          
            <ul class="breadcrumb">
-            <li><a href="index.aspx">Home</a> <span class="divider">/</span></li>
-            <li><a href="product_View.aspx">Products</a> <span class="divider">/</span></li>
-            <li class="active">product Details</li>
+            <li><a href="index.aspx">Trang chủ</a> <span class="divider">/</span></li>
+            <li><a href="product_View.aspx">Chi tiết sản phẩm </a> <span class="divider">/</span></li>
+            <li class="active">Chi tiết sản phẩm</li>
            </ul>
            <div class="row">
             <asp:Repeater ID="RPChitiet" runat="server">
               <ItemTemplate>   
-                  <div id="gallery" class="span3">
-                  <a href="themes/images/products/large/f1.jpg" title="Fujifilm FinePix S2950 Digital Camera">
-				  <img src="themes/images/products/large/f1.jpg" style="width:100%" alt="Fujifilm FinePix S2950 Digital Camera"/>
+                  <%--<div id="gallery" class="span3">
+                  <a href="themes/images/products/large/f1.jpg" title="Chợ Việt.net">
+				  <img src="themes/images/products/large/f1.jpg" style="width:100%" alt=""/>
                   </a>
 			      <div id="differentview" class="moreOptopm carousel slide">
                 <div class="carousel-inner">
@@ -44,10 +44,41 @@
 				<span class="btn"><i class="icon-thumbs-down"></i></span>
 			  </div>
 			</div>
+			      </div>--%>
+                  <div id="gallery" class="span3">
+                  <a href="<%# Eval("image1", "~/Images/{0}") %>" title="Chợ Việt.net">
+				  <%--<img src="<%# Eval("image1", "~/Images/{0}") %>" style="width:100%"/>--%>
+                  <asp:Image ID="Imahinhan2" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' style="width:100%" />			
+                  </a>
+			      <div id="differentview" class="moreOptopm carousel slide">
+                <div class="carousel-inner">
+                  <div class="item active">
+                   <a href="<%# Eval("image2", "~/Images/{0}") %>"> <asp:Image ID="Image1" runat="server" style="width:29%" ImageUrl='<%# Eval("image2", "~/Images/{0}") %>' /></a>
+                   <a href="<%# Eval("image3", "~/Images/{0}") %>"> <asp:Image ID="Image2" runat="server" style="width:29%" ImageUrl='<%# Eval("image3", "~/Images/{0}") %>' /></a>
+                   <a href="<%# Eval("image4", "~/Images/{0}") %>"> <asp:Image ID="Image3" runat="server" style="width:29%" ImageUrl='<%# Eval("image4", "~/Images/{0}") %>' /></a>
+                  </div>
+                  <div class="item">
+                   <a href="<%# Eval("image5", "~/Images/{0}") %>"> <asp:Image ID="Image4" runat="server" style="width:29%" ImageUrl='<%# Eval("image5", "~/Images/{0}") %>' /></a>
+                   <a href="<%# Eval("image6", "~/Images/{0}") %>"> <asp:Image ID="Image5" runat="server" style="width:29%" ImageUrl='<%# Eval("image6", "~/Images/{0}") %>' /></a>
+                   <a href="<%# Eval("image1", "~/Images/{0}") %>"> <asp:Image ID="Image6" runat="server" style="width:29%" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' /></a>
+                  </div>
+                </div>
+              </div>			  
+			      <div class="btn-toolbar">
+			  <div class="btn-group">
+				<span class="btn"><i class="icon-envelope"></i></span>
+				<span class="btn"><i class="icon-print"></i></span>
+				<span class="btn"><i class="icon-zoom-in"></i></span>
+				<span class="btn"><i class="icon-star"></i></span>
+				<span class="btn"><i class=" icon-thumbs-up"></i></span>
+				<span class="btn"><i class="icon-thumbs-down"></i></span>
+			  </div>
+			</div>
 			      </div>
 			      <div class="span6">
 				<h3><%# Eval("title") %></h3>
-				<small>Mã Sản phẩm :<%# Eval("ID") %>  :Tại khu vực <%# Eval("region") %></small>
+                <small style="color:red">Ngày đăng :<%# Eval("timeaction") %> </small><br />
+				<small>Mã Sản phẩm :<%# Eval("ID") %>  :   Tại khu vực <%# Eval("region") %></small>
 				<hr class="soft">
 				<div class="form-horizontal qtyFrm">
 				  <div class="control-group">
@@ -97,7 +128,7 @@
                     js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.3";
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));</script>
-                  <div class="fb-comments" data-href="http://localhost:22269/product_detail.aspx#detail" data-numposts="5" data-colorscheme="light"></div>
+                <div class="fb-comments" data-href="http://localhost:22269/product_detail.aspx#detail" data-numposts="5" data-colorscheme="light"></div>
               </div>
 		<div class="tab-pane fade" id="profile">
 		<div id="myTab" class="pull-right">
@@ -115,23 +146,22 @@
                         <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
 					</div>
 					<div class="span4">
-						<h3>New | Available</h3>				
+						<h5>Ngày đăng :<%# Eval("timeaction") %> </h5><br />
+                        <h7>Người đăng :<%# Eval("nguoidang") %> </h7>			
 						<hr class="soft">
 						<h5><%# Eval("title") %> </h5>
 						<p>
 						<%# Eval("content") %>
 						</p>
-						<a class="btn btn-small pull-right" href="product_detail.aspx">Xem chi tiết</a>
+						<a class="btn btn-small pull-right" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Xem chi tiết</a>
 						<br class="clr">
 					</div>
 					<div class="span3 alignR">
 					<form class="form-horizontal qtyFrm">
-					<h3><%# Eval("price") %></h3><br />
-                     <asp:Label ID="Label1" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label>
+					<h3>Giá : <%# Eval("price") %></h3><br />
+                    <%-- <asp:Label ID="Label1" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label>--%>
 					<br>
-					<div class="btn-group">
-					  <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-					 </div>
+					
 						</form>
 					</div>
 			    </div>
@@ -151,7 +181,7 @@
 						          <p> 
 							       <%# Eval("title") %> 
 						          </p>
-						          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx">Xem chi tiết<i class="icon-zoom-in"></i></a><a class="btn btn-primary" href="#"><%# Eval("price") %></a></h4>
+						          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Xem chi tiết<i class="icon-zoom-in"></i></a><a class="btn btn-primary" href="#"><%# Eval("price") %></a></h4>
 						        </div>
 					          </div>
 					        </li>

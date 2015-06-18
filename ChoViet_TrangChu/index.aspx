@@ -122,21 +122,21 @@
 		   <div class="thumbnail">
 			<img src="themes/images/products/panasonic.jpg" alt="Bootshop panasonoc New camera">
 			<div class="caption">
-			  <h5>Panasonic</h5>
-				<h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
+			  <h5>Quảng cáo </h5>
+				
 			</div>
 		  </div><br>
 			<div class="thumbnail">
 				<img src="themes/images/products/kindle.png" title="Bootshop New Kindel" alt="Bootshop Kindel">
 				<div class="caption">
-				  <h5>Kindle</h5>
-				    <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">$222.00</a></h4>
+				  <h5>Quảng cáo</h5>
+				   
 				</div>
 			  </div><br>
 			<div class="thumbnail">
 				<img src="themes/images/payment_methods.png" title="Bootshop Payment Methods" alt="Payments Methods">
 				<div class="caption">
-				  <h5>Payment Methods</h5>
+				  <h5>Cổng thanh toán</h5>
 				</div>
 			  </div>
 	</div>
@@ -155,8 +155,8 @@
 				          <i class="tag"></i>
 					        <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>'  Height="160px" Width="160px" />
 					        <div class="caption">
-                              <h5><%# Eval("title") %></h5>
-					          <h6><%# Eval("nguoidang") %></h6>
+                              <p><asp:Label ID="txtnguoidan" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label></p>
+                              <p><asp:Label ID="txttieu" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
 					          <h4><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Chi tiết</a> <span class="pull-right"><%# Eval("price") %></span></h4>
 					        </div>
 				          </div>
@@ -179,7 +179,7 @@
                                 <h5> <asp:Label ID="txtnguoidang" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label></h5>
                                 <p><asp:Label ID="txttieude" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
 
-					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Chi tiết<i class="icon-zoom-in"></i></a> <a class="btn btn-link" href="product_detail.aspx">'<%# Eval("price") %>'</a></h4>
+					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Chi tiết<i class="icon-zoom-in"></i></a> <a class="btn btn-link" href="product_detail.aspx"><%# Eval("price") %></a></h4>
 					        </div>
 				       </div>
 				      </li>

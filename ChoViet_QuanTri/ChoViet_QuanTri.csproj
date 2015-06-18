@@ -68,7 +68,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin.aspx" />
     <Content Include="Admin_Create_Dulieu_Thongtin.aspx" />
     <Content Include="Admin_Dulieu_Category.aspx" />
     <Content Include="Admin_Dulieu_Information.aspx" />
@@ -95,14 +94,10 @@
     <Content Include="assets\css\styles.css" />
     <Content Include="assets\images\bg.jpg" />
     <Content Include="assets\images\logo.png" />
-    <Content Include="Content.ascx" />
-    <Content Include="Footer.ascx" />
     <Content Include="Global.asax" />
     <Content Include="Header.ascx" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
-    <Content Include="MasterPage\Test.Master" />
-    <Content Include="MasterPage\QuanTri.Master" />
     <Content Include="MasterPage\Admin.Master" />
     <Content Include="assets\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="assets\bootstrap\css\bootstrap.css.map" />
@@ -110,7 +105,6 @@
     <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="packages.config" />
-    <Content Include="WebForm1.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -146,13 +140,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.aspx.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Admin.aspx.designer.cs">
-      <DependentUpon>Admin.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Admin_Create_Dulieu_Thongtin.aspx.cs">
       <DependentUpon>Admin_Create_Dulieu_Thongtin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -258,20 +245,6 @@
     <Compile Include="Admin_CapMoiTaiKhoanNhanVien.aspx.designer.cs">
       <DependentUpon>Admin_CapMoiTaiKhoanNhanVien.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Content.ascx.cs">
-      <DependentUpon>Content.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Content.ascx.designer.cs">
-      <DependentUpon>Content.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Footer.ascx.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Footer.ascx.designer.cs">
-      <DependentUpon>Footer.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -302,20 +275,6 @@
     </Compile>
     <Compile Include="MasterPage\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
-    </Compile>
-    <Compile Include="MasterPage\Test.Master.cs">
-      <DependentUpon>Test.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MasterPage\Test.Master.designer.cs">
-      <DependentUpon>Test.Master</DependentUpon>
-    </Compile>
-    <Compile Include="MasterPage\QuanTri.Master.cs">
-      <DependentUpon>QuanTri.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MasterPage\QuanTri.Master.designer.cs">
-      <DependentUpon>QuanTri.Master</DependentUpon>
     </Compile>
     <Compile Include="MenuAdmin.ascx.cs">
       <DependentUpon>MenuAdmin.ascx</DependentUpon>
@@ -360,13 +319,6 @@
     <Compile Include="TinQuangCao_ViewChiTiet.aspx.designer.cs">
       <DependentUpon>TinQuangCao_ViewChiTiet.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUSINESS\BUSINESS.csproj">
@@ -378,9 +330,7 @@
       <Name>DATA</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Image\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>

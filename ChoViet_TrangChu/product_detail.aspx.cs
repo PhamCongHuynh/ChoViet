@@ -30,7 +30,8 @@ namespace ChoViet_TrangChu
         {
            
             int mid = Int32.Parse(Request.QueryString["matinid"].ToString());
-            int madanhmuc = checkanhmuc(mid);
+            //string madm = checkanhmuc(mid);
+            int madanhmuc =News_Controller.kiemtraDM(mid);
             var list = News_Controller.ViewByproduct(madanhmuc);
             PagedDataSource pgitems = new PagedDataSource();
             //System.Data.DataView dv = new System.Data.DataView(list);
@@ -73,11 +74,11 @@ namespace ChoViet_TrangChu
             PageNumber = Convert.ToInt32(e.CommandArgument) - 1;
             loadDLview();
         }
-        public int checkanhmuc(int masp)
+        public string checkanhmuc(int masp)
         {
             News_Controller obj=new News_Controller();
             var list =obj.GetById(masp);
-            int madm = list.FirstOrDefault().Category.Id;
+            string madm = list.FirstOrDefault().Category.Id.ToString();
             return madm;
         }
     }

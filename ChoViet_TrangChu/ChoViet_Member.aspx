@@ -17,7 +17,7 @@
                     <asp:TextBox ID="txttimkiem" CssClass="form-control" style="min-width:100%"  runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <asp:Button ID="btltimkiem" CssClass="btn btn-success" runat="server" Text="Tìm kiếm" />
+                    <asp:Button ID="btltimkiem" CssClass="btn btn-success" runat="server" Text="Tìm kiếm" OnClick="btltimkiem_Click" />
                 </div>
             </div>
         </div>

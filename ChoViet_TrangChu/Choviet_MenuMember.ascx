@@ -11,7 +11,7 @@
 			<ul>
 				<li><a href="ChoViet_Member.aspx?status_id=1"><i class="icon-chevron-right"></i>Đang rao vặt</a></li>
 				<li><a href="ChoViet_Member.aspx?status_id=0"><i class="icon-chevron-right"></i>Tin mới chờ duyệt</a></li>																							
-			    <li><a href="ChoViet_Member.aspx?status_id=2"><i class="icon-chevron-right"></i>Tin đợi duyệt</a></li>
+			    <li><a href="ChoViet_Member.aspx?status_id=2"><i class="icon-chevron-right"></i>Tin đang xem xét</a></li>
 				<li><a href="ChoViet_Member.aspx?status_id=3"><i class="icon-chevron-right"></i>Tin bị từ chối</a></li>																										
             </ul>
 			</li>

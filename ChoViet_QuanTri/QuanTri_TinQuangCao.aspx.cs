@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BUSINESS;
+using System.Collections;
+using DATA;
 
 namespace ChoViet_QuanTri
 {
@@ -14,19 +16,30 @@ namespace ChoViet_QuanTri
         {
             if(!IsPostBack)
             {
+                loadkhuvuc();
                 loadDanhsachtinQC();
+            }
+        }
+        public void loadkhuvuc()
+        {
+            Regions_Controller re = new Regions_Controller();
+            var listds = re.GetALLRegions();
+            foreach (Regions obj in listds)
+            {
+                Drkhuvuc.Items.Add(new ListItem(obj.Name.ToString(), obj.Id.ToString()));
             }
         }
         public void loadDanhsachtinQC()
         {
-            int cate = 1;
+            
             int idm = Int32.Parse(Session["id"].ToString());
-            var list = Schedule_Controller.checkCategory(idm);
-            string tyle_qc ="1";
-            GrdanhSachtinquangcao.DataSource = News_Controller.QTViewDSProduct(cate,tyle_qc);
+           
+            int ca = Schedule_Controller.kiemtraCategory(idm);
+                      
+            string statu_new = Request.QueryString["mt"].ToString();
+            GrdanhSachtinquangcao.DataSource = News_Controller.QTViewDSProduct(ca,statu_new);
             GrdanhSachtinquangcao.DataBind();
         }
-
         protected void GrdanhSachtinquangcao_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GrdanhSachtinquangcao.PageIndex = e.NewPageIndex;
@@ -36,7 +49,6 @@ namespace ChoViet_QuanTri
         {
             Response.Redirect("TinQuangCao_ViewChiTiet.aspx?matin=" + GrdanhSachtinquangcao.DataKeys[e.NewEditIndex]["matin"].ToString());
         }
-
         protected void GrdanhSachtinquangcao_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
@@ -61,5 +73,34 @@ namespace ChoViet_QuanTri
             Response.Redirect(Request.RawUrl);
             lblthongbao.Text = "Bạn vừa xóa 1 tập tin ! ";
         }
+
+        protected void btbtimkiem_Click(object sender, EventArgs e)
+        {
+            int idm = Int32.Parse(Session["id"].ToString());
+            int ca = Schedule_Controller.kiemtraCategory(idm);
+            int khuvucs= Int32.Parse(Drkhuvuc.SelectedValue);
+            string timkiem = txtimkiem.Text;
+            if(!timkiem.Equals(""))
+            {
+                int ids = Int32.Parse(timkiem);
+                var list = News_Controller.timkiemBYIdQT(ids,ca);
+                GrdanhSachtinquangcao.DataSource = list;
+                GrdanhSachtinquangcao.DataBind();
+            }
+            else
+            {
+                var list = News_Controller.timkiemBYKhacQT(khuvucs,Drloaitin.SelectedValue,ca);
+                GrdanhSachtinquangcao.DataSource = list;
+                GrdanhSachtinquangcao.DataBind();
+            }
+            
+        }
+
+        //protected void btltimkiem_Click(object sender, EventArgs e)
+        //{
+        //    var list = News_Controller.timkiemBYIdQT(txttimkiem.Text);
+        //    GrdanhSachtinquangcao.DataSource = list;
+        //    GrdanhSachtinquangcao.DataBind();
+        //}
     }
 }

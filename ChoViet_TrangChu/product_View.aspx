@@ -4,10 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="span9">
     <ul class="breadcrumb">
-		<li><a href="index.aspx">Home</a> <span class="divider">/</span></li>
-		<li class="active">Products Name</li>
+		<li><a href="index.aspx">Trang chủ</a> <span class="divider">/</span></li>
+		<li class="active">Danh sách sản phẩm</li>
     </ul>
-	<h3> Danh sách sản phẩm <small class="pull-right"> 40 products are available </small></h3>	
+	<h3> Danh sách sản phẩm <small class="pull-right"> </small></h3>	
 	<hr class="soft">
 	<p>
 		Chợ việt kiểm duyệt toàn bộ tin trước khi đăng để việc mua bán an toàn & hiệu quả hơn. Tuy nhiên, quá trình duyệt tin chỉ có thể hạn chế tối đa các trường hợp không trung thực. Hãy báo cho chúng tôi những tin xấu để chúng tôi có thể xác minh & xây dựng trang web mua bán an toàn nhất cho người Việt.
@@ -38,14 +38,13 @@
 					<div class="span2">
 						<asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
 					</div>
-					<div class="span4">
-						<h3>New | Available</h3>				
+					<div class="span4">									
 						<hr class="soft">
 						<h5><%# Eval("title") %> </h5>
 						<p>
 						<%# Eval("content") %>
 						</p>
-						<a class="btn btn-small pull-right" href="product_details.html">Xem</a>
+						<a class="btn btn-small pull-right" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Xem chi tiết </a>
 						<br class="clr">
 					</div>
 					<div class="span3 alignR">

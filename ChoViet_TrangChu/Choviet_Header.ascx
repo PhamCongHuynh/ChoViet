@@ -56,9 +56,7 @@
 				
 			  </div>
 			  <div class="control-group">
-				<label class="checkbox">
-				<input type="checkbox"/> Nhớ mật khẩu
-				</label>
+                  <asp:Button ID="btndangk" CssClass="btn btn-link" runat="server" Text="Đăng ký tài khoản" OnClick="btndangk_Click" />
 			  </div>
 			</div>
             <asp:Button ID="btndangnhap" CssClass="btn btn-success" runat="server" Text="Đăng nhập" OnClick="Button1_Click" />

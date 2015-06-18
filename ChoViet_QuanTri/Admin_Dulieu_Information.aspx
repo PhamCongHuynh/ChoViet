@@ -6,7 +6,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <ul class="breadcrumb">
-		<li><a href="index.html">Quản trị hệ thống</a> <span class="divider">//</span></li>
+		<li><a href="index.aspx">Quản trị hệ thống</a><span class="divider">//</span></li>
 		<li class="active">Quản lý thông tin chợ việt</li>
     </ul>
     <hr />

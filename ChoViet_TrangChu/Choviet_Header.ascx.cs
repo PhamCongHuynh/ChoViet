@@ -63,7 +63,7 @@ namespace ChoViet_TrangChu
                 //var list = ac.GetById(ids);
                 //string name = list.FirstOrDefault().name.ToString();
                 //hpcanhan.Text = name;
-                Response.Redirect("ChoViet_DoiThongTinCaNhan.aspx");
+                Response.Redirect("Choviet_Thongtinchung.aspx");
             }
             else
             {
@@ -104,6 +104,11 @@ namespace ChoViet_TrangChu
         public static string md5(string data)
         {
             return BitConverter.ToString(encryptData(data)).Replace("-", "").ToLower();
+        }
+
+        protected void btndangk_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Choviet_DangKy.aspx");
         }
     }
 }

@@ -86,5 +86,21 @@ namespace BUSINESS
              }
 
          }
+         public static int kiemtraCategory(int idma)
+         {
+             using (dbchoviet db = new dbchoviet())
+             {
+                 
+                 var query = from u in db.Schedules
+                             where u.Account_Managers.Id == idma
+                             join ca in db.Categorys on u.Category.Id equals ca.Id
+                             select u.Category;
+                 var categorys = (from c in db.Categorys where c == query.FirstOrDefault()   select c).First();   
+        
+
+                 return categorys.Id;
+             }
+
+         }
     }
 }

@@ -152,7 +152,7 @@
     </div>
     <div class="form-group">
         <label class="control-label col-sm-4"> </label>      
-        <asp:Button ID="btndangky" CssClass="btn btn-success" runat="server" Text="Bước tiếp theo" OnClick="btndangky_Click" />
+        <asp:Button ID="btndangky" CssClass="btn btn-success" runat="server" Text="Đăng tin ngay" OnClick="btndangky_Click" />
     </div>
 </div>
             </div>

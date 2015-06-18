@@ -4,8 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="span9">
     <ul class="breadcrumb">
-		<li><a href="index.aspx">Home</a> <span class="divider">/</span></li>
-		<li class="active">Products Name</li>
+		<li><a href="index.aspx">Trang chủ</a> <span class="divider">/</span></li>
+		<li class="active">Sản phẩm tìm kiếm</li>
     </ul>
 	<h3> Danh sách sản phẩm <small class="pull-right">  </small></h3>	
 	<hr class="soft">

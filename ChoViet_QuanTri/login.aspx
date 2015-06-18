@@ -27,7 +27,6 @@
 				</div>
                 <asp:Button ID="btndangnhap" CssClass="btn btn-primary btn-block" runat="server" Text="Đăng nhập" OnClick="btndangnhap_Click" />
 				
-				<a href="#">Nhớ mật khẩu</a>
 			</div>
 		</section>
 	</section>

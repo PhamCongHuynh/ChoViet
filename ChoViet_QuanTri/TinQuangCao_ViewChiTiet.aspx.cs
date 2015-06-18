@@ -29,7 +29,7 @@ namespace ChoViet_QuanTri
             int idsp = Int32.Parse(Request.QueryString["matin"]);
             int idmana = Int32.Parse(Session["id"].ToString());
             News_Controller.updateDuyet(idsp," ","1",DateTime.Now.ToString(),DateTime.Now.ToString(),idmana);
-            Response.Redirect("QuanTri_TinQuangCao.aspx");
+            Response.Redirect("QuanTri_TinQuangCao.aspx?mt=0");
         }
 
         protected void btnxoa_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace ChoViet_QuanTri
             int idmatin = Int32.Parse(Request.QueryString["matin"]);
             News_Controller obj = new News_Controller();
             obj.Delete(idmatin);
-            Response.Redirect("QuanTri_TinQuangCao.aspx");
+            Response.Redirect("QuanTri_TinQuangCao.aspx?mt=0");
         }
 
         protected void btnxacnhanchoduyet_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace ChoViet_QuanTri
             int idsp = Int32.Parse(Request.QueryString["matin"]);
             int idmana = Int32.Parse(Session["id"].ToString());
             News_Controller.updateDuyet(idsp,txtghichuchoduyet.Text, "2", DateTime.Now.ToString()," ", idmana);
-            Response.Redirect("QuanTri_TinQuangCao.aspx");
+            Response.Redirect("QuanTri_TinQuangCao.aspx?mt=2");
         }
 
         protected void btnvipham_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace ChoViet_QuanTri
             int idsp = Int32.Parse(Request.QueryString["matin"]);
             int idmana = Int32.Parse(Session["id"].ToString());
             News_Controller.updateDuyet(idsp, txtghichuchoduyet.Text, "3", DateTime.Now.ToString(), " ", idmana);
-            Response.Redirect("QuanTri_TinQuangCao.aspx");
+            Response.Redirect("QuanTri_TinQuangCao.aspx?mt=3");
         }
     }
 }

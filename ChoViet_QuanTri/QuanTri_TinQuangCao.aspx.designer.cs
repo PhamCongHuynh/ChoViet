@@ -13,31 +13,49 @@ namespace ChoViet_QuanTri {
     public partial class QuanTri_TinQuangCao {
         
         /// <summary>
-        /// Label1 control.
+        /// txtimkiem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox txtimkiem;
         
         /// <summary>
-        /// txttimkiem control.
+        /// RegularExpressionValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttimkiem;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
-        /// btltimkiem control.
+        /// Drkhuvuc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btltimkiem;
+        protected global::System.Web.UI.WebControls.DropDownList Drkhuvuc;
+        
+        /// <summary>
+        /// Drloaitin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList Drloaitin;
+        
+        /// <summary>
+        /// btbtimkiem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btbtimkiem;
         
         /// <summary>
         /// lblthongbao control.
