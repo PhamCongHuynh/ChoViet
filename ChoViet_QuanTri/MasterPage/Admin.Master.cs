@@ -60,5 +60,10 @@ namespace ChoViet_QuanTri.MasterPage
             Session["id"] = "";
             Response.Redirect("login.aspx");
         }
+
+        protected void btncanhan_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("QuanTri_Thong_TinCaNhan.aspx");
+        }
     }
 }

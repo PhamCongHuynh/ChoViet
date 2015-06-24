@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ul class="breadcrumb">
-		<li><a href="index.aspx">Quản trị hệ thống</a><span class="divider">//</span></li>
+		<li><a href="index.aspx">Quản trị hệ thống</a><span class="divider"></span></li>
 		<li class="active">Quản lý tin quảng cáo</li>
     </ul>
     <hr />
@@ -39,15 +39,17 @@
     --%>
         <div class="form-horizontal">
             <div class="form-group">
-               <div class="col-sm-4">
-                   <asp:TextBox ID="txtimkiem" CssClass="form-control" placeholder="Tìm kiếm theo ID"  runat="server"></asp:TextBox>
-                   <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ValidationExpression="([0-9])*" ControlToValidate="txtimkiem" runat="server" ErrorMessage="Chỉ nhập được số !"></asp:RegularExpressionValidator>
+               <div class="col-sm-5">
+                   <asp:TextBox ID="txtimkiem" CssClass="form-control" placeholder="Tìm kiếm theo từ khóa"  runat="server"></asp:TextBox>                  
                </div>
                 <div class="col-sm-3">
-                   <asp:DropDownList ID="Drkhuvuc"  CssClass="form-control" runat="server"></asp:DropDownList>
+                   <asp:DropDownList ID="Drkhuvuc"  CssClass="form-control" runat="server">
+                       <asp:ListItem Value="1">Lọc theo khu vực </asp:ListItem>
+                   </asp:DropDownList>
                </div>
-                 <div class="col-sm-3">
+                 <div class="col-sm-2">
                    <asp:DropDownList ID="Drloaitin"  CssClass="form-control" runat="server">
+                       <asp:ListItem Value="1">Lọc theo loại tin </asp:ListItem>
                        <asp:ListItem Value="1">Cần mua </asp:ListItem>
                        <asp:ListItem Value="2">Cần bán</asp:ListItem>
                      </asp:DropDownList>
@@ -59,6 +61,9 @@
         </div>
     </div>
     <asp:Label ID="lblthongbao" runat="server" Text=""></asp:Label>
+    <div class="pull-right">
+         <h4>Tổng số : <asp:Label ID="lbltongketqua" style ="color:red" runat="server" Text=""></asp:Label> kết quả</h4>
+    </div>
     <asp:GridView ID="GrdanhSachtinquangcao" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" OnPageIndexChanging="GrdanhSachtinquangcao_PageIndexChanging" AutoGenerateColumns="False" DataKeyNames="matin" OnRowEditing="GrdanhSachtinquangcao_RowEditing" OnRowDataBound="GrdanhSachtinquangcao_RowDataBound" OnRowDeleting="GrdanhSachtinquangcao_RowDeleting">
         <Columns>
             <asp:BoundField DataField="matin" HeaderText="Mã tin" />

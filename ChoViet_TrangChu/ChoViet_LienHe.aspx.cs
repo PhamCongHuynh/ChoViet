@@ -18,7 +18,7 @@ namespace ChoViet_TrangChu
 
         protected void btngui_Click(object sender, EventArgs e)
         {
-            if(Page.IsValid)
+            if (!txtname.Text.Equals("") && !txtemail.Text.Equals("") && !txtnoidung.Text.Equals("") && !txttieude.Text.Equals("") && !txtsodienthoai.Text.Equals(""))
             {
                 Support obj = new Support();
                 obj.name_cus = txtname.Text;
@@ -31,6 +31,9 @@ namespace ChoViet_TrangChu
                 sups.InsertSup(obj);
                 Response.Redirect(Request.RawUrl);
             }
+            else
+                Lblthongbao.Text = "Bạn phải điền đầy đủ thông tin trước khi gửi";
+
         }
         
     }

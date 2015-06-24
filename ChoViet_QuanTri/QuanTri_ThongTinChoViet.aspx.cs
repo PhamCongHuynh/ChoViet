@@ -22,6 +22,7 @@ namespace ChoViet_QuanTri
         {
             grdsthongtin.DataSource=Information_controller.getQTInforALL();
             grdsthongtin.DataBind();
+            lbltongketqua.Text = grdsthongtin.Rows.Count.ToString();
         }
 
         protected void grdsthongtin_PageIndexChanging(object sender, GridViewPageEventArgs e)

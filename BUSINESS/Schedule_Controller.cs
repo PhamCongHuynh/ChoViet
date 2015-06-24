@@ -86,6 +86,15 @@ namespace BUSINESS
              }
 
          }
+         //public static List<Schedule> checkCategory(int idma)
+         //{
+         //    using (dbchoviet db = new dbchoviet())
+         //    {
+         //        var query = from u in db.Schedules where u.Account_Managers.Id == idma select u;
+         //        return query.ToList();
+         //    }
+
+         //}
          public static int kiemtraCategory(int idma)
          {
              using (dbchoviet db = new dbchoviet())

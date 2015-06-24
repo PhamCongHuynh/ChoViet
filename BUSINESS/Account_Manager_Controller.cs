@@ -43,7 +43,13 @@ namespace BUSINESS
             }
             
         }
-
+        //public List<Account_Manager> GetById(int id_phancong)
+        //{
+        //    List<Account_Manager> list = new List<Account_Manager>();
+        //    Account_Manager ac = Account_ManagerREPO.GetById(ids);
+        //    list.Add(ac);
+        //    return list;
+        //}
 
         public void Delete(int ids) 
         {

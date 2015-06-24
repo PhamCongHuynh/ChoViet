@@ -42,7 +42,8 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">  
+    <form id="form1" runat="server">
+    
     <div id="header">
         <uc1:Choviet_Header runat="server" id="Choviet_Header" />
     </div>
@@ -70,9 +71,7 @@
 		  <div class="item next left">
 		  <div class="container">
 			<a href="index.aspx"><img src="themes/images/carousel/3.png" alt=""></a>
-			<div class="carousel-caption">
-				  <h4>Second Thumbnail label</h4>
-				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			<div class="carousel-caption">				  
 				</div>
 			
 		  </div>
@@ -81,8 +80,7 @@
 		   <div class="container">
 			<a href="index.aspx"><img src="themes/images/carousel/4.png" alt=""></a>
 			<div class="carousel-caption">
-				  <h4>Second Thumbnail label</h4>
-				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				  
 				</div>
 		   
 		  </div>
@@ -91,17 +89,14 @@
 		   <div class="container">
 			<a href="index.aspx"><img src="themes/images/carousel/5.png" alt=""></a>
 			<div class="carousel-caption">
-				  <h4>Second Thumbnail label</h4>
-				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				  
 			</div>
 		  </div>
 		  </div>
 		   <div class="item">
 		   <div class="container">
 			<a href="index.aspx"><img src="themes/images/carousel/6.png" alt=""></a>
-			<div class="carousel-caption">
-				  <h4>Second Thumbnail label</h4>
-				  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			<div class="carousel-caption">				  
 				</div>
 		  </div>
 		  </div>
@@ -117,49 +112,28 @@
 	<div id="sidebar" class="span3">
 		<div class="well well-small"><a id="myCart" href="product_summary.html"><img src="themes/images/ico-cart.png" alt="cart"> Danh mục chính <span class="badge badge-warning pull-right"></span></a></div>
         <uc1:Choviet_MenuRight runat="server" id="Choviet_MenuRight" />
-        
-		<br>
-		   <div class="thumbnail">
-			<img src="themes/images/products/panasonic.jpg" alt="Bootshop panasonoc New camera">
-			<div class="caption">
-			  <h5>Quảng cáo </h5>
-				
-			</div>
-		  </div><br>
-			<div class="thumbnail">
-				<img src="themes/images/products/kindle.png" title="Bootshop New Kindel" alt="Bootshop Kindel">
-				<div class="caption">
-				  <h5>Quảng cáo</h5>
-				   
-				</div>
-			  </div><br>
-			<div class="thumbnail">
-				<img src="themes/images/payment_methods.png" title="Bootshop Payment Methods" alt="Payments Methods">
-				<div class="caption">
-				  <h5>Cổng thanh toán</h5>
-				</div>
-			  </div>
 	</div>
 <!-- Sidebar end=============================================== -->
 		<div class="span9">		
 			<div class="well well-small">
-			<h4>Quảng cáo đặc biệt<small class="pull-right">Chợ Việt </small></h4>
-			<div class="row-fluid">
-			
+			<h4>Quảng cáo đặc biệt<small class="pull-right">Tổng số sản phẩm : <asp:Label ID="lbltongsotindb" style ="color:red" runat="server" Text=""></asp:Label> </small> </h4>
+			<div class="row-fluid">		
 			  <div class="item">
 			  <ul class="thumbnails">
                  <asp:Repeater ID="DLDanhSachDB" runat="server">
                       <ItemTemplate>                       
                        <li class="span3">
+                          <a href="product_detail.aspx?matinid=<%# Eval("ID") %>">
 				          <div class="thumbnail">
 				          <i class="tag"></i>
-					        <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>'  Height="160px" Width="160px" />
+					        <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>'  Height="160px" Width="100%" />
 					        <div class="caption">
                               <p><asp:Label ID="txtnguoidan" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label></p>
-                              <p><asp:Label ID="txttieu" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
-					          <h4><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Chi tiết</a> <span class="pull-right"><%# Eval("price") %></span></h4>
-					        </div>
+                              <p style="text-align:left"><asp:Label ID="txttieu" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
+					          <p style="text-align:left"><a style="color:red" href="#"><%# Eval("price") %></a><a class="pull-right"><%# Eval("like") %> Thích</a></p>
+                            </div>
 				          </div>
+                           </a>
 				        </li>                      
                       </ItemTemplate>
                   </asp:Repeater>
@@ -168,20 +142,21 @@
 	    </div>
             <h4>Xem nhiều hơn<small class="pull-right">Liên hệ ngay để mua hàng </small></h4>
 		</div>
-		     <h4>Danh sách sản phẩm trong ngày </h4>
+		     <h4>Danh sách sản phẩm trong ngày <small class="pull-right">Tổng số sản phẩm : <asp:Label ID="lbltongdslastp" style ="color:red" runat="server" Text=""></asp:Label> </small> </h4>
 			 <ul class="thumbnails">
                   <asp:Repeater ID="DLlatestproducts" runat="server">
                       <ItemTemplate>
                      <li class="span3">
+                         <a href="product_detail.aspx?matinid=<%# Eval("ID") %>">
 				       <div class="thumbnail">
-                          <asp:Image ID="Imahinhanlast" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
+                          <asp:Image ID="Imahinhanlast" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="200px" Width="100%" />
 					        <div class="caption">
                                 <h5> <asp:Label ID="txtnguoidang" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label></h5>
-                                <p><asp:Label ID="txttieude" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
-
-					          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Chi tiết<i class="icon-zoom-in"></i></a> <a class="btn btn-link" href="product_detail.aspx"><%# Eval("price") %></a></h4>
+                                <p style="text-align:left"><asp:Label ID="txttieude" runat="server" Text='<%# Eval("title") %>'></asp:Label> </p>
+					            <p style="text-align:left"><a style="color:red" href="#"><%# Eval("price") %></a><a class="pull-right"><%# Eval("like") %> Thích</a></p>
 					        </div>
 				       </div>
+                      </a>
 				      </li>
                       </ItemTemplate>
                   </asp:Repeater>

@@ -25,6 +25,7 @@ namespace ChoViet_TrangChu
             //string st_new_id = "0";
             Grdanhsach.DataSource = News_Controller.NewsNguoiDungBy(tv,st_new_id);
             Grdanhsach.DataBind();
+            lbltongketqua.Text = Grdanhsach.Rows.Count.ToString();
         }
 
         protected void Grdanhsach_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -71,13 +72,13 @@ namespace ChoViet_TrangChu
             Response.Redirect("ChoVietMember_chitiettin.aspx?matin=" + Grdanhsach.DataKeys[e.NewEditIndex]["Matin"].ToString());
         }
 
-        protected void btltimkiem_Click(object sender, EventArgs e)
-        {
-            int tv = Int32.Parse(Session["id"].ToString());
-            string st_new_i = Request.QueryString["status_id"];
-            int matin = Int32.Parse(txttimkiem.Text);
-            Grdanhsach.DataSource=News_Controller.TimkiemNguoiDungBy(tv,matin,st_new_i);
-            Grdanhsach.DataBind();
-        }
+        //protected void btltimkiem_Click(object sender, EventArgs e)
+        //{
+        //    int tv = Int32.Parse(Session["id"].ToString());
+        //    string st_new_i = Request.QueryString["status_id"];
+        //    int matin = Int32.Parse(txttimkiem.Text);
+        //    Grdanhsach.DataSource=News_Controller.TimkiemNguoiDungBy(tv,matin,st_new_i);
+        //    Grdanhsach.DataBind();
+        //}
     }
 }

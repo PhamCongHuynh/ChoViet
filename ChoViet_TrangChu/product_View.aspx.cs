@@ -60,6 +60,7 @@ namespace ChoViet_TrangChu
                     DLblockView.DataSource = pgitems;
                     DLListView.DataBind();
                     DLblockView.DataBind();
+                    lbltongsptim.Text = DLListView.Items.Count.ToString();
                 }
                 public int PageNumber
                 {

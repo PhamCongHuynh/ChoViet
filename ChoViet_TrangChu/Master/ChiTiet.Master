@@ -51,27 +51,7 @@
 	<div id="sidebar" class="span3">
 		<div class="well well-small"><a id="myCart" href="#"><img src="themes/images/ico-cart.png" alt="cart">Danh mục chính  <span class="badge badge-warning pull-right"></span></a></div>
         <uc1:Choviet_MenuRight runat="server" id="Choviet_MenuRight" />
-		<br>
-		    <div class="thumbnail">
-			<img src="themes/images/products/panasonic.jpg" alt="Bootshop panasonoc New camera">
-			<div class="caption">
-			  <h5>Quảng cáo </h5>
-				
-			</div>
-		  </div><br>
-			<div class="thumbnail">
-				<img src="themes/images/products/kindle.png" title="Bootshop New Kindel" alt="Bootshop Kindel">
-				<div class="caption">
-				  <h5>Quảng cáo</h5>
-				   
-				</div>
-			  </div><br>
-			<div class="thumbnail">
-				<img src="themes/images/payment_methods.png" title="Bootshop Payment Methods" alt="Payments Methods">
-				<div class="caption">
-				  <h5>Cổng thanh toán</h5>
-				</div>
-			  </div>
+		
 	</div>
 <!-- Sidebar end=============================================== -->
 	<%--<div class="span9">	--%>

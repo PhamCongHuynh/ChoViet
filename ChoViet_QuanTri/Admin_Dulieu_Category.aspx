@@ -3,11 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ul class="breadcrumb">
-		<li><a href="index.aspx">Quản trị hệ thống</a><span class="divider">//</span></li>
+		<li><a href="index.aspx">Quản trị hệ thống</a><span class="divider"></span></li>
 		<li class="active">Quản lý dữ liệu danh mục</li>
     </ul>
     <hr />
-    <div class="jumbotron">
+    <%--<div class="jumbotron">
         <div class="navbar-form">
             <div class="form-group">
                 <asp:Label ID="Label1" CssClass="text-center" runat="server" Text="Tìm kiếm theo ID "></asp:Label>  
@@ -19,11 +19,20 @@
                 <asp:Button ID="btltimkiem" CssClass="btn btn-success" runat="server" Text="Tìm kiếm" />
             </div>
         </div>
+    </div>--%>
+    <h2>Quản trị danh mục chợ việt</h2>
+    <div class="pull-right">
+         <h4>Tổng số : <asp:Label ID="lbltongketqua" style ="color:red" runat="server" Text=""></asp:Label> kết quả</h4>
     </div>
-    <asp:GridView ID="grDSdanhmuc" CssClass="table table-hover" runat="server" AllowPaging="True" OnSelectedIndexChanging="grDSdanhmuc_SelectedIndexChanging">
+    <br />
+    <asp:GridView ID="grDSdanhmuc" CssClass="table table-hover" runat="server" OnSelectedIndexChanging="grDSdanhmuc_SelectedIndexChanging" AutoGenerateColumns="False" OnRowDataBound="grDSdanhmuc_RowDataBound">
         <Columns>
             
-            <asp:CommandField DeleteText="Xóa" EditText="Sửa" HeaderText="Thao tác" InsertText="Thêm" ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+            <asp:BoundField DataField="Id" HeaderText="Mã quảng cáo" />
+            <asp:BoundField DataField="parent" HeaderText="Thuộc danh mục" />
+            <asp:BoundField DataField="name" HeaderText="Tên quảng cáo" />
+            
+            <asp:CommandField DeleteText="Xóa" EditText="Sửa" HeaderText="Thao tác" InsertText="Thêm" ShowDeleteButton="True" ShowEditButton="True" />
         </Columns>
     </asp:GridView>
 

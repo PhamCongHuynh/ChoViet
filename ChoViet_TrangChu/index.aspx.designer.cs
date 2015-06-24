@@ -49,6 +49,15 @@ namespace ChoViet_TrangChu {
         protected global::ChoViet_TrangChu.Choviet_MenuRight Choviet_MenuRight;
         
         /// <summary>
+        /// lbltongsotindb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltongsotindb;
+        
+        /// <summary>
         /// DLDanhSachDB control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace ChoViet_TrangChu {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater DLDanhSachDB;
+        
+        /// <summary>
+        /// lbltongdslastp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltongdslastp;
         
         /// <summary>
         /// DLlatestproducts control.

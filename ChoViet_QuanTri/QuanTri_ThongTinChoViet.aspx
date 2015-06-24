@@ -3,11 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ul class="breadcrumb">
-		<li><a href="index.aspx">Quản trị hệ thống</a><span class="divider">//</span></li>
-		<li class="active">Quản lý nhân viên</li>
+		<li><a href="index.aspx">Quản trị hệ thống</a><span class="divider"></span></li>
+		<li class="active">Quản lý thông tin tin tức</li>
     </ul>
     <hr />
-    <div class="jumbotron">
+    <%--<div class="jumbotron">
         <div class="navbar-form">
             <div class="form-group">
                 <asp:Label ID="Label1" CssClass="text-center" runat="server" Text="Tìm kiếm theo ID "></asp:Label>  
@@ -19,6 +19,9 @@
                 <asp:Button ID="btltimkiem" CssClass="btn btn-success" runat="server" Text="Tìm kiếm" />
             </div>
         </div>
+    </div>--%>
+    <div class="pull-right">
+         <h4>Tổng số : <asp:Label ID="lbltongketqua" style ="color:red" runat="server" Text=""></asp:Label> kết quả</h4>
     </div>
     <asp:GridView ID="grdsthongtin" CssClass="table-hover table" runat="server" AllowPaging="True" AutoGenerateColumns="False" OnPageIndexChanging="grdsthongtin_PageIndexChanging" PageSize="20">
         <Columns>

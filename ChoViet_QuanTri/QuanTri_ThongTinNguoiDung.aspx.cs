@@ -23,6 +23,22 @@ namespace ChoViet_QuanTri
             Account_Member_Controller ac=new Account_Member_Controller();
             Grdanhsachnguoidung.DataSource = ac.getALL().ToList();
             Grdanhsachnguoidung.DataBind();
+            lbltongketqua.Text = Grdanhsachnguoidung.Rows.Count.ToString();
+        }
+
+        protected void Grdanhsachnguoidung_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int ma = Int32.Parse(e.Keys[0].ToString());
+            News_Controller.xoatintheonguoidung(ma);
+            Account_Member_Controller ac = new Account_Member_Controller();
+            ac.Delete(ma);            
+            Response.Redirect(Request.RawUrl);
+            lblthongbao.Text = "Bạn vừa xóa 1 tập tin ! ";
+        }
+
+        protected void Grdanhsachnguoidung_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            Response.Redirect("Admin_NguoiDung_Chitiet.aspx?matv=" + Grdanhsachnguoidung.DataKeys[e.NewEditIndex]["Id"].ToString());
         }
    
     }

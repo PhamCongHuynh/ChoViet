@@ -22,6 +22,27 @@ namespace ChoViet_QuanTri
         {
             Grphancong.DataSource = Schedule_Controller.GetPhanCong();
             Grphancong.DataBind();
+            lbltongketqua.Text = Grphancong.Rows.Count.ToString();
+        }
+
+        protected void Grphancong_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            Response.Redirect("Admin_Phanconglai.aspx?maid=" + Grphancong.DataKeys[e.NewEditIndex]["ID"].ToString());
+        }    
+
+        protected void Grphancong_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                if (e.Row.Cells[3].Text == "1")
+                {
+                    e.Row.Cells[3].Text = "Admin";
+                }
+                else if (e.Row.Cells[3].Text == "2")
+                    e.Row.Cells[3].Text = "Quản trị viên";
+                else
+                    e.Row.Cells[3].Text = "Nhân viên";
+            }
         }
     }
 }

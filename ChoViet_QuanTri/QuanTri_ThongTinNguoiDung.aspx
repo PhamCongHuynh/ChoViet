@@ -3,32 +3,27 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <ul class="breadcrumb">
-		<li><a href="index.aspx">Quản trị hệ thống</a> <span class="divider">//</span></li>
+		<li><a href="index.aspx">Quản trị hệ thống</a> <span class="divider"></span></li>
 		<li class="active">Quản lý thông tin người dùng</li>
     </ul>
     <hr />
     <div class="jumbotron">
-        <div class="navbar-form">
-            <div class="form-group">
-                <asp:Label ID="Label1" CssClass="text-center" runat="server" Text="Tìm kiếm theo ID "></asp:Label>  
-            </div>
-            <div class="form-group" style="min-width:70%">
-                <asp:TextBox ID="txttimkiem" CssClass="form-control" style="min-width:100%"  runat="server"></asp:TextBox>
-            </div>
-            <div class="form-group">
-                <asp:Button ID="btltimkiem" CssClass="btn btn-success" runat="server" Text="Tìm kiếm" />
-            </div>
-        </div>
+        <h2>Chào mừng bạn đã đăng nhập trang quản trị hệ thống Chợ Việt </h2>  
+        <p>--Phần nội dung đang được xây dựng--</p> 
     </div>
-    <asp:GridView ID="Grdanhsachnguoidung" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" AutoGenerateColumns="False" >
+    <asp:Label ID="lblthongbao" style ="color:red" runat="server" Text=""></asp:Label>
+    <div class="pull-right">
+         <h4>Tổng số : <asp:Label ID="lbltongketqua" style ="color:red" runat="server" Text=""></asp:Label> kết quả</h4>
+    </div>
+    <asp:GridView ID="Grdanhsachnguoidung" CssClass="table table-hover" runat="server" AllowPaging="True" PageSize="20" AutoGenerateColumns="False" OnRowDeleting="Grdanhsachnguoidung_RowDeleting" DataKeyNames="Id" OnRowEditing="Grdanhsachnguoidung_RowEditing" >
         <Columns>
-            <asp:BoundField DataField="Id" HeaderText="Mã thành viên" />
-            <asp:BoundField DataField="name" HeaderText="Họ và tên" />
-            <asp:BoundField DataField="phonenumber" HeaderText="Số điện thoại" />
+            <asp:BoundField DataField="Id" HeaderText="ID" />
+            <asp:BoundField DataField="name" HeaderText="Họ tên" />
+            <asp:BoundField DataField="phonenumber" HeaderText="Di động" />
             <asp:BoundField DataField="email" HeaderText="E-mail" />
             <asp:BoundField DataField="address" HeaderText="Địa chỉ" />
             <asp:BoundField DataField="datecreate" HeaderText="Ngày đăng ký" />
-            <asp:CommandField DeleteText="Xóa" HeaderText="Thao tác" SelectText="Xem chi tiết" ShowDeleteButton="True" ShowSelectButton="True" />
+            <asp:CommandField DeleteText="Xóa" HeaderText="Thao tác" SelectText="ss" ShowDeleteButton="True" EditText="Xem chi tiết" ShowEditButton="True" />
 
         </Columns>
     </asp:GridView>

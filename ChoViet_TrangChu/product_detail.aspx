@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/ChiTiet.Master" AutoEventWireup="true" EnableEventValidation="false" CodeBehind="product_detail.aspx.cs" Inherits="ChoViet_TrangChu.product_detail" %>
+
+<%@ Register TagPrefix="cc1" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style1 {
@@ -7,112 +9,123 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="span9">          
-           <ul class="breadcrumb">
+    <div class="span9">
+        <ul class="breadcrumb">
             <li><a href="index.aspx">Trang chủ</a> <span class="divider">/</span></li>
-            <li><a href="product_View.aspx">Chi tiết sản phẩm </a> <span class="divider">/</span></li>
-            <li class="active">Chi tiết sản phẩm</li>
-           </ul>
-           <div class="row">
+            <li><a href="index.aspx">Chi tiết sản phẩm </a><span class="divider">/</span></li>
+        </ul>
+        <div class="row">
             <asp:Repeater ID="RPChitiet" runat="server">
-              <ItemTemplate>   
-                  <%--<div id="gallery" class="span3">
-                  <a href="themes/images/products/large/f1.jpg" title="Chợ Việt.net">
-				  <img src="themes/images/products/large/f1.jpg" style="width:100%" alt=""/>
-                  </a>
-			      <div id="differentview" class="moreOptopm carousel slide">
-                <div class="carousel-inner">
-                  <div class="item active">
-                   <a href="themes/images/products/large/f1.jpg"> <img style="width:29%" src="themes/images/products/large/f1.jpg" alt=""></a>
-                   <a href="themes/images/products/large/f1.jpg"> <img style="width:29%" src="themes/images/products/large/f2.jpg" alt=""></a>
-                   <a href="themes/images/products/large/f1.jpg"> <img style="width:29%" src="themes/images/products/large/f3.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                   <a href="themes/images/products/large/f1.jpg"> <img style="width:29%" src="themes/images/products/large/f3.jpg" alt=""></a>
-                   <a href="themes/images/products/large/f1.jpg"> <img style="width:29%" src="themes/images/products/large/f1.jpg" alt=""></a>
-                   <a href="themes/images/products/large/f1.jpg"> <img style="width:29%" src="themes/images/products/large/f2.jpg" alt=""></a>
-                  </div>
-                </div>
-              </div>			  
-			      <div class="btn-toolbar">
+                <ItemTemplate>
+                    <div id="gallery" class="span3">
+                        <a href='<%# "Images/"+ Eval("image1") %>' title="Chợ Việt.net">
+                            <img src='<%# "Images/"+ Eval("image1") %>' style="width: 100%" alt="" />
+                        </a>
+                        <div id="differentview" class="moreOptopm carousel slide">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <a href='<%# "Images/"+ Eval("image2") %>'>
+                                        <img style="width: 29%" src='<%# "Images/"+ Eval("image2") %>' alt=""></a>
+                                    <a href='<%# "Images/"+ Eval("image3") %>'>
+                                        <img style="width: 29%" src='<%# "Images/"+ Eval("image3") %>' alt=""></a>
+                                    <a href='<%# "Images/"+ Eval("image4") %>'>
+                                        <img style="width: 29%" src='<%# "Images/"+ Eval("image4") %>' alt=""></a>
+                                </div>
+                                <div class="item">
+                                    <a href='<%# "Images/"+ Eval("image5") %>'>
+                                        <img style="width: 29%" src='<%# "Images/"+ Eval("image5") %>' alt=""></a>
+                                    <a href='<%# "Images/"+ Eval("image6") %>'>
+                                        <img style="width: 29%" src='<%# "Images/"+ Eval("image6") %>' alt=""></a>
+                                    <a href='<%# "Images/"+ Eval("image1") %>'>
+                                        <img style="width: 29%" src='<%# "Images/"+ Eval("image1") %>' alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <%--    <div class="btn-toolbar">
 			  <div class="btn-group">
-				<span class="btn"><i class="icon-envelope"></i></span>
-				<span class="btn"><i class="icon-print"></i></span>
-				<span class="btn"><i class="icon-zoom-in"></i></span>
-				<span class="btn"><i class="icon-star"></i></span>
-				<span class="btn"><i class=" icon-thumbs-up"></i></span>
-				<span class="btn"><i class="icon-thumbs-down"></i></span>
+                <asp:Button ID="Button2" CssClass="btn" runat="server" Text="" />
+                <asp:Button ID="Button3" CssClass="btn" runat="server" Text="" />
+                <asp:Button ID="Button4" CssClass="btn icon-home" runat="server" Text="" />    
 			  </div>
-			</div>
-			      </div>--%>
-                  <div id="gallery" class="span3">
-                  <a href="<%# Eval("image1", "~/Images/{0}") %>" title="Chợ Việt.net">
-				  <%--<img src="<%# Eval("image1", "~/Images/{0}") %>" style="width:100%"/>--%>
-                  <asp:Image ID="Imahinhan2" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' style="width:100%" />			
-                  </a>
-			      <div id="differentview" class="moreOptopm carousel slide">
-                <div class="carousel-inner">
-                  <div class="item active">
-                   <a href="<%# Eval("image2", "~/Images/{0}") %>"> <asp:Image ID="Image1" runat="server" style="width:29%" ImageUrl='<%# Eval("image2", "~/Images/{0}") %>' /></a>
-                   <a href="<%# Eval("image3", "~/Images/{0}") %>"> <asp:Image ID="Image2" runat="server" style="width:29%" ImageUrl='<%# Eval("image3", "~/Images/{0}") %>' /></a>
-                   <a href="<%# Eval("image4", "~/Images/{0}") %>"> <asp:Image ID="Image3" runat="server" style="width:29%" ImageUrl='<%# Eval("image4", "~/Images/{0}") %>' /></a>
-                  </div>
-                  <div class="item">
-                   <a href="<%# Eval("image5", "~/Images/{0}") %>"> <asp:Image ID="Image4" runat="server" style="width:29%" ImageUrl='<%# Eval("image5", "~/Images/{0}") %>' /></a>
-                   <a href="<%# Eval("image6", "~/Images/{0}") %>"> <asp:Image ID="Image5" runat="server" style="width:29%" ImageUrl='<%# Eval("image6", "~/Images/{0}") %>' /></a>
-                   <a href="<%# Eval("image1", "~/Images/{0}") %>"> <asp:Image ID="Image6" runat="server" style="width:29%" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' /></a>
-                  </div>
-                </div>
-              </div>			  
-			      <div class="btn-toolbar">
-			  <div class="btn-group">
-				<span class="btn"><i class="icon-envelope"></i></span>
-				<span class="btn"><i class="icon-print"></i></span>
-				<span class="btn"><i class="icon-zoom-in"></i></span>
-				<span class="btn"><i class="icon-star"></i></span>
-				<span class="btn"><i class=" icon-thumbs-up"></i></span>
-				<span class="btn"><i class="icon-thumbs-down"></i></span>
-			  </div>
-			</div>
-			      </div>
-			      <div class="span6">
-				<h3><%# Eval("title") %></h3>
-                <small style="color:red">Ngày đăng :<%# Eval("timeaction") %> </small><br />
-				<small>Mã Sản phẩm :<%# Eval("ID") %>  :   Tại khu vực <%# Eval("region") %></small>
-				<hr class="soft">
-				<div class="form-horizontal qtyFrm">
-				  <div class="control-group">
-					<label class="control-label"><span> Giá : <%# Eval("price") %></span></label>
-				  </div>
-				</div>
-				
-				<hr class="soft">
-				<h5>Liên hệ :<%# Eval("nguoidang") %> -DT : <%# Eval("phone") %></h5>
-                <smail>Email :<%# Eval("email") %></smail>
-				<%--<div class="form-horizontal qtyFrm pull-right">
-				  <div class="control-group">
-					<label class="control-label"><span>Color</span></label>
-					<div class="controls">
-					  <select class="span2" style="visibility: visible;">
-						  <option>Black</option>
-						  <option>Red</option>
-						  <option>Blue</option>
-						  <option>Brown</option>
-						</select>
-					</div>
-				  </div>
-				</div>--%>
+			</div>--%>
+                    </div>
+                    <div class="span6">
+                        <h3><%# Eval("title") %></h3>
+                        <h5>Ngày đăng :<a style="color: red"><%# Eval("timeaction") %></a> <a>Khu Vực :<%# Eval("region") %></a> </h5>
+                        <br />
+                        <%--<hr class="soft">--%>
+                        <h5>Mã Sản phẩm :<%# Eval("ID") %></h5>
+                        <%--<hr class="soft">--%>
+                        <div class="form-horizontal qtyFrm">
+                            <div class="control-group">
+                                <label class="control-label"><span>Giá : <%# Eval("price") %></span></label>
+                            </div>
+                        </div>
+                        <h5> Phương thức giao nhận :<a><%# Eval("ship") %> - <%# Eval("pay") %></a></h5>
+                        <hr class="soft">
+                        <h5>Liên hệ :<a style="color: red"><%# Eval("nguoidang") %></a> <a> trực tiếp qua số điện thoại :<%# Eval("phone") %></a> </h5>
+                        <br />
+                        <%--<h5 >Liên hệ qua email :<a  style="color:red"><%# Eval("email") %></a></h5><br />		--%>
+                        <h5>Bấm gửi email :<asp:ImageButton ID="guimail" CssClass="btn btn-link" ImageUrl="~/Images/lienhe.jpg" runat="server" Height="40" Width="50" />
+                        <cc1:ModalPopupExtender runat="server" DynamicServicePath="" BehaviorID="guimail_ModalPopupExtender" TargetControlID="guimail" ID="guimail_ModalPopupExtender" PopupControlID="Panelguimail" BackgroundCssClass="modalBackground" ></cc1:ModalPopupExtender>
+                        </h5><br />  				
 				<hr class="soft clr">
 				<p>
-				<%# Eval("content") %>
+				Mô tả :<%# Eval("content") %>
 				</p>
-				<a class="btn btn-small pull-right" href="#detail">Thảo luận</a>
+                <div class="pull-right">
+                <a href="#"><%# Eval("like") %> người đã </a>
+                <a><asp:ImageButton CssClass="btn btn-link" ID="like" ImageUrl="~/Images/20150120-doan-tinh-cach-qua-nut-like-tren-facebook-1.jpg"  runat="server"  Height="26" Width="74" OnClick="like_Click" /></a>
+                  <a class="btn btn-small " href="#detail">Thảo luận</a>
+                </div>
 				<br class="clr">
 			<a href="#" name="detail"></a>
 			<hr class="soft">
 			</div>
               </ItemTemplate>
          </asp:Repeater>
+            <asp:Panel ID="Panelguimail" style="width:60%;height:auto; display:none; background:white;" runat="server">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Liên hệ mua hàng</h4>
+          </div>
+          <div class="modal-body">
+              <div class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <div class="col-sm-10">
+                     <asp:TextBox ID="txtemailCus" style="width:100%" placeholder="Email của bạn" TextMode="MultiLine" Columns="30" Rows="1" runat="server"></asp:TextBox>
+                    </div>
+                  </div> 
+                  <br />
+                  <div class="form-group">
+                    <div class="col-sm-10">
+                     <asp:TextBox ID="txtmatkhau" style="width:100%" placeholder="Mật khẩu của bạn" TextMode="Password" runat="server"></asp:TextBox>
+                    </div>
+                  </div> 
+                  <br />
+                  <div class="form-group">
+                    <div class="col-sm-10">
+                     <asp:TextBox ID="txttieude" style="width:100%" placeholder="Tiêu đề" TextMode="MultiLine" Columns="50" Rows="2" runat="server"></asp:TextBox>
+                    </div>
+                  </div>  
+                  <br />
+                  <div class="form-group">                  
+                    <div class="col-sm-10">
+                     <asp:TextBox ID="txtnoidungs" style="width:100%" placeholder="Nội dung" TextMode="MultiLine" Columns="70" Rows="5" runat="server"></asp:TextBox>
+                    </div>
+                  </div>                 
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="form-group"> 
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <asp:Button ID="btnguimail" runat="server" Text="Gửi " OnClick="btnguimail_Click" />
+                        <asp:Button ID="Button2" runat="server" Text="Hủy" />
+                    </div>
+                  </div>
+          </div>
+            </asp:Panel>
+
             <div class="span9">
             <ul id="productDetail" class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">Thảo luận</a></li>
@@ -128,9 +141,12 @@
                     js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.3";
                     fjs.parentNode.insertBefore(js, fjs);
                 }(document, 'script', 'facebook-jssdk'));</script>
-                <div class="fb-comments" data-href="http://localhost:22269/product_detail.aspx#detail" data-numposts="5" data-colorscheme="light"></div>
+                <div class="fb-comments" data-href="<%=Page.Request.Url.AbsoluteUri %>" data-numposts="5" data-colorscheme="light"></div>
               </div>
 		<div class="tab-pane fade" id="profile">
+        <div class="pull-left">
+             <h5>Tổng số kết quả : <asp:Label ID="lbltongsplq" style ="color:red" runat="server" Text=""></asp:Label></h5>
+        </div>
 		<div id="myTab" class="pull-right">
 		 <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
 		 <a href="#blockView" data-toggle="tab"><span class="btn btn-large btn-primary"><i class="icon-th-large"></i></span></a>
@@ -145,7 +161,7 @@
 					<div class="span2">
                         <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
 					</div>
-					<div class="span4">
+					<div class="span5">
 						<h5>Ngày đăng :<%# Eval("timeaction") %> </h5><br />
                         <h7>Người đăng :<%# Eval("nguoidang") %> </h7>			
 						<hr class="soft">
@@ -156,10 +172,10 @@
 						<a class="btn btn-small pull-right" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Xem chi tiết</a>
 						<br class="clr">
 					</div>
-					<div class="span3 alignR">
+					<div class="span2 alignR">
 					<form class="form-horizontal qtyFrm">
 					<h3>Giá : <%# Eval("price") %></h3><br />
-                    <%-- <asp:Label ID="Label1" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label>--%>
+                    <p><%# Eval("like") %> Người đã thích </p>
 					<br>
 					
 						</form>
@@ -174,16 +190,16 @@
                     <asp:Repeater ID="DLblockView" runat="server">
                         <ItemTemplate>
                            <li class="span3">
+                             <a href="product_detail.aspx?matinid=<%# Eval("ID") %>">
 					          <div class="thumbnail">
-						        <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
+						        <asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="200px" Width="100%" />
 						        <div class="caption">
 						          <h5><%# Eval("nguoidang") %></h5>
-						          <p> 
-							       <%# Eval("title") %> 
-						          </p>
-						          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Xem chi tiết<i class="icon-zoom-in"></i></a><a class="btn btn-primary" href="#"><%# Eval("price") %></a></h4>
+						          <h5 style="text-align:left"><%# Eval("title") %> </h5>
+						          <p style="text-align:left"><a style="color:red" href="#"><%# Eval("price") %></a><a class="pull-right"><%# Eval("like") %> Thích</a></p>
 						        </div>
 					          </div>
+                            </a>
 					        </li>
                         </ItemTemplate>
                     </asp:Repeater>	

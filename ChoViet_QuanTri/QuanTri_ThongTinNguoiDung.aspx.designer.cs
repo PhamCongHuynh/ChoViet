@@ -13,31 +13,22 @@ namespace ChoViet_QuanTri {
     public partial class QuanTri_ThongTinNguoiDung {
         
         /// <summary>
-        /// Label1 control.
+        /// lblthongbao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblthongbao;
         
         /// <summary>
-        /// txttimkiem control.
+        /// lbltongketqua control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttimkiem;
-        
-        /// <summary>
-        /// btltimkiem control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btltimkiem;
+        protected global::System.Web.UI.WebControls.Label lbltongketqua;
         
         /// <summary>
         /// Grdanhsachnguoidung control.

@@ -21,6 +21,7 @@ namespace ChoViet_QuanTri
         {
             Grdanhsachhotrokhachhang.DataSource = Supports_controller.getQTSupALL();
             Grdanhsachhotrokhachhang.DataBind();
+            lbltongketqua.Text = Grdanhsachhotrokhachhang.Rows.Count.ToString();
         }
 
         protected void Grdanhsachhotrokhachhang_PageIndexChanging(object sender, GridViewPageEventArgs e)

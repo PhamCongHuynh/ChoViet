@@ -68,12 +68,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin_ChiTiet_taikhoan.aspx" />
     <Content Include="Admin_Create_Dulieu_Thongtin.aspx" />
     <Content Include="Admin_Dulieu_Category.aspx" />
     <Content Include="Admin_Dulieu_Information.aspx" />
     <Content Include="Admin_Dulieu_Regions.aspx" />
+    <Content Include="Admin_NguoiDung_Chitiet.aspx" />
     <Content Include="Admin_phancong.aspx" />
     <Content Include="Admin_PhanCongCongViec.aspx" />
+    <Content Include="Admin_Phanconglai.aspx" />
     <Content Include="Admin_QuanLyTaiKhoan.aspx" />
     <Content Include="Admin_QuanLyTinQuangCao.aspx" />
     <Content Include="Admin_SuaThongTin.aspx" />
@@ -114,6 +117,7 @@
     <Content Include="MenuAdmin.ascx" />
     <Content Include="MenuQuanTri.ascx" />
     <Content Include="QuanTri_ThongTinNguoiDung.aspx" />
+    <Content Include="QuanTri_Thong_TinCaNhan.aspx" />
     <Content Include="QuanTri_TinQuangCao.aspx" />
     <Content Include="search.ascx" />
     <Content Include="Style2\base.css" />
@@ -140,6 +144,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_ChiTiet_taikhoan.aspx.cs">
+      <DependentUpon>Admin_ChiTiet_taikhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_ChiTiet_taikhoan.aspx.designer.cs">
+      <DependentUpon>Admin_ChiTiet_taikhoan.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Create_Dulieu_Thongtin.aspx.cs">
       <DependentUpon>Admin_Create_Dulieu_Thongtin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -168,6 +179,13 @@
     <Compile Include="Admin_Dulieu_Regions.aspx.designer.cs">
       <DependentUpon>Admin_Dulieu_Regions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin_NguoiDung_Chitiet.aspx.cs">
+      <DependentUpon>Admin_NguoiDung_Chitiet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_NguoiDung_Chitiet.aspx.designer.cs">
+      <DependentUpon>Admin_NguoiDung_Chitiet.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin_phancong.aspx.cs">
       <DependentUpon>Admin_phancong.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -181,6 +199,13 @@
     </Compile>
     <Compile Include="Admin_PhanCongCongViec.aspx.designer.cs">
       <DependentUpon>Admin_PhanCongCongViec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Phanconglai.aspx.cs">
+      <DependentUpon>Admin_Phanconglai.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Phanconglai.aspx.designer.cs">
+      <DependentUpon>Admin_Phanconglai.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin_QuanLyTaiKhoan.aspx.cs">
       <DependentUpon>Admin_QuanLyTaiKhoan.aspx</DependentUpon>
@@ -297,6 +322,13 @@
     </Compile>
     <Compile Include="QuanTri_ThongTinNguoiDung.aspx.designer.cs">
       <DependentUpon>QuanTri_ThongTinNguoiDung.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri_Thong_TinCaNhan.aspx.cs">
+      <DependentUpon>QuanTri_Thong_TinCaNhan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuanTri_Thong_TinCaNhan.aspx.designer.cs">
+      <DependentUpon>QuanTri_Thong_TinCaNhan.aspx</DependentUpon>
     </Compile>
     <Compile Include="QuanTri_TinQuangCao.aspx.cs">
       <DependentUpon>QuanTri_TinQuangCao.aspx</DependentUpon>

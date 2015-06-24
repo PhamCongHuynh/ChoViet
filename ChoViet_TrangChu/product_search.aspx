@@ -24,7 +24,9 @@
             </select>
 		</div>
 	  </div>--%>
-	  
+<div class="pull-left">
+     <h5>Tổng số : <asp:Label ID="lbltongsptimthay" style ="color:red" runat="server" Text=""></asp:Label> kết quả tìm thấy</h5>
+</div>	  
 <div id="myTab" class="pull-right">
  <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
  <a href="#blockView" data-toggle="tab"><span class="btn btn-large btn-primary"><i class="icon-th-large"></i></span></a>
@@ -36,16 +38,15 @@
                     <ItemTemplate>
                        <div class="row">	  
 					<div class="span2">
-						<asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
+						<asp:Image ID="Imahinhanh" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="100%" />
 					</div>
-					<div class="span4">
-						<h3>New | Available</h3>				
+					<div class="span4">										
 						<hr class="soft">
 						<h5><%# Eval("title") %> </h5>
 						<p>
 						<%# Eval("content") %>
 						</p>
-						<a class="btn btn-small pull-right" href="product_details.html">Xem</a>
+						<a class="btn btn-small pull-right" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Xem</a>
 						<br class="clr">
 					</div>
 					<div class="span3 alignR">
@@ -54,9 +55,9 @@
                      <asp:Label ID="Label1" runat="server" Text='<%# Eval("nguoidang") %>'></asp:Label>
 					<br>
 					<div class="btn-group">
-					  <a href="product_detail.aspx?matinid=<%# Eval("ID") %>" class="btn btn-large"><i class="icon-zoom-in"></i></a>
+					 
 					 </div>
-						</form>
+					</form>
 					</div>
 			    </div>
 			    <hr class="soft">
@@ -68,16 +69,18 @@
                     <asp:Repeater ID="DLblockView" runat="server" >
                         <ItemTemplate>
                            <li class="span3">
+                               <a href="product_detail.aspx?matinid=<%# Eval("ID") %>">
 					          <div class="thumbnail">
-						        <asp:Image ID="Imahinhanh2" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="160px" Width="160px" />
+						        <asp:Image ID="Imahinhanh2" runat="server" ImageUrl='<%# Eval("image1", "~/Images/{0}") %>' Height="200px" Width="100%" />
 						        <div class="caption">
 						          <h5><%# Eval("nguoidang") %></h5>
-						          <p> 
+						          <p  style="text-align:left"> 
 							       <%# Eval("title") %> 
 						          </p>
-						          <h4 style="text-align:center"><a class="btn" href="product_detail.aspx?matinid=<%# Eval("ID") %>">Xem<i class="icon-zoom-in"></i></a><a class="btn btn-primary" href="#"><%# Eval("price") %></a></h4>
+						          <p style="text-align:left"><a style="color:red" href="#"><%# Eval("price") %></a><a class="pull-right"><%# Eval("like") %> Thích</a></p>
 						        </div>
 					          </div>
+                              </a>
 					        </li>
                         </ItemTemplate>
                     </asp:Repeater>	

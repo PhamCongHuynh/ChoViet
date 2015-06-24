@@ -101,18 +101,29 @@
                         <asp:TextBox ID="Label29" CssClass="control-group" Enabled="False" TextMode="MultiLine" Columns="50" Rows="3" runat="server" Text='<%# Eval("quytrinhvanchuyen") %>'></asp:TextBox>
                     </div>
                 </div>
-                <div class="form-group">
+               <%-- <div class="form-group">
                     <asp:Button ID="btnduyet" CssClass="btn btn-default col-ms-3" runat="server" Text="Duyệt tin đăng" ToolTip="Duyệt đăng ngay" OnClick="btnduyet_Click" />
                     <asp:Button ID="btnchoxemxet" CssClass="btn btn-default col-ms-3" runat="server" Text="Chờ duyệt" ToolTip="Lưu xem xet chờ duyệt"/>
                     <cc1:ModalPopupExtender runat="server" DynamicServicePath="" BehaviorID="btnchoxemxet_ModalPopupExtender" PopupControlID="Panelchoduyet" TargetControlID="btnchoxemxet" ID="btnchoxemxet_ModalPopupExtender" BackgroundCssClass="modalBackground" ></cc1:ModalPopupExtender>
                     <asp:Button ID="btnvipham" CssClass="btn btn-default col-ms-3" runat="server" Text="Vi phạm quy chế" ToolTip="Đánh dấu vi phạm quy chế" />
                     <cc1:ModalPopupExtender runat="server" DynamicServicePath="" BehaviorID="btnvipham_ModalPopupExtender" TargetControlID="btnvipham" ID="btnvipham_ModalPopupExtender" PopupControlID="PanelVipham" BackgroundCssClass="modalBackground"></cc1:ModalPopupExtender>
                     <asp:Button ID="btnxoa" CssClass="btn btn-default col-ms-3" runat="server" Text="Xóa tin này" ToolTip="Xóa tin " OnClick="btnxoa_Click" />
-     </div>
+               </div>--%>
  </div>
      </div>
         </ItemTemplate>    
     </asp:Repeater>
+    <div class="form-horizontal">
+              <div class="form-group">
+                    <asp:Button ID="btnduyet" CssClass="btn btn-default col-ms-3" runat="server" Text="Duyệt tin đăng" ToolTip="Duyệt đăng ngay" OnClick="btnduyet_Click" />
+                    <asp:Button ID="btnchoxemxet" CssClass="btn btn-default col-ms-3" runat="server" Text="Chờ duyệt" ToolTip="Lưu xem xet chờ duyệt"/>
+                    <cc1:ModalPopupExtender runat="server" DynamicServicePath="" BehaviorID="btnchoxemxet_ModalPopupExtender" PopupControlID="Panelchoduyet" TargetControlID="btnchoxemxet" ID="btnchoxemxet_ModalPopupExtender" BackgroundCssClass="modalBackground" ></cc1:ModalPopupExtender>
+                    <asp:Button ID="btntbvipham" CssClass="btn btn-default col-ms-3" runat="server" Text="Vi phạm quy chế" ToolTip="Đánh dấu vi phạm quy chế" />
+                    <cc1:ModalPopupExtender runat="server" DynamicServicePath="" BehaviorID="btnvipham_ModalPopupExtender" TargetControlID="btntbvipham" ID="btnvipham_ModalPopupExtender" PopupControlID="PanelVipham" BackgroundCssClass="modalBackground"></cc1:ModalPopupExtender>
+                    <asp:Button ID="btnxoa" CssClass="btn btn-default col-ms-3" runat="server" Text="Xóa tin này" ToolTip="Xóa tin " OnClick="btnxoa_Click" />
+               </div>
+    </div>
+   <%-- //PopupControlID="Panelchoduyet" TargetControlID="btnchoxemxet"--%>
     <asp:Panel ID="Panelchoduyet" style="width:60%;height:auto; display:none; background:white;" runat="server">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>

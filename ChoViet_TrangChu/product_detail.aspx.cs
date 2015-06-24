@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BUSINESS;
+using System.Net;
+using System.Net.Mail;
 
 namespace ChoViet_TrangChu
 {
@@ -53,7 +55,8 @@ namespace ChoViet_TrangChu
             DLListView.DataSource = pgitems;
             DLblockView.DataSource = pgitems;
             DLListView.DataBind();
-            DLblockView.DataBind();            
+            DLblockView.DataBind();
+            lbltongsplq.Text = DLListView.Items.Count.ToString();
         }
         public int PageNumber
         {
@@ -80,6 +83,40 @@ namespace ChoViet_TrangChu
             var list =obj.GetById(masp);
             string madm = list.FirstOrDefault().Category.Id.ToString();
             return madm;
+        }
+
+        protected void like_Click(object sender, ImageClickEventArgs e)
+        {
+            int mid = Int32.Parse(Request.QueryString["matinid"].ToString());
+            News_Controller.updateLike(mid);
+            Response.Redirect(Request.RawUrl);
+            
+        }
+
+        protected void btnguimail_Click(object sender, EventArgs e)
+        {
+            int mid = Int32.Parse(Request.QueryString["matinid"].ToString());
+            string emailcus = News_Controller.gemailById(mid);
+            SmtpClient smtp = new SmtpClient();
+            try
+            {
+                //ĐỊA CHỈ SMTP Server
+                smtp.Host = "smtp.gmail.com";
+                //Cổng SMTP
+                smtp.Port = 587;
+                //SMTP yêu cầu mã hóa dữ liệu theo SSL
+                smtp.EnableSsl = true;
+                //UserName và Password của mail
+                smtp.Credentials = new NetworkCredential(txtemailCus.Text,txtmatkhau.Text);
+
+                //Tham số lần lượt là địa chỉ người gửi, người nhận, tiêu đề và nội dung thư
+                smtp.Send(txtemailCus.Text, emailcus, txttieude.Text, txtnoidungs.Text);
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

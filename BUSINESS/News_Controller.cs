@@ -62,6 +62,7 @@ namespace BUSINESS
                 obj.image6=image6s;
                 obj.price=prices;
                 obj.pay=pays;
+                obj.likes = "0";
                 obj.shipping=shippings;
                 obj.datecreate=datecreates;
                 obj.Account_Managers=manager;
@@ -92,7 +93,8 @@ namespace BUSINESS
                                  danhmuc=ca.name,
                                  timeaction =n.dateaction,
                                  nguoidang=ac.name,
-                                 image1 = n.image1
+                                 image1 = n.image1,
+                                 like=n.likes
                              });
                 return Views.ToList();
             }
@@ -117,7 +119,8 @@ namespace BUSINESS
                                 danhmuc = ca.name,
                                 timeaction = n.dateaction,
                                 nguoidang = ac.name,
-                                image1 = n.image1
+                                image1 = n.image1,
+                                like=n.likes
                             }).Take(4);
                 return Views.ToList();
             }
@@ -173,6 +176,7 @@ namespace BUSINESS
                                 timeaction = n.datecheck,
                                 nguoidang = ac.name,
                                 image1 = n.image1,
+                                like=n.likes,
                                 content=n.content
                             }).Take(30);
                 return Views.ToList();
@@ -197,7 +201,7 @@ namespace BUSINESS
             using (dbchoviet db = new dbchoviet())
             {
                 var Views = (from n in db.Newss.AsEnumerable()
-                             where (n.Regions.Id==idkhuvuc || n.title.Contains(tukhoa)) && n.status_news=="1"
+                             where (n.Regions.Id==idkhuvuc && n.title.Contains(tukhoa)|| n.content.Contains(tukhoa)) && n.status_news=="1"
                              join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
                              join re in db.Regions on n.Regions.Id equals re.Id
                              join ca in db.Categorys on n.Category.Id equals ca.Id
@@ -212,6 +216,7 @@ namespace BUSINESS
                                  timeaction = n.dateaction,
                                  nguoidang = ac.name,
                                  image1 = n.image1,
+                                 like = n.likes,
                                  content = n.content
                              });
                 return Views.ToList();
@@ -240,6 +245,7 @@ namespace BUSINESS
                                  timeaction =n.datecheck,
                                  email=ac.email,
                                  phone=n.phone_number,
+                                 like = n.likes,
                                  nguoidang=ac.name,
                                  image1=n.image1,
                                  image2 = n.image2,
@@ -256,6 +262,17 @@ namespace BUSINESS
                              };
                 return Views.ToList();
             }
+        }
+        public static void xoatintheonguoidung(int id_nguoidung)
+        {
+            using(dbchoviet db=new dbchoviet())
+            {
+                //var member= (db.Account_Members.FirstOrDefault(acm=>acm.Id==id_nguoidung));
+                var objnew = db.Newss.Where(n => n.Account_Members.Id == id_nguoidung);
+                db.Newss.RemoveRange(objnew);
+                db.SaveChanges();
+            }
+            
         }
         //Quản trị: phương thức này trả về danh sách các sản phẩm trong phần quản trị
         public static IEnumerable ViewDanhSachTinQLByCategoryID(int ids)
@@ -306,6 +323,7 @@ namespace BUSINESS
                                 image4 = n.image4,
                                 image5 = n.image5,
                                 image6 = n.image6,
+                                like = n.likes,
                                 khuvuc = re.Name,
                                 danhmuc = ca.name,
                                 gia=n.price,
@@ -340,6 +358,7 @@ namespace BUSINESS
                                 danhmuc = ca.name,
                                 thoigiangui = n.datecreate,
                                 nguoidang = ac.name,
+
                             };
                 return Views.ToList();
             }
@@ -364,7 +383,7 @@ namespace BUSINESS
                                 danhmuc = ca.name,
                                 kiemduyet=n.status_news,
                                 thoigiandang = n.datecreate,
-                                luotxem=n.views                               
+                                luotxem = n.likes                             
                             };
                 return Views.ToList();
             }
@@ -388,6 +407,7 @@ namespace BUSINESS
                                 danhmuc = ca.name,
                                 kiemduyet = n.status_news,
                                 thoigiandang = n.datecreate,
+                                like = n.likes,
                                 luotxem = n.views
                             };
                 return Views.ToList();
@@ -404,6 +424,16 @@ namespace BUSINESS
                 query.datecheck=ngayduyet;
                 query.dateaction=ngayhoatdong;
                 query.Account_Managers=manager;
+                db.SaveChanges();
+            }
+        }
+        public static void updateLike(int matin)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var query = (from n in db.Newss where n.Id == matin select n).First();
+                int lik=Int32.Parse(query.likes)+1;
+                query.likes=lik.ToString();                
                 db.SaveChanges();
             }
         }
@@ -432,13 +462,13 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
-        public static IEnumerable timkiemBYKhacQT(int khuvuc, string loaitin, int cateid)
+        public static IEnumerable timkiemBYKhacQT(string keyk, int khuvuc, string loaitin, int cateid)
         {
             using (dbchoviet db = new dbchoviet())
             {
                 var region = db.Regions.FirstOrDefault(ca => ca.Id == khuvuc);
                 var Views = from n in db.Newss.AsEnumerable()
-                            where (n.Regions == region || n.type_news == loaitin) && n.Category.parent == cateid
+                            where (n.title.Contains(keyk)||n.content.Contains(keyk))&& n.Regions == region && n.type_news == loaitin && n.Category.parent == cateid
                             //where n.Category.Id==cate_id
                             join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
                             join re in db.Regions on n.Regions.Id equals re.Id
@@ -457,7 +487,93 @@ namespace BUSINESS
                 return Views.ToList();
             }
         }
+        public static IEnumerable timkiemBYTuKhoaQT(string keyk, int cateid)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var Views = from n in db.Newss.AsEnumerable()
+                            where (n.title.Contains(keyk) || n.content.Contains(keyk)) && n.Category.parent == cateid
+                            //where n.Category.Id==cate_id
+                            join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
+                            join re in db.Regions on n.Regions.Id equals re.Id
+                            join ca in db.Categorys on n.Category.Id equals ca.Id
+                            orderby n.Id descending
+                            select new
+                            {
+                                matin = n.Id,
+                                tieude = n.title,
+                                loaitin = n.type_news,
+                                khuvuc = re.Name,
+                                danhmuc = ca.name,
+                                thoigiangui = n.datecreate,
+                                nguoidang = ac.name,
+                            };
+                return Views.ToList();
+            }
+        }
+        public static IEnumerable timkiemBYloaitinQT(string loaitin, int cateid)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                
+                var Views = from n in db.Newss.AsEnumerable()
+                            where n.type_news == loaitin && n.Category.parent == cateid
+                            //where n.Category.Id==cate_id
+                            join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
+                            join re in db.Regions on n.Regions.Id equals re.Id
+                            join ca in db.Categorys on n.Category.Id equals ca.Id
+                            orderby n.Id descending
+                            select new
+                            {
+                                matin = n.Id,
+                                tieude = n.title,
+                                loaitin = n.type_news,
+                                khuvuc = re.Name,
+                                danhmuc = ca.name,
+                                thoigiangui = n.datecreate,
+                                nguoidang = ac.name,
+                            };
+                return Views.ToList();
+            }
+        }
+        public static IEnumerable timkiemBYkhuvucQT(int khuvuc, int cateid)
+        {
+            using (dbchoviet db = new dbchoviet())
+            {
+                var region = db.Regions.FirstOrDefault(ca => ca.Id == khuvuc);
+                var Views = from n in db.Newss.AsEnumerable()
+                            where  n.Regions == region && n.Category.parent == cateid
+                            //where n.Category.Id==cate_id
+                            join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
+                            join re in db.Regions on n.Regions.Id equals re.Id
+                            join ca in db.Categorys on n.Category.Id equals ca.Id
+                            orderby n.Id descending
+                            select new
+                            {
+                                matin = n.Id,
+                                tieude = n.title,
+                                loaitin = n.type_news,
+                                khuvuc = re.Name,
+                                danhmuc = ca.name,
+                                thoigiangui = n.datecreate,
+                                nguoidang = ac.name,
+                            };
+                return Views.ToList();
+            }
+        }
+        public static string gemailById(int id_new)
+        {
+            using(dbchoviet db=new dbchoviet())
+            {
+                var querynew = from n in db.Newss
+                               where n.Id == id_new
+                               join ac in db.Account_Members on n.Account_Members.Id equals ac.Id
+                               select n.Account_Members;
+                var acm = (from ac in db.Account_Members where ac == querynew.FirstOrDefault() select ac).First();
+                return acm.email;
 
+            }
+        }
 
     }
 }

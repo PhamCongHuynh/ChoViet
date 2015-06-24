@@ -13,6 +13,15 @@ namespace ChoViet_TrangChu {
     public partial class product_search {
         
         /// <summary>
+        /// lbltongsptimthay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltongsptimthay;
+        
+        /// <summary>
         /// DLListView control.
         /// </summary>
         /// <remarks>

@@ -29,7 +29,7 @@ namespace ChoViet_TrangChu
             //System.Data.DataView dv = new System.Data.DataView(list);
             pgitems.DataSource = list;
             pgitems.AllowPaging = true;
-            pgitems.PageSize = 18;
+            pgitems.PageSize = 30;
             pgitems.CurrentPageIndex = PageNumber;
             if (pgitems.PageCount > 1)
             {
@@ -45,11 +45,14 @@ namespace ChoViet_TrangChu
             DLlatestproducts.DataSource= pgitems;
             //DLlatestproducts.DataSource = News_Controller.ViewLastProduct();
             DLlatestproducts.DataBind();
+            //lbltongdslastp.Text = DLlatestproducts.Items.Count.ToString();
+            lbltongdslastp.Text = pgitems.Count.ToString();
         }
         public void DanhsachDacBiet()
         {
             DLDanhSachDB.DataSource = News_Controller.ViewSPnoibat();
             DLDanhSachDB.DataBind();
+            lbltongsotindb.Text = DLDanhSachDB.Items.Count.ToString();
         }
         public int PageNumber
         {

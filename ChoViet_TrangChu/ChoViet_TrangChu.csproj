@@ -98,6 +98,7 @@
     <Content Include="Images\12.jpg" />
     <Content Include="Images\13.jpg" />
     <Content Include="Images\2.jpg" />
+    <Content Include="Images\20150120-doan-tinh-cach-qua-nut-like-tren-facebook-1.jpg" />
     <Content Include="Images\3.jpg" />
     <Content Include="Images\4.jpg" />
     <Content Include="Images\5.jpg" />
@@ -110,7 +111,10 @@
     <Content Include="Images\b3.jpg" />
     <Content Include="Images\b4.jpg" />
     <Content Include="Images\kindle.png" />
+    <Content Include="Images\lienhe.jpg" />
     <Content Include="Images\panasonic.jpg" />
+    <Content Include="Images\lienheemail.jpg" />
+    <Content Include="Images\tải xuống.png" />
     <Content Include="product_detail.aspx" />
     <Content Include="product_search.aspx" />
     <Content Include="product_View.aspx" />

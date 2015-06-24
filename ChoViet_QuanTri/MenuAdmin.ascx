@@ -18,4 +18,7 @@
             <a href="Admin_Dulieu_Regions.aspx" class="list-group-item">Quản lý danh sách khu vực</a>
             <a href="Admin_Dulieu_Information.aspx" class="list-group-item">Quản lý danh sách thông tin</a>
             <a href="Admin_Dulieu_Category.aspx" class="list-group-item">Quản lý danh mục quảng cáo</a>
+            <a href="#" class="list-group-item active"> Danh mục cá nhân</a>
+            <a href="QuanTri_DoiMK.aspx" class="list-group-item">Đổi mật khẩu</a>
+            <a href="QuanTri_Thong_TinCaNhan.aspx" class="list-group-item">Thông tin cá nhân</a>
           </div>

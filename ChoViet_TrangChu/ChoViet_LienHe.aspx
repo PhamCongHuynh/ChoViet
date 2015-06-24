@@ -29,30 +29,31 @@
 		                </div>
 		                <div class="span4">
 		                <h4>Cần hỗ trợ</h4>
+                        <asp:Label ID="Lblthongbao" style="color:red" runat="server" Text=""></asp:Label>
 		                <div class="form-horizontal">
                         <fieldset>
                           <div class="control-group">
                               <asp:TextBox ID="txtname" placeholder="Họ tên" class="input-xlarge" runat="server"></asp:TextBox>
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtname" ErrorMessage="(!)"></asp:RequiredFieldValidator>
+                              <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtname" ErrorMessage="(!)"></asp:RequiredFieldValidator>--%>
                           </div>
 		                   <div class="control-group">
                                <asp:TextBox ID="txtemail" placeholder="E-mail" class="input-xlarge" runat="server"></asp:TextBox>
-                               <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtemail" ErrorMessage="(!)"></asp:RequiredFieldValidator>
+                               <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtemail" ErrorMessage="(!)"></asp:RequiredFieldValidator>--%>
                           </div>
                              <div class="control-group">
                                <asp:TextBox ID="txtsodienthoai" placeholder="Số điện thoại của bạn" class="input-xlarge" runat="server"></asp:TextBox>
-                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtsodienthoai" ErrorMessage="(!)"></asp:RequiredFieldValidator>
+                                <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtsodienthoai" ErrorMessage="(!)"></asp:RequiredFieldValidator>--%>
                           </div>
 		                   <div class="control-group">
                                <asp:TextBox ID="txttieude" placeholder="Tiêu đề" class="input-xlarge" runat="server"></asp:TextBox>
-                               <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txttieude" ErrorMessage="(!)"></asp:RequiredFieldValidator>
+                               <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txttieude" ErrorMessage="(!)"></asp:RequiredFieldValidator>--%>
                           </div>
                           <div class="control-group">  
                               <asp:TextBox ID="txtnoidung" placeholder="Nội dung" TextMode="MultiLine" Columns="50" Rows="5" class="input-xlarge" runat="server"></asp:TextBox>
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtnoidung" ErrorMessage="(!)"></asp:RequiredFieldValidator>
+                              <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtnoidung" ErrorMessage="(!)"></asp:RequiredFieldValidator>--%>
                           </div>
                             <asp:Button ID="btngui" CssClass="btn btn-success" runat="server" Text="Gửi" OnClick="btngui_Click" />
-                        </fieldset>
+                        </fieldset>                          
                       </div>
 		                </div>
 	                </div>

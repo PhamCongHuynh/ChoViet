@@ -37,8 +37,16 @@ namespace ChoViet_QuanTri
             int ca = Schedule_Controller.kiemtraCategory(idm);
                       
             string statu_new = Request.QueryString["mt"].ToString();
-            GrdanhSachtinquangcao.DataSource = News_Controller.QTViewDSProduct(ca,statu_new);
+            var query=News_Controller.QTViewDSProduct(ca,statu_new);
+            GrdanhSachtinquangcao.DataSource = query;
             GrdanhSachtinquangcao.DataBind();
+            int dem = 0;
+            foreach(var cout in query)
+            {
+                dem = dem + 1;
+            }
+            //lbltongketqua.Text = GrdanhSachtinquangcao.Rows.Count.ToString();
+            lbltongketqua.Text = dem.ToString();
         }
         protected void GrdanhSachtinquangcao_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
@@ -54,9 +62,9 @@ namespace ChoViet_QuanTri
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 if (e.Row.Cells[2].Text == "1")
-                    e.Row.Cells[2].Text = "Cần bán";
-                else if (e.Row.Cells[2].Text == "2")
                     e.Row.Cells[2].Text = "Cần mua";
+                else if (e.Row.Cells[2].Text == "2")
+                    e.Row.Cells[2].Text = "Cần bán";
                 else if (e.Row.Cells[2].Text == "3")
                     e.Row.Cells[2].Text = "Cần thuê";
                 else
@@ -79,20 +87,35 @@ namespace ChoViet_QuanTri
             int idm = Int32.Parse(Session["id"].ToString());
             int ca = Schedule_Controller.kiemtraCategory(idm);
             int khuvucs= Int32.Parse(Drkhuvuc.SelectedValue);
+            string loaitins= Drloaitin.SelectedValue;
             string timkiem = txtimkiem.Text;
-            if(!timkiem.Equals(""))
+            if(!txtimkiem.Text.Equals("")&&khuvucs==0 && loaitins.Equals("0"))
             {
                 int ids = Int32.Parse(timkiem);
-                var list = News_Controller.timkiemBYIdQT(ids,ca);
+                var list = News_Controller.timkiemBYTuKhoaQT(txtimkiem.Text,ca);
                 GrdanhSachtinquangcao.DataSource = list;
                 GrdanhSachtinquangcao.DataBind();
             }
-            else
+            else if(!txtimkiem.Text.Equals("")&&khuvucs!=0&&!loaitins.Equals("0"))
             {
-                var list = News_Controller.timkiemBYKhacQT(khuvucs,Drloaitin.SelectedValue,ca);
+                var list = News_Controller.timkiemBYKhacQT(txtimkiem.Text,khuvucs,loaitins,ca);
                 GrdanhSachtinquangcao.DataSource = list;
                 GrdanhSachtinquangcao.DataBind();
             }
+            else if(txtimkiem.Text.Equals("")&&khuvucs!=0&&loaitins.Equals("0"))
+            {
+                var list = News_Controller.timkiemBYkhuvucQT(khuvucs,ca);
+                GrdanhSachtinquangcao.DataSource = list;
+                GrdanhSachtinquangcao.DataBind();
+            }
+            else if (txtimkiem.Text.Equals("") && khuvucs == 0 && !loaitins.Equals("0"))
+            {
+                var list = News_Controller.timkiemBYloaitinQT(loaitins, ca);
+                GrdanhSachtinquangcao.DataSource = list;
+                GrdanhSachtinquangcao.DataBind();
+            }
+            
+
             
         }
 
